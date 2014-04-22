@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brewery:</strong>
+  <%= @brewery_contact.brewery_id %>
+</p>
+
+<p>
+  <strong>Contact type:</strong>
+  <%= @brewery_contact.contact_type_id %>
+</p>
+
+<p>
+  <strong>Brewery contact:</strong>
+  <%= @brewery_contact.brewery_contact %>
+</p>
+
+<%= link_to 'Edit', edit_brewery_contact_path(@brewery_contact) %> |
+<%= link_to 'Back', brewery_contacts_path %>
