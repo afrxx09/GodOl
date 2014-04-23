@@ -1,14 +1,10 @@
 GodOl::Application.routes.draw do
-  get "static_pages/start"
-  get "static_pages/kontakt"
-  get "static_pages/om"
-  
-  resources :brewery_contacts
+	root 'static_pages#start'
+	
+	match '/kontakt', to: 'static_pages#kontakt', via: 'get'
+	match '/om', to: 'static_pages#om', via: 'get'
 
-  resources :contact_types
-
-  resources :breweries
-
-  
-  root 'static_pages#start'
+	resources :brewery_contacts
+	resources :contact_types
+	resources :breweries
 end
