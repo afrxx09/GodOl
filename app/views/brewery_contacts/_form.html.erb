@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= f.label :brewery_id %><br>
-    <%= f.number_field :brewery_id %>
+    <%= f.collection_select :brewery_id, Brewery.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :contact_type_id %><br>
-    <%= f.number_field :contact_type_id %>
+    <%= f.collection_select :contact_type_id, ContactType.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :brewery_contact %><br>
