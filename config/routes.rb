@@ -1,4 +1,5 @@
 GodOl::Application.routes.draw do
+	resources :users
 	root 'static_pages#start'
 	
 	match '/kontakt', to: 'static_pages#kontakt', via: 'get'
