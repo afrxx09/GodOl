@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   root 'static_pages#start'
-  get 'static_pages/start'
-
-  get 'static_pages/kontakt'
+  
+  match '/start', to: 'static_pages#start', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/beer_list', to: 'static_pages#beer_list', via: 'get'
+  match '/brewery_list', to: 'static_pages#brewery_list', via: 'get'
+  
+  #get 'static_pages/start'
+  #get 'static_pages/contact'
+  #get 'static_pages/beer_list'
+  #get 'static_pages/brewery_list'
   
   
 
