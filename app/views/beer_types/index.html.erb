@@ -1,0 +1,5 @@
+<% provide(:title, 'Beer Types') %>
+<h1><%= yield(:title) %></h1>
+<% @beer_types.each do |bt| %>
+	<p><%= bt.id %>: <%= bt.name %></p>
+<% end %>

@@ -1,0 +1,5 @@
+<% provide(:title, 'Contact Types') %>
+<h1><%= yield(:title) %></h1>
+<% @contact_types.each do |ct| %>
+	<p><%= ct.id %>: <%= ct.name %></p>
+<% end %>

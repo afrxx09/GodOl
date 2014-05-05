@@ -1,5 +1,26 @@
 Rails.application.routes.draw do
+  get 'beer_types', to: 'beer_types#index'
+  get 'beer_types/new', to: 'beer_types#new'
+  post 'beer_types', to: 'beer_types#create'
+  get 'beer_types/:id/edit', to: 'beer_types#edit'
+  get 'beer_types/:id', to: 'beer_types#show'
+  patch 'beer_types', to: 'beer_types#update'
+  delete 'beer_types', to: 'beer_types#destroy'
+
+  #get 'contact_types/index'
+  #get 'contact_types/new'
+  #post 'contact_types/create'
+  #get 'contact_types/edit'
+  #patch 'contact_types/update'
+  #delete 'contact_types/destroy'
+
+  resources :contact_types
+
+  get 'users/new'
+
   root 'static_pages#start'
+  
+  match '/signup', to: 'users#new', via: 'get'
   
   match '/start', to: 'static_pages#start', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
