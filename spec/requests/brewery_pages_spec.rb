@@ -6,14 +6,17 @@ describe "Brewery pages" do
 	
 	describe "Brewery page: create new" do
 		before { visit new_brewery_path }
-		#before { visit "/breweries/new" }
 				
 		it { should have_title ('Lägg till bryggeri')}
 	end
 	
 	describe "Brewery page: edit" do
 		#let(:brewery) { FactoryGirl.create(:brewery) }
-		before { visit brewery_path}
+		
+		before do
+			@b = Brewery.first
+			visit edit_brewery_path(@b)
+		end
 		
 		it { should have_title ('Lägg till bryggeri')}
 	end
