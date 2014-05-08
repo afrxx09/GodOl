@@ -1,38 +1,32 @@
 Rails.application.routes.draw do
-  get 'beer_types', to: 'beer_types#index'
-  get 'beer_types/new', to: 'beer_types#new'
-  post 'beer_types', to: 'beer_types#create'
-  get 'beer_types/:id/edit', to: 'beer_types#edit'
-  get 'beer_types/:id', to: 'beer_types#show'
-  patch 'beer_types', to: 'beer_types#update'
-  delete 'beer_types', to: 'beer_types#destroy'
-
-  #get 'contact_types/index'
-  #get 'contact_types/new'
-  #post 'contact_types/create'
-  #get 'contact_types/edit'
-  #patch 'contact_types/update'
-  #delete 'contact_types/destroy'
-
-  resources :contact_types
-
-  get 'users/new'
+  resources :breweries
+  resources :beers
+  resources :beer_types, :except => :show
+  resources :contact_types, :except => :show
 
   root 'static_pages#start'
-  
+
   match '/signup', to: 'users#new', via: 'get'
-  
   match '/start', to: 'static_pages#start', via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/beer_list', to: 'static_pages#beer_list', via: 'get'
   match '/brewery_list', to: 'static_pages#brewery_list', via: 'get'
   
-  #get 'static_pages/start'
-  #get 'static_pages/contact'
-  #get 'static_pages/beer_list'
-  #get 'static_pages/brewery_list'
-  
-  
+  #get 'beer_types', to: 'beer_types#index'
+  #get 'beer_type', to: 'beer_types#index'
+  #get 'beer_type/new', to: 'beer_types#new'
+  #post 'beer_type', to: 'beer_types#create'
+  #get 'beer_type/:id/edit', to: 'beer_types#edit', as: 'beer_type_edit'
+  #patch 'beer_type', to: 'beer_types#update'
+  #delete 'beer_type', to: 'beer_types#destroy'
+
+  #get 'contact_types', to: 'contact_types#index'
+  #get 'contact_type', to:  'contact_types#index'
+  #get 'contact_types/new', to: 'contact_types#new'
+  #post 'contact_types', to: 'contact_types#create'
+  #get 'contact_types/:id/edit', to: 'contact_types#edit', as: 'contact_type_edit'
+  #patch 'contact_types', to: 'contact_types#update'
+  #delete 'contact_types', to: 'contact_types#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

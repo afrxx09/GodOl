@@ -11,9 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502085432) do
+ActiveRecord::Schema.define(version: 20140506182415) do
 
   create_table "beer_types", force: true do |t|
+    t.string   "name"
+    t.string   "asd"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "beers", force: true do |t|
+    t.integer  "brewery_id"
+    t.integer  "beer_type_id"
+    t.string   "name"
+    t.float    "abv"
+    t.integer  "ibu"
+    t.integer  "ebc"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "breweries", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "nationality"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
