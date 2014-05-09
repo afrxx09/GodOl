@@ -1,6 +1,6 @@
 <% provide(:title, 'Lägg till bryggeri') %>
 <h1><%= yield(:title) %></h1>
-<% form_for @brewery do |f| %>
+<%= form_for(@brewery) do |f| %>
 
 	<% if @brewery.errors.any? %>
 		<div id="error_explanation">
@@ -16,6 +16,11 @@
 	<div>
 		<%= f.label :name %>
 		<%= f.text_field :name %>
+	</div>
+
+	<div>
+		<%= f.label :nationality %>
+		<%= f.text_field :nationality %>
 	</div>
 	
 	<div>

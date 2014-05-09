@@ -19,7 +19,14 @@
 	</div>
 	
 	<div>
+		<%= f.label :nationality %>
+		<%= f.text_field :nationality %>
+	</div>
+
+	<div>
 		<%= f.submit %>
 	</div>
 	
 <% end %>
+
+<%= link_to "Tillbaka", breweries_path %>
