@@ -1,10 +1,16 @@
 <% provide(:title, 'Contact Types') %>
 <h1><%= yield(:title) %></h1>
-<%= link_to "Ny Contact Type", new_contact_type_path %>
+
+<div>
+	<%= link_to "Ny Contact Type", new_contact_type_path %>
+</div>
+
+<div>
 <% @contact_types.each do |ct| %>
 	<p>
-		<%= ct.id %>: <%= ct.name %><br />
+		<%= link_to ct.name, contact_type_path(ct) %><br />
 		<%= link_to "Redigera", edit_contact_type_path(ct) %>
 		<%= link_to "Ta bort", contact_type_path(ct) , method: :delete %>
 	</p>
 <% end %>
+</div>

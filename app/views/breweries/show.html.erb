@@ -8,3 +8,9 @@
 	<div><%= @brewery.nationality %></div>
 	<div><%= @brewery.description %></div>
 </div>
+<div>
+	<p>Kontaktinfo</p>
+	<% @brewery_contacts.each do |bc| %>
+		<%= bc.contact_type %>
+	<% end %>
+</div>

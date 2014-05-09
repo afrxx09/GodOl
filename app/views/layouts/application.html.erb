@@ -9,13 +9,17 @@
 	<body>
 		<div id="wrap">
 			
-			<%= render 'layouts/header' %>
+			<div id="head">
+				<%= render 'layouts/header' %>
+			</div>
 			
 			<div id="main">
 				<%= yield %>
 			</div>
 			
-			<%= render 'layouts/footer' %>
+			<div id="footer">
+				<%= render 'layouts/footer' %>
+			</div>
 			
 		</div>
 	</body>

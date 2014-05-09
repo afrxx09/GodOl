@@ -1,2 +1,54 @@
-<h1>Beers#new</h1>
-<p>Find me in app/views/beers/new.html.erb</p>
+<% provide(:title, 'Lägg till öl') %>
+<h1><%= yield(:title) %></h1>
+<%= form_for(@beer) do |f| %>
+
+	<% if @beer.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@beer.errors.count, "error") %> prohibited this beer from being saved:</h2>
+			<ul>
+			<% @beer.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</div>
+	
+	<div>
+		<%= f.label :brewery_id %>
+		<%= collection_select(:beer, :brewery_id, Brewery.all ,:id, :name) %>
+	</div>
+	
+	<div>
+		<%= f.label :beer_type_id %>
+		<%= collection_select(:beer, :beer_type_id, BeerType.all ,:id, :name) %>
+	</div>
+	
+	<%
+		#brewery
+		#beertype
+	%>
+	<div>
+		<%= f.label :abv %>
+		<%= f.text_field :abv %>
+	</div>
+	
+	<div>
+		<%= f.label :ibu %>
+		<%= f.text_field :ibu %>
+	</div>
+	
+	<div>
+		<%= f.label :ebc %>
+		<%= f.text_field :ebc %>
+	</div>
+	
+	<div>
+		<%= f.submit %>
+	</div>
+	
+<% end %>

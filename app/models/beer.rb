@@ -1,4 +1,6 @@
 class Beer < ActiveRecord::Base
+	belongs_to :beer_type
+	belongs_to :brewery
 	validates :brewery_id, presence: true
 	validates_numericality_of :brewery_id, :greater_than => 0
 	

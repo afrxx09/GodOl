@@ -1,10 +1,15 @@
 <% provide(:title, 'Bryggerier') %>
 <h1><%= yield(:title) %></h1>
-<%= link_to "Lägg tillBryggeri", new_brewery_path %>
+<div>
+	<%= link_to "Lägg tillBryggeri", new_brewery_path %>
+</div>
+
+<div>
 <% @breweries.each do |b| %>
 	<p>
-		<%= b.id %>: <%= b.name %><br />
+		<%= link_to b.name, brewery_path(b) %><br />
 		<%= link_to "Redigera", edit_brewery_path(b) %>
 		<%= link_to "Ta bort", brewery_path(b) , method: :delete %>
 	</p>
 <% end %>
+</div>

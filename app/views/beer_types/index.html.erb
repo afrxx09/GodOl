@@ -1,10 +1,16 @@
 <% provide(:title, 'Beer Types') %>
 <h1><%= yield(:title) %></h1>
-<%= link_to "Ny Beer Type", new_beer_type_path %>
+
+<div>
+	<%= link_to "Ny Beer Type", new_beer_type_path %>
+</div>
+
+<div>
 <% @beer_types.each do |bt| %>
 	<p>
-		<%= bt.id %>: <%= bt.name %><br />
+		<%= link_to bt.name, beer_type_path(bt) %><br />
 		<%= link_to "Redigera", edit_beer_type_path(bt) %>
 		<%= link_to "Ta bort", beer_type_path(bt) , method: :delete %>
 	</p>
 <% end %>
+</div>
