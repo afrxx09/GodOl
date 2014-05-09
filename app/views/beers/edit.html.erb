@@ -1,4 +1,4 @@
-<% provide(:title, 'Lägg till öl') %>
+<% provide(:title, 'Redigera öl') %>
 <h1><%= yield(:title) %></h1>
 <%= form_for(@beer) do |f| %>
 
@@ -20,14 +20,13 @@
 	
 	<div>
 		<%= f.label :brewery_id %>
-		<%= collection_select(:beer, :brewery_id, Brewery.all ,:id, :name) %>
+		<%= f.collection_select(:brewery, :brewery_id, Brewery.all ,:id, :name) %>
 	</div>
 	
-	<div>
-		<%= f.label :beer_type_id %>
-		<%= collection_select(:beer, :beer_type_id, BeerType.all ,:id, :name) %>
-	</div>
-	
+	<%
+		#brewery
+		#beertype
+	%>
 	<div>
 		<%= f.label :abv %>
 		<%= f.text_field :abv %>

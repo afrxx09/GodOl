@@ -8,9 +8,30 @@
 	<div><%= @brewery.nationality %></div>
 	<div><%= @brewery.description %></div>
 </div>
+<hr />
 <div>
 	<p>Kontaktinfo</p>
-	<% @brewery_contacts.each do |bc| %>
-		<%= bc.contact_type %>
+	<% @brewery.brewery_contacts.all.each do |bc| %>
+		<div>
+			<%= bc.contact_type.name %> - <%= bc.brewery_contact %>
+		</div>
+	<% end %>
+</div>
+<hr />
+<div>
+	<p>Ny kontakt</p>
+	
+	<%= form_for [@brewery, @brewery.brewery_contacts.build] do |f_bc| %>
+		<div>
+			<%= f_bc.label :brewery_contact %>
+			<%= f_bc.text_field :brewery_contact %>
+		</div>
+		
+		<div>
+			<%= f_bc.label :contact_type_id %>
+			<%= collection_select(:brewery_contact, :contact_type_id, ContactType.all ,:id, :name) %>
+		</div>
+		
+		<%= f_bc.submit %>
 	<% end %>
 </div>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :breweries
+  resources :breweries do
+    resources :brewery_contacts
+  end
   resources :beers
   resources :beer_types, :except => :show
   resources :contact_types, :except => :show

@@ -2432,3 +2432,234 @@ Processing by StaticPagesController#contact as HTML
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.0ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateBreweryContacts (20140509200750)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mCREATE TABLE "brewery_contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "brewery_id" integer, "contact_type_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140509200750"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to UpdateBreweryContactRecord (20140509202643)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "brewery_contacts" ADD "brewery_id" integer[0m
+SQLite3::SQLException: duplicate column name: brewery_id: ALTER TABLE "brewery_contacts" ADD "brewery_id" integer
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2014-05-10 01:50:41 +0200
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_login.html.erb (1.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 39ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2014-05-10 01:50:41 +0200
+Processing by UsersController#new as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-10 01:50:41 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"   ORDER BY "breweries"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@ASD.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user.user@test.se') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user_asd@asd.qwe.se') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user_at_asd.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd@test.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd+.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('TEST@EXEMPEL.COM') LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-05-09 23:50:42.061952"], ["email", "test@exempel.com"], ["name", "Test Exempel"], ["updated_at", "2014-05-09 23:50:42.061952"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/beer_list" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#beer_list as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/beer_list" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#beer_list as HTML
+  Rendered layouts/_login.html.erb (1.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/contact" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/contact" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/brewery_list" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#brewery_list as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/brewery_list" for 127.0.0.1 at 2014-05-10 01:50:42 +0200
+Processing by StaticPagesController#brewery_list as HTML
+  Rendered layouts/_login.html.erb (0.0ms)
+  Rendered layouts/_adminnav.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by BeersController#new as HTML
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction

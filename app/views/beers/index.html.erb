@@ -1,0 +1,14 @@
+<% provide(:title, 'Öl') %>
+<h1><%= yield(:title) %></h1>
+<div>
+	<%= link_to "Lägg till Öl", new_beer_path %>
+</div>
+<div>
+<% @beers.each do |b| %>
+	<p>
+		<%= link_to b.name, beer_path(b) %><br />
+		<%= link_to "Redigera", edit_beer_path(b) %>
+		<%= link_to "Ta bort", beer_path(b) , method: :delete %>
+	</p>
+<% end %>
+</div>

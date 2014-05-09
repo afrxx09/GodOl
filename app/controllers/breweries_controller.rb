@@ -5,7 +5,6 @@ class BreweriesController < ApplicationController
 	
 	def show
 		@brewery = Brewery.find(params[:id])
-		@brewery_contacts = BreweryContact.find_by(brewery_id: @brewery.id)
 	end
 	
 	def new
