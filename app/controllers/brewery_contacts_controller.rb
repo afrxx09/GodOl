@@ -6,8 +6,11 @@ class BreweryContactsController < ApplicationController
 		redirect_to brewery_path(@brewery)
 	end
 	
-	def destoy
-		
+	def destroy
+		@brewery = Brewery.find(params[:brewery_id])
+		@brewery_contact = @brewery.brewery_contacts.find(params[:id])
+		@brewery_contact.destroy
+		redirect_to brewery_path(@brewery)
 	end
 	
 	private

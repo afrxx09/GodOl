@@ -1,7 +1,7 @@
 <% provide(:title, 'Öl') %>
 <h1><%= yield(:title) %></h1>
 <div>
-	<%= link_to "Lägg till Öl", new_beer_path %>
+	<%= link_to "Lägg till Öl", new_beer_path %> - <%= link_to "Öl-typer", beer_types_path %>
 </div>
 <div>
 <% @beers.each do |b| %>
