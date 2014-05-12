@@ -1,0 +1,1 @@
+Mycket problem med FactoryGirl. Objekten som ska skapas går ofta inte testa mot, får mycket "nil:class"-fel. Har kommit runt dessa fel genom att manuellt lägga in poster i test-databasen att testa mot istället. Om jag inte kommer på vad det är som gör att FactoryGirl krånglar ibland så skippar jag att använda mig av "fake"-objekt för tesning. 

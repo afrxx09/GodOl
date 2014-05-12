@@ -4,11 +4,11 @@
 	<%= link_to "Lägg till Öl", new_beer_path %> - <%= link_to "Öl-typer", beer_types_path %>
 </div>
 <div>
-<% @beers.each do |b| %>
+<% @beers.each do |beer| %>
 	<p>
-		<%= link_to b.name, beer_path(b) %><br />
-		<%= link_to "Redigera", edit_beer_path(b) %>
-		<%= link_to "Ta bort", beer_path(b) , method: :delete %>
+		<%= link_to beer.name, beer_path(beer) %><br />
+		<%= link_to "Redigera", edit_beer_path(beer) %>
+		<%= link_to "Ta bort", beer_path(beer) , method: :delete %>
 	</p>
 <% end %>
 </div>

@@ -1,5 +1,5 @@
-<% provide(:title, 'Redigera bryggeri') %>
-<h1><%= yield(:title) %></h1>
+<% provide(:title, 'Redigera bryggeri: ') %>
+<h1><%= yield(:title) %><%= @brewery.name %></h1>
 <%= form_for(@brewery) do |f| %>
 
 	<% if @brewery.errors.any? %>
