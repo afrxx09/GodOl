@@ -9,18 +9,34 @@
 	<body>
 		<div id="wrap">
 			
-			<div id="head">
-				<%= render 'layouts/header' %>
+			<div id="header-container">
+				<div id="header">
+					<%= render 'layouts/header' %>
+				</div>
 			</div>
 			
-			<div id="main">
-				<%= yield %>
+			<div id="nav-container">
+				<div id="nav">
+					<%= render 'layouts/nav' %>
+				</div>
+				<div class="clear"></div>
 			</div>
 			
+			<div id="main-container">
+				<div id="main">
+					<%= yield %>
+				</div>
+			</div>
+			
+			<div id="clear-footer"></div>
+			
+		</div>
+		
+		<div id="footer-container">
 			<div id="footer">
 				<%= render 'layouts/footer' %>
 			</div>
-			
 		</div>
+		
 	</body>
 </html>

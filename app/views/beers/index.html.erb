@@ -3,12 +3,16 @@
 <div>
 	<%= link_to "Lägg till Öl", new_beer_path %> - <%= link_to "Öl-typer", beer_types_path %>
 </div>
-<div>
+<div class="list">
 <% @beers.each do |beer| %>
-	<p>
-		<%= link_to beer.name, beer_path(beer) %><br />
-		<%= link_to "Redigera", edit_beer_path(beer) %>
-		<%= link_to "Ta bort", beer_path(beer) , method: :delete %>
-	</p>
+	<div class="list-row">
+		<div class="list-col"><%= link_to beer.name, beer_path(beer) %></div>
+		<div class="list-col"><%= beer.beer_type.name %></div>
+		<div class="list-col"><%= link_to beer.brewery.name, brewery_path(beer.brewery) %></div>
+		<div class="list-col">
+			<%= link_to "Redigera", edit_beer_path(beer) %>
+			<%= link_to "Ta bort", beer_path(beer) , method: :delete %>
+		</div>
+	</div>
 <% end %>
 </div>

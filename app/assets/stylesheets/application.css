@@ -19,9 +19,15 @@
 	padding:0;
 }
 
-body {
+body,html {
+	width:100%;
+	height:100%;
 	font-family: sans-serif;
 	font-size:1em;
+	background: -webkit-linear-gradient(#ddd, #fff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#ddd, #fff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#ddd, #fff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#ddd, #fff); /* Standard */
 }
 
 .clear{
@@ -29,32 +35,77 @@ body {
 }
 
 #wrap{
-	width:900px;
+	width:100%;
+	min-height:100%;
+	margin:0;
+}
+
+#header-container{
+	width:100%;
+	height:150px;
+	background:#630;
+	
+}
+
+#header{
+	position:relative;
+	width:960px;
 	margin:0 auto;
-	padding:10px;
-	background-color:#f00;
 }
 
-#head{
-	background-color:#ff0;
-	padding:10px;
-}
-
-#tophead{
-	padding:10px;
-	background-color:#f00;
+#logo{
+	position: absolute;
+	top:10px;
+	left:10px;
+	width:250px;
+	height:50px;
+	background:#eee;
 }
 
 #login{
 	float:right;
-	padding:10px 20px;
-	background-color:#00f;
+	width:200px;
+	background-color:#ddd;
+}
+
+#login .form-row{
+	float:left;
+	width:100%;
+	margin-top:5px;
+}
+
+#login label{
+	display:block;
+	width:75px;
+	float:left;
+	font-size:.8em;
+}
+#login input{
+	display:block;
+	float:left;
+	width:100px;
+	padding:0 3px;
+	font-size:.75em;
+}
+
+#login #btn-login{
+	display:block;
+	width:100px;
+	float:right;
+	padding:5px 0;
+	margin-right:15px;
+	background-color:#aaa;
+	border:1px solid #eee;
+}
+
+#login #signup-link{
+	text-align:center;
+	text-decoration:none;
 }
 
 #adminnav{
-	padding:10px;
 	float:right;
-	background-color:#00f;
+	background-color:#ccc;
 }
 
 #adminnav ul{
@@ -63,16 +114,25 @@ body {
 
 #adminnav ul li{
 	float:left;
-	background-color:#f0f;
+	background-color:#eee;
 }
 
 #adminnav ul li a{
 	display:block;
-	padding:10px 20px;
+	padding:3px 8px;
+	color:#333;
+	text-decoration:none;
+}
+
+#nav-container{
+	width:100%;
+	height:40px;
+	background-color:#036;
 }
 
 #nav{
-	background-color:#0ff;
+	width:960px;
+	margin:0 auto;
 }
 
 #nav ul{
@@ -81,24 +141,42 @@ body {
 
 #nav ul li{
 	float:left;
-	background-color:#f0f;
 }
 
 #nav ul li a{
 	display:block;
 	padding:10px 20px;
+	color:#000;
+	text-decoration:none;
+}
+
+#main-container{
+	width:100%;
 }
 
 #main {
-	padding:10px;
+	width:960px;
+	min-height:200px;
+	margin:0 auto;
 	background-color:#fff;
 }
 
-#footer{
-	background-color:#0f0;
-	padding:10px;
+#clear-footer{
+	clear:both;
+	height:100px;
 }
 
-#test{
-	
+#footer-container{
+	width:100%;
+	position:relative;
+	bottom:0;
+	margin:-100px auto 0 auto;
+	height:79px;
+	padding:10px 0;
+	background-color:#363;
+	border-top:1px solid #ccc;
+}
+#footer{
+	width:960px;
+	margin:0 auto;
 }

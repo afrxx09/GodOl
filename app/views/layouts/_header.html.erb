@@ -1,22 +1,37 @@
-<div id="tophead">
-
-	<div id="login">
-		<%= render 'layouts/login' %>
-	</div>
-	
-	<div id="adminnav">
-		<%= render 'layouts/adminnav' %>
-	</div>
-	
-	<div class="clear"></div>
-</div>
-
 <div id="logo">
 	<h1>God Öl</h1>
 </div>
 
-<div id="nav">
-	<%= render 'layouts/nav' %>
+<div id="login">
+	<form>
+		<div class="form-row">
+			<label for="login-email">E-mail</label>
+			<input id="login-email" type="text" />
+		</div>
+		
+		<div class="form-row">
+			<label for="login-password">Password</label>
+			<input id="login-password" type="password" />
+		</div>
+		
+		<div class="form-row">
+			<button id="btn-login">Log in</button>
+		</div>
+		<div class="clear"></div>
+	</form>
+	
+	<div id="signup-link">
+		<%= link_to "Registrera", signup_path %>
+	</div>
+	
+</div>
+
+<div id="adminnav">
+	<ul>
+		<li><%= link_to "Öl", beers_path %></li>
+		<li><%= link_to "Bryggerier", breweries_path %></li>
+		<li><a href="#">Log out</a></li>
+	</ul>
 </div>
 
 <div class="clear"></div>
