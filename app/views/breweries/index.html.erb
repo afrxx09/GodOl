@@ -5,12 +5,20 @@
 	<%= link_to "Kontakttyper", contact_types_path %>
 </div>
 
-<div>
+<div class="list">
+	<div class="list-row">
+		<div class="list-col">Namn</div>
+		<div class="list-col">Land</div>
+		<div class="list-col">Antal</div>
+	</div>
 <% @breweries.each do |b| %>
-	<p>
-		<%= link_to b.name, brewery_path(b) %><br />
-		<%= link_to "Redigera", edit_brewery_path(b) %>
-		<%= link_to "Delete", brewery_path(b) , method: :delete %>
-	</p>
+	<div class="list-row">
+		<div class="list-col"><%= link_to b.name, brewery_path(b) %></div>
+		<div class="list-col"><%= b.nationality %></div>
+		<div class="list-col">
+			<%= link_to "Redigera", edit_brewery_path(b) %>
+			<%= link_to "Delete", brewery_path(b) , method: :delete %>
+		</div>
+	</div>
 <% end %>
 </div>

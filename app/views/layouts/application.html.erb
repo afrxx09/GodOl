@@ -9,21 +9,26 @@
 	<body>
 		<div id="wrap">
 			
-			<div id="header-container">
-				<div id="header">
-					<%= render 'layouts/header' %>
+			<div id="header-wrap">
+				<div id="header-container">
+					<div id="header" class="c16">
+						<%= render 'layouts/header' %>
+					</div>
 				</div>
 			</div>
 			
-			<div id="nav-container">
-				<div id="nav">
-					<%= render 'layouts/nav' %>
+			<div id="nav-wrap">
+				<div id="nav-container">
+					<div id="nav" class="c16">
+						<%= render 'layouts/nav' %>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
 			</div>
 			
-			<div id="main-container">
-				<div id="main">
+			<div id="main-wrap">
+				
+				<div id="main-container">
 					<%= yield %>
 				</div>
 			</div>
@@ -32,9 +37,11 @@
 			
 		</div>
 		
-		<div id="footer-container">
-			<div id="footer">
-				<%= render 'layouts/footer' %>
+		<div id="footer-wrap">
+			<div id="footer-container">
+				<div id="footer" class="c16">
+					<%= render 'layouts/footer' %>
+				</div>
 			</div>
 		</div>
 		
