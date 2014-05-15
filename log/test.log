@@ -32780,3 +32780,599 @@ Processing by BreweriesController#show as HTML
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
   [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/contact" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/contact" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#contact as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/brewery_list" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#brewery_list as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/brewery_list" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#brewery_list as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/beer_list" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#beer_list as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/beer_list" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by StaticPagesController#beer_list as HTML
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBeer Load (1.0ms)[0m  [1mSELECT  "beers".* FROM "beers"   ORDER BY "beers"."id" ASC LIMIT 1[0m
+Started GET "/beers/1" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.0ms)[0m  SELECT  "beers".* FROM "beers"  WHERE "beers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers"   ORDER BY "beers"."id" ASC LIMIT 1[0m
+Started GET "/beers/1" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.0ms)[0m  SELECT  "beers".* FROM "beers"  WHERE "beers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers"   ORDER BY "beers"."id" ASC LIMIT 1[0m
+Started GET "/beers/1" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.0ms)[0m  SELECT  "beers".* FROM "beers"  WHERE "beers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/beers" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#index as HTML
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT "breweries".* FROM "breweries"[0m
+  [1m[35mBeerType Load (0.0ms)[0m  SELECT "beer_types".* FROM "beer_types"
+  Rendered beers/_form.html.erb (49.0ms)
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT "beers".* FROM "beers"[0m
+  [1m[35mBeerType Load (0.0ms)[0m  SELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 71ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+  [1m[35mBeer Load (0.0ms)[0m  SELECT  "beers".* FROM "beers"   ORDER BY "beers"."id" ASC LIMIT 1
+Started GET "/beers/1/edit" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers"  WHERE "beers"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT "beer_types".* FROM "beer_types"[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/beers" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#index as HTML
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT "beer_types".* FROM "beer_types"[0m
+  Rendered beers/_form.html.erb (3.0ms)
+  [1m[35mBeer Load (0.0ms)[0m  SELECT "beers".* FROM "beers"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT  "beers".* FROM "beers"   ORDER BY "beers"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/beers" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BeersController#index as HTML
+  [1m[35mBrewery Load (1.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT "beer_types".* FROM "beer_types"[0m
+  Rendered beers/_form.html.erb (3.0ms)
+  [1m[35mBeer Load (0.0ms)[0m  SELECT "beers".* FROM "beers"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by UsersController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+Started GET "/signup" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by UsersController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:48.840798"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:48.840798"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBreweryContact Load (1.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mContactType Load (0.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (12.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "breweries"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:48.918803"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:48.918803"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:48.942804"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:48.942804"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (1.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (3.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:48.988807"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:48.988807"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:48 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.014808"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.014808"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (1.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.041810"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.041810"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "breweries"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.066811"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.066811"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBreweryContact Load (0.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mContactType Load (0.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.082812"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.082812"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBreweryContact Load (0.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mContactType Load (0.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.100813"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.100813"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBreweryContact Load (0.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mContactType Load (0.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.117814"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.117814"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBreweryContact Load (0.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[35mContactType Load (0.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (2.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "breweries"[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.159816"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.159816"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.185818"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.185818"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.231820"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.231820"], ["zip", "12345"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/breweries/2/edit" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 2]]
+  Rendered collection (0.0ms)
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "breweries"
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "breweries"[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries/new" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#new as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#index as HTML
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT "beers".* FROM "beers"  WHERE "beers"."brewery_id" = ?[0m  [["brewery_id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "breweries"
+Started DELETE "/breweries/1" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "breweries" WHERE "breweries"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/breweries
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#index as HTML
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT "breweries".* FROM "breweries"[0m
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "breweries"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#index as HTML
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT "breweries".* FROM "breweries"[0m
+  [1m[35mBeer Load (0.0ms)[0m  SELECT "beers".* FROM "beers"  WHERE "beers"."brewery_id" = ?  [["brewery_id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"   ORDER BY "breweries"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#index as HTML
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  [1m[36mBeer Load (0.0ms)[0m  [1mSELECT "beers".* FROM "beers"  WHERE "beers"."brewery_id" = ?[0m  [["brewery_id", 1]]
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"   ORDER BY "breweries"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.418831"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.418831"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "breweries" ("address", "address2", "city", "created_at", "description", "name", "nationality", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["address", "Street 123"], ["address2", "c/o A Place"], ["city", "A town"], ["created_at", "2014-05-15 19:09:49.435832"], ["description", "A brewery in a city in CA."], ["name", "Brewry"], ["nationality", "USA"], ["state", "CA"], ["updated_at", "2014-05-15 19:09:49.435832"], ["zip", "12345"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/breweries/2" for 127.0.0.1 at 2014-05-15 21:09:49 +0200
+Processing by BreweriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('TEST@EXEMPEL.COM') LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-05-15 19:09:49.473834"], ["email", "test@exempel.com"], ["name", "Test Exempel"], ["updated_at", "2014-05-15 19:09:49.473834"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('') LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@ASD.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user.user@test.se') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user_asd@asd.qwe.se') LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('test@exempel.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd,com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user_at_asd.com') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd@test.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE LOWER("users"."email") = LOWER('user@asd+.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+Processing by BeersController#new as HTML
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

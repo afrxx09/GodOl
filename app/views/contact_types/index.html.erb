@@ -1,24 +1,30 @@
-<% provide(:title, 'Contact Types') %>
-<h1><%= yield(:title) %></h1>
+<% provide(:title, 'Kontakt-typer') %>
+<div class="c8">
+	<h1><%= yield(:title) %></h1>
 
-<div>
-	<%= link_to "Ny Contact Type", new_contact_type_path %>
+	<div id="contact-type-list">
+		<div class="list-row header">
+			<div class="list-col id">Id</div>
+			<div class="list-col name">Namn</div>
+			<div class="list-col count">Antal</div>
+			<div class="list-col delete">Ta bort</div>
+		</div>
+		<% @contact_types.each do |ct| %>
+		<div class="list-row">
+			<div class="list-col id"><%= ct.id %></div>
+			<div class="list-col name"><%= ct.name %></div>
+			<div class="list-col count"><%= ct.brewery_contacts.length %></div>
+			<div class="list-col delete"><%= link_to "Ta bort", contact_type_path(ct) , method: :delete %>
+			</div>
+		</div>
+		<% end %>
+
+	</div>
 </div>
 
-<div class="list">
-	<div class="list-row">
-		<div class="list-col">Id</div>
-		<div class="list-col">Namn</div>
-		<div class="list-col">Hantera</div>
+<div class="c4">
+	<h2>Lägg till Kontakt-typ</h2>
+	<div id="contact-type-form">
+		<%= render 'form' %>
 	</div>
-<% @contact_types.each do |ct| %>
-	<div class="list-row">
-		<div class="list-col"><%= ct.id %></div>
-		<div class="list-col"><%= link_to ct.name, contact_type_path(ct) %></div>
-		<div class="list-col">
-			<%= link_to "Redigera", edit_contact_type_path(ct) %>
-			<%= link_to "Ta bort", contact_type_path(ct) , method: :delete %>
-		</div>
-	</div>
-<% end %>
 </div>

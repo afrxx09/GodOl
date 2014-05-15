@@ -2,29 +2,75 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.list{
+#beer-type-list{
 	float:left;
-	width:940px;
+	width:620px;
 	margin:10px 0;
-	//border-top:1px solid #00f;
-	//border-right:1px solid #ff0;
 	
 	.list-row{
 		float:left;
-		width:940px;
+		width:620px;
 		background-color:#e6e6e6;
-		//border-bottom:1px solid #0f0;
 		
 		.list-col{
 			float:left;
 			margin-right:10px;
 			padding:2px 0 2px 5px;
-			width: 220px;
-			//border-left:1px solid #f00;
+		}
+		
+		.id{
+			width:50px;
+		}
+		.name{
+			width:350px;
+		}
+		.count{
+			width:75px;
+		}
+		.delete{
+			width:75px;
 		}
 	}
-	
+	.list-row.header{
+		font-weight:bold;
+		background-color:#ddd;
+	}
 	.list-row:nth-child(even){
 		background-color:#eeeeee;
+	}
+}
+
+#beer-type-form{
+	margin:10px 0;
+	
+	.form-row{
+		width:100%;
+		float:left;
+		margin:5px 0;
+		
+		.form-label{
+			display:block;
+			float:left;
+			width:75px;
+			font-weight:bold;
+			text-align:right;
+			margin-right:10px;
+		}
+		
+		.form-input{
+			float:left;
+			width:150px;
+			
+			input[type="text"]{
+				width:150px;
+				padding:3px;
+			}
+			
+		}
+		
+		input[type="submit"]{
+			margin-left:85px;
+			padding:5px 15px;
+		}
 	}
 }

@@ -1,62 +1,78 @@
 <% provide(:title, 'Redigera bryggeri: ') %>
-<h1><%= yield(:title) %><%= @brewery.name %></h1>
-<%= form_for(@brewery) do |f| %>
 
-	<% if @brewery.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@brewery.errors.count, "error") %> prohibited this brewery from being saved:</h2>
-			<ul>
-			<% @brewery.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
+<div class="c8">
+	<h1><%= yield(:title) %><%= @brewery.name %></h1>
+	
+	<div id="brewery-form">
+		<%= form_for(@brewery) do |f| %>
+
+			<% if @brewery.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@brewery.errors.count, "error") %> prohibited this brewery from being saved:</h2>
+					<ul>
+					<% @brewery.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
 			<% end %>
-			</ul>
-		</div>
-	<% end %>
-	
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
+			
+			<div class="form-row">
+					<div class="form-label"><%= f.label :name %><span class="req">*</span></div>
+					<div class="form-input"><%= f.text_field :name %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :address %></div>
+					<div class="form-input"><%= f.text_field :address %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :address2 %></div>
+					<div class="form-input"><%= f.text_field :address2 %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :city %></div>
+					<div class="form-input"><%= f.text_field :city %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :zip %></div>
+					<div class="form-input"><%= f.text_field :zip %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :state %></div>
+					<div class="form-input"><%= f.text_field :state %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :nationality %><span class="req">*</span></div>
+					<div class="form-input"><%= f.text_field :nationality %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :description %></div>
+					<div class="form-input"><%= f.text_area :description %></div>
+				</div>
+				
+				<div class="form-row">
+					<%= f.submit "Spara" %>
+					<%= link_to "Avbryt", breweries_path %>
+				</div>
+			
+		<% end %>
 	</div>
-	
-	<div>
-		<%= f.label :address %>
-		<%= f.text_field :address %>
-	</div>
-	
-	<div>
-		<%= f.label :address2 %>
-		<%= f.text_field :address2 %>
-	</div>
-	
-	<div>
-		<%= f.label :city %>
-		<%= f.text_field :city %>
-	</div>
-	
-	<div>
-		<%= f.label :zip %>
-		<%= f.text_field :zip %>
-	</div>
-	
-	<div>
-		<%= f.label :state %>
-		<%= f.text_field :state %>
-	</div>
-	
-	<div>
-		<%= f.label :nationality %>
-		<%= f.text_field :nationality %>
-	</div>
-	
-	<div>
-		<%= f.label :description %>
-		<%= f.text_area :description %>
-	</div>
+</div>
 
+<div class="c4">
 	<div>
-		<%= f.submit %>
+		<h3>Kontaktinfo</h3>
+		<%= render @brewery.brewery_contacts %>
 	</div>
-	
-<% end %>
-
-<%= link_to "Tillbaka", breweries_path %>
+	<div>
+		<h3>Ny kontakt</h3>
+		<%= render 'brewery_contacts/form' %>
+	</div>
+</div>

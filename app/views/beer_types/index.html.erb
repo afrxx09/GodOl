@@ -1,26 +1,28 @@
-<% provide(:title, 'Beer Types') %>
-<h1><%= yield(:title) %></h1>
+<% provide(:title, 'Öl-typer') %>
+<div class="c8">
+	<h1><%= yield(:title) %></h1>
 
-<div>
-	<%= link_to "Ny Beer Type", new_beer_type_path %>
-</div>
-
-<div class="list">
-	<div class="list-row">
-		<div class="list-col">Id</div>
-		<div class="list-col">Namn</div>
-		<div class="list-col">Antal</div>
-		<div class="list-col">Hantera</div>
-	</div>
-<% @beer_types.each do |bt| %>
-	<div class="list-row">
-		<div class="list-col"><%= bt.id %></div>
-		<div class="list-col"><%= link_to bt.name, beer_type_path(bt) %></div>
-		<div class="list-col"><%= bt.beers.length %></div>
-		<div class="list-col">
-			<%= link_to "Redigera", edit_beer_type_path(bt) %>
-			<%= link_to "Ta bort", beer_type_path(bt) , method: :delete %>
+	<div id="beer-type-list">
+		<div class="list-row header">
+			<div class="list-col id">Id</div>
+			<div class="list-col name">Namn</div>
+			<div class="list-col count">Antal</div>
+			<div class="list-col delete">Hantera</div>
 		</div>
+		<% @beer_types.each do |bt| %>
+		<div class="list-row">
+			<div class="list-col id"><%= bt.id %></div>
+			<div class="list-col name"><%= bt.name %></div>
+			<div class="list-col count"><%= bt.beers.length %></div>
+			<div class="list-col delete"><%= link_to "Ta bort", beer_type_path(bt), method: :delete %></div>
+		</div>
+		<% end %>
 	</div>
-<% end %>
 </div>
+
+<div class="c4">
+	<h2>Lägg till Öl-typ</h2>
+	<div id="beer-type-form">
+		<%= render 'form' %>
+	</div>
+</div>	

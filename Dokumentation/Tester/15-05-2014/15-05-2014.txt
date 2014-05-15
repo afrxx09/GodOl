@@ -1,0 +1,1 @@
+Har strukturerat om massa i koden, tagit bort "onödig" Modell-hantering på några modeller. Har även ändrat en del rubriker och knappar som gör att många tester inte går igenom. Ska refakturera och kontrollera felen när omstruktureringen är klar.

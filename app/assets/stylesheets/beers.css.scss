@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.list{
+#beer-list{
 	float:left;
 	width:940px;
 	margin:10px 0;
@@ -26,5 +26,57 @@ div.list{
 	
 	.list-row:nth-child(even){
 		background-color:#eeeeee;
+	}
+}
+
+#beer-form{
+	
+	margin:10px 0;
+
+	.form-row{
+		float:left;
+		width:100%;
+		margin:5px 0;
+		clear:both;
+		
+		input[type="submit"]{
+			float:right;
+			font-weight:bold;
+			margin-right:32px;
+			padding:8px 25px;
+		}
+	}
+
+	.form-label{
+		display:block;
+		float:left;
+		width:75px;
+		margin-right:10px;
+		text-align:right;
+		font-weight:bold;
+
+		.req{
+			color:#e33;
+		}
+	}
+
+	.form-input{
+		display:block;
+		float:left;
+		width:200px;
+
+		input,
+		select{
+			padding:3px;
+			background-color:#fff;
+			border:1px solid #ddd;
+		}
+		
+		input{
+			width:190px;
+		}
+		select{
+			width:198px;
+		}
 	}
 }
