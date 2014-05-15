@@ -37421,3 +37421,410 @@ Processing by BeersController#index as HTML
   Rendered layouts/_nav.html.erb (1.0ms)
   Rendered layouts/_footer.html.erb (1.0ms)
 Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-14 23:19:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (1.0ms)
+  Rendered static_pages/start.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 105ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (0.0ms)
+  Rendered static_pages/start.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/beer_types.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/beers.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/breweries.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/brewery_contacts.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/contact_types.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/beer_types.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/beers.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/brewery_contacts.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/breweries.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/contact_types.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-14 23:19:39 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (0.0ms)
+  Rendered static_pages/start.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+Processing by StaticPagesController#start as HTML
+  Rendered layouts/_main_right.html.erb (0.0ms)
+  Rendered static_pages/start.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/beers.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/beer_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/breweries.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/brewery_contacts.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/contact_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/beer_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/beers.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/breweries.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/brewery_contacts.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/contact_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-15 20:03:01 +0200
+
+
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 20:06:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BreweriesController#index as HTML
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  Rendered breweries/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 118ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 20:06:17 +0200
+Processing by BreweriesController#index as HTML
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT "breweries".* FROM "breweries"[0m
+  Rendered breweries/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/breweries" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+Processing by BreweriesController#index as HTML
+  [1m[35mBrewery Load (0.0ms)[0m  SELECT "breweries".* FROM "breweries"
+  Rendered breweries/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/contact_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/brewery_contacts.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/beer_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/breweries.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/beers.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/beer_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/beers.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/breweries.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/brewery_contacts.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/contact_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:04 +0200
+
+
+Started GET "/breweries/1" for 127.0.0.1 at 2014-05-15 20:07:17 +0200
+Processing by BreweriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBreweryContact Load (1.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 1]]
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContactType Load (0.0ms)[0m  SELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered brewery_contacts/_brewery_contact.html.erb (9.0ms)
+  [1m[36mContactType Load (1.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (17.0ms)
+  Rendered breweries/show.html.erb within layouts/application (76.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 94ms (Views: 89.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/breweries/1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+Processing by BreweriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBrewery Load (1.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBreweryContact Load (0.0ms)[0m  [1mSELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?[0m  [["brewery_id", 1]]
+  [1m[35mContactType Load (0.0ms)[0m  SELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered brewery_contacts/_brewery_contact.html.erb (4.0ms)
+  [1m[35mContactType Load (1.0ms)[0m  SELECT "contact_types".* FROM "contact_types"
+  Rendered brewery_contacts/_form.html.erb (6.0ms)
+  Rendered breweries/show.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 35.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/beer_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/brewery_contacts.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/contact_types.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/breweries.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/beers.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/beer_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/beers.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/brewery_contacts.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/contact_types.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/breweries.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-15 20:07:21 +0200
+
+
+Started GET "/beers" for 127.0.0.1 at 2014-05-15 20:07:30 +0200
+Processing by BeersController#index as HTML
+  [1m[36mBeer Load (1.0ms)[0m  [1mSELECT "beers".* FROM "beers"[0m
+  [1m[35mBeerType Load (0.0ms)[0m  SELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBeerType Load (0.0ms)[0m  SELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered beers/index.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/beers/1" for 127.0.0.1 at 2014-05-15 20:07:31 +0200
+Processing by BeersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBeer Load (0.0ms)[0m  SELECT  "beers".* FROM "beers"  WHERE "beers"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (1.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered beers/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/breweries/1" for 127.0.0.1 at 2014-05-15 20:07:33 +0200
+Processing by BreweriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBrewery Load (0.0ms)[0m  [1mSELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBreweryContact Load (0.0ms)[0m  SELECT "brewery_contacts".* FROM "brewery_contacts"  WHERE "brewery_contacts"."brewery_id" = ?  [["brewery_id", 1]]
+  [1m[36mContactType Load (0.0ms)[0m  [1mSELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mContactType Load (0.0ms)[0m  SELECT  "contact_types".* FROM "contact_types"  WHERE "contact_types"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered brewery_contacts/_brewery_contact.html.erb (3.0ms)
+  [1m[36mContactType Load (1.0ms)[0m  [1mSELECT "contact_types".* FROM "contact_types"[0m
+  Rendered brewery_contacts/_form.html.erb (4.0ms)
+  Rendered breweries/show.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 35ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/beers" for 127.0.0.1 at 2014-05-15 20:07:36 +0200
+Processing by BeersController#index as HTML
+  [1m[35mBeer Load (1.0ms)[0m  SELECT "beers".* FROM "beers"
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBrewery Load (1.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBeerType Load (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "beer_types".* FROM "beer_types"  WHERE "beer_types"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "breweries".* FROM "breweries"  WHERE "breweries"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered beers/index.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 2.0ms)
