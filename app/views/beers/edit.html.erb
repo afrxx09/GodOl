@@ -1,49 +1,56 @@
-<% provide(:title, 'Redigera öl') %>
-<h1><%= yield(:title) %></h1>
-<%= form_for(@beer) do |f| %>
+<% provide(:title, 'Redigera') %>
+<div class="c8">
+	<h1><%= yield(:title) %></h1>
 
-	<% if @beer.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@beer.errors.count, "error") %> prohibited this beer from being saved:</h2>
-			<ul>
-			<% @beer.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
+	<div id="beer-form">
+		<%= form_for(@beer) do |f| %>
+
+			<% if @beer.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@beer.errors.count, "error") %> prohibited this beer from being saved:</h2>
+					<ul>
+					<% @beer.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
 			<% end %>
-			</ul>
-		</div>
-	<% end %>
-	
-	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-	
-	<div>
-		<%= f.label :brewery_id %>
-		<%= f.collection_select(:brewery, :brewery_id, Brewery.all ,:id, :name) %>
-	</div>
-	
-	<%
-		#brewery
-		#beertype
-	%>
-	<div>
-		<%= f.label :abv %>
-		<%= f.text_field :abv %>
-	</div>
-	
-	<div>
-		<%= f.label :ibu %>
-		<%= f.text_field :ibu %>
-	</div>
-	
-	<div>
-		<%= f.label :ebc %>
-		<%= f.text_field :ebc %>
-	</div>
-	
-	<div>
-		<%= f.submit %>
-	</div>
-	
-<% end %>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :name %></div>
+				<div class="form-input"><%= f.text_field :name %></div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :brewery_id %></div>
+				<div class="form-input"><%= collection_select(:beer, :brewery_id, Brewery.all ,:id, :name) %></div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :beer_type_id %></div>
+				<div class="form-input"><%= collection_select(:beer, :beer_type_id, BeerType.all ,:id, :name) %></div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :abv %></div>
+				<div class="form-input"><%= f.text_field :abv %></div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :ibu %></div>
+				<div class="form-input"><%= f.text_field :ibu %></div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-label"><%= f.label :ebc %></div>
+				<div class="form-input"><%= f.text_field :ebc %></div>
+			</div>
+			
+			<div class="form-row">
+				<%= f.submit "Spara" %>
+				<%= link_to "Tillbaka", beers_path %>
+			</div>
+			
+		<% end %>
+	</end>
+</div>

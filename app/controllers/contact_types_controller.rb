@@ -2,11 +2,9 @@ class ContactTypesController < ApplicationController
 	
 	def index
 		@contact_types = ContactType.all
-	end
-	
-	def new
 		@contact_type = ContactType.new
 	end
+
 	
 	def create
 		@contact_type = ContactType.new(contact_types_params)
@@ -15,20 +13,6 @@ class ContactTypesController < ApplicationController
 			redirect_to contact_types_path
 		else
 			render 'new'
-		end
-	end
-	
-	def edit
-		@contact_type = ContactType.find(params[:id])
-	end
-	
-	def update
-		@contact_type = ContactType.find(params[:id])
-
-		if @contact_type.update(contact_types_params)
-			redirect_to contact_types_path
-		else
-			render 'edit'
 		end
 	end
 	

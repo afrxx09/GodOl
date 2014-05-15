@@ -1,24 +1,23 @@
 <% provide(:title, 'Öl') %>
-<h1><%= yield(:title) %></h1>
-<div>
-	<%= link_to "Lägg till Öl", new_beer_path %> - <%= link_to "Öl-typer", beer_types_path %>
-</div>
-<div class="list">
-	<div class="list-row">
-		<div class="list-col">Namn</div>
-		<div class="list-col">Typ</div>
-		<div class="list-col">Bryggeri</div>
-		<div class="list-col">Hantera</div>
+<dic class="c12">
+	<h1><%= yield(:title) %></h1>
+	<div>
+		<%= link_to "Lägg till Öl", new_beer_path %> - <%= link_to "Öl-typer", beer_types_path %>
 	</div>
-<% @beers.each do |beer| %>
-	<div class="list-row">
-		<div class="list-col"><%= link_to beer.name, beer_path(beer) %></div>
-		<div class="list-col"><%= beer.beer_type.name %></div>
-		<div class="list-col"><%= link_to beer.brewery.name, brewery_path(beer.brewery) %></div>
-		<div class="list-col">
-			<%= link_to "Redigera", edit_beer_path(beer) %>
-			<%= link_to "Ta bort", beer_path(beer) , method: :delete %>
+	<div id="beer-list">
+		<div class="list-row">
+			<div class="list-col">Öl</div>
+			<div class="list-col">Typ</div>
+			<div class="list-col">Bryggeri</div>
+			<div class="list-col">Ta bort</div>
 		</div>
+	<% @beers.each do |beer| %>
+		<div class="list-row">
+			<div class="list-col"><%= link_to beer.name, edit_beer_path(beer) %></div>
+			<div class="list-col"><%= beer.beer_type.name %></div>
+			<div class="list-col"><%= link_to beer.brewery.name, brewery_path(beer.brewery) %></div>
+			<div class="list-col"><%= link_to "Ta bort", beer_path(beer) , method: :delete %></div>
+		</div>
+	<% end %>
 	</div>
-<% end %>
 </div>
