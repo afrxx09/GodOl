@@ -4,10 +4,6 @@ class BeersController < ApplicationController
 		@beer = Beer.new
 	end
 	
-	def show
-		@beer = Beer.find(params[:id])
-	end
-	
 	def new
 		@beer = Beer.new
 	end
@@ -16,7 +12,7 @@ class BeersController < ApplicationController
 		@beer = Beer.new(beer_params)
 
 		if @beer.save
-			redirect_to beer_path(@beer)
+			redirect_to beers_path
 		else
 			render 'new'
 		end
@@ -30,7 +26,7 @@ class BeersController < ApplicationController
 		@beer = Beer.find(params[:id])
 
 		if @beer.update(beer_params)
-			redirect_to beer_path(@beer)
+			redirect_to beers_path
 		else
 			render 'edit'
 		end

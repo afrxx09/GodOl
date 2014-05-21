@@ -15,7 +15,7 @@ describe "Brewery pages" do
 		describe "Create brewery" do
 			
 			before { visit new_brewery_path }
-			let(:submit) { 'Create Brewery' }
+			let(:submit) { 'Lägg till' }
 			
 			describe "With invalid data" do
 				it "should not create brewery" do
@@ -40,9 +40,9 @@ describe "Brewery pages" do
 					expect { click_button submit }.to change(Brewery, :count).by(1)
 				end
 				
-				describe "After brewery is saved" do
+				describe "After brewery is saved and brewery-list is shown" do
 					before { click_button submit }
-					it { should have_content('Breweryname') }
+					it { should have_content('Bryggerier') }
 				end
 			end
 			
@@ -64,7 +64,7 @@ describe "Brewery pages" do
 			
 			let(:brewery) { FactoryGirl.create(:brewery) }
 			before { visit edit_brewery_path(brewery) }
-			let(:submit) { 'Update Brewery' }
+			let(:submit) { 'Spara' }
 			
 			describe "With invlaid information" do
 				before do
@@ -134,43 +134,15 @@ describe "Brewery pages" do
 		
 	end
 	
-	
-	describe "Show Brewery page" do
-		
-		describe "Visit brewery page by url" do
-			
-			let(:brewery) { FactoryGirl.create(:brewery) }
-			before { visit brewery_path(brewery) }
-			
-			it { should have_content(brewery.name) }
-			it { should have_content(brewery.nationality) }		
-			
-		end 
-		
-		describe "View brewery-details by link" do
-			
-			describe "Confirm link to brewery" do
-				
-				let(:brewery) { Brewery.first }
-				before { visit breweries_path }
-			
-				it { should have_link(brewery.name, href: brewery_path(brewery)) }
-				
-			end
-			
-		end
-		
-	end
-	
 	describe "Delete Brewery" do
 		
 		let(:brewery) { Brewery.first }
 		before { visit breweries_path }
 		
-		it { should have_link('Delete', href: brewery_path(brewery)) }
+		it { should have_link('Ta bort', href: brewery_path(brewery)) }
 		it "Should delete a brewery" do
 			expect do
-				click_link('Delete', match: :first)
+				click_link('Ta bort', match: :first)
 			end.to change(Brewery, :count).by(-1)
 		end
 		

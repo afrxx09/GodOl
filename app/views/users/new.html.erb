@@ -1,2 +1,13 @@
 <% provide(:title, 'Registrera') %>
 <h1><%= yield(:title) %></h1>
+
+<%= form_for(@user) do |u| %>
+	<div>
+		<%= u.label :name %>
+		<%= u.text_field :name %>
+	</div>
+	<div>
+		<%= u.label :email %>
+		<%= u.text_field :email %>
+	</div>
+<% end %>

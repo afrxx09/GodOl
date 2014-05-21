@@ -2,9 +2,12 @@ Rails.application.routes.draw do
   resources :breweries do
     resources :brewery_contacts
   end
-  resources :beers
-  resources :beer_types, :except => :show
-  resources :contact_types, :except => :show
+  
+  resources :beers, except: :show
+  resources :beer_types, except: [ :show, :edit, :index ]
+  resources :contact_types, except: [ :show, :edit, :index ]
+  
+  resources :users, except: [ :show, :index ]
 
   root 'static_pages#start'
 

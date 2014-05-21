@@ -3,10 +3,6 @@ class BreweriesController < ApplicationController
 		@breweries = Brewery.all
 	end
 	
-	def show
-		@brewery = Brewery.find(params[:id])
-	end
-	
 	def new
 		@brewery = Brewery.new
 	end
@@ -15,7 +11,7 @@ class BreweriesController < ApplicationController
 		@brewery = Brewery.new(brewery_params)
 
 		if @brewery.save
-			redirect_to brewery_path(@brewery)
+			redirect_to breweries_path
 		else
 			render 'new'
 		end
@@ -29,7 +25,7 @@ class BreweriesController < ApplicationController
 		@brewery = Brewery.find(params[:id])
 
 		if @brewery.update(brewery_params)
-			redirect_to brewery_path(@brewery)
+			redirect_to breweries_path
 		else
 			render 'edit'
 		end

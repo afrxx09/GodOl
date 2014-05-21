@@ -1,6 +1,6 @@
-<% provide(:title, 'Redigera') %>
+<% provide(:title, 'Redigera Öl: ') %>
 <div class="c12">
-	<h1><%= yield(:title) %></h1>
+	<h1><%= yield(:title) %><%= @beer.name %></h1>
 
 	<div id="beer-form">
 		<%= form_for(@beer) do |f| %>
