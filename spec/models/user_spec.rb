@@ -91,7 +91,7 @@ describe User do
 		it "should be saved with lower case" do
 			@user.email = mix_case_email
 			@user.save
-			expect(@user.reload.email).to eq = mix_case_email.downcase
+			expect(@user.reload.email).to eq mix_case_email.downcase
 		end
 	end
 	

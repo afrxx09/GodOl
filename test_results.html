@@ -284,484 +284,90 @@ a {
 <div class="results">
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
-  <dt id="example_group_1" class="passed">BeersController</dt>
+  <dt id="example_group_1" class="passed">User</dt>
+    <script type="text/javascript">moveProgressBar('6.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00600s</span></dd>
+    <script type="text/javascript">moveProgressBar('13.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #email</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('20.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password_confirmation</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('26.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('33.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password_digest</span><span class='duration'>0.00200s</span></dd>
+    <script type="text/javascript">moveProgressBar('40.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.01200s</span></dd>
   </dl>
 </div>
 <div id="div_group_2" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_2" class="passed">GET &#39;new&#39;</dt>
-    <script type="text/javascript">moveProgressBar('1.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">returns http success</span><span class='duration'>0.01900s</span></dd>
+  <dt id="example_group_2" class="passed">When name is empty</dt>
+    <script type="text/javascript">moveProgressBar('46.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00500s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_3" class="passed">Brewery</dt>
-    <script type="text/javascript">moveProgressBar('2.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00600s</span></dd>
-    <script type="text/javascript">moveProgressBar('3.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #city</span><span class='duration'>0.01800s</span></dd>
-    <script type="text/javascript">moveProgressBar('5.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00300s</span></dd>
-    <script type="text/javascript">moveProgressBar('6.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #state</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('7.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #address</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('8.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #description</span><span class='duration'>0.00000s</span></dd>
-    <script type="text/javascript">moveProgressBar('10.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #zip</span><span class='duration'>0.00000s</span></dd>
-    <script type="text/javascript">moveProgressBar('11.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #nationality</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('12.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #address2</span><span class='duration'>0.00000s</span></dd>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_3" class="passed">When email is empty</dt>
+    <script type="text/javascript">moveProgressBar('53.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_4" class="passed">Minimal but still valid Brewery object</dt>
-    <script type="text/javascript">moveProgressBar('14.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00100s</span></dd>
+  <dt id="example_group_4" class="passed">When email is not unique</dt>
+    <script type="text/javascript">moveProgressBar('60.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00700s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_5" class="passed">Brewery with missing required fields</dt>
+  <dt id="example_group_5" class="passed">When password is not matching confirmation</dt>
+    <script type="text/javascript">moveProgressBar('66.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_6" class="passed">Missing name</dt>
-    <script type="text/javascript">moveProgressBar('15.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.01200s</span></dd>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_6" class="passed">Email address is mixed lower and upper case</dt>
+    <script type="text/javascript">moveProgressBar('73.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be saved with lower case</span><span class='duration'>0.00600s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_7" class="passed">Missing nationality</dt>
-    <script type="text/javascript">moveProgressBar('16.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_7" class="passed">When email has correct format</dt>
+    <script type="text/javascript">moveProgressBar('80.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00400s</span></dd>
   </dl>
 </div>
 <div id="div_group_8" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_8" class="passed">New empty, thus invalid Brewery</dt>
-    <script type="text/javascript">moveProgressBar('17.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00500s</span></dd>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_8" class="passed">When email has incorrect format</dt>
+    <script type="text/javascript">moveProgressBar('86.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be invalid</span><span class='duration'>0.00400s</span></dd>
   </dl>
 </div>
 <div id="div_group_9" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_9" class="passed">UserPages</dt>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_9" class="passed">When password is missing</dt>
+    <script type="text/javascript">moveProgressBar('93.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
   </dl>
 </div>
 <div id="div_group_10" class="example_group passed">
   <dl style="margin-left: 15px;">
-  <dt id="example_group_10" class="passed">signup page</dt>
-    <script type="text/javascript">moveProgressBar('19.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have selector &quot;h1&quot;, &quot;Registrera&quot;</span><span class='duration'>0.05800s</span></dd>
-    <script type="text/javascript">moveProgressBar('20.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Registrera&quot;</span><span class='duration'>0.00500s</span></dd>
-  </dl>
-</div>
-<div id="div_group_11" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_11" class="passed">User</dt>
-    <script type="text/javascript">moveProgressBar('21.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00200s</span></dd>
-    <script type="text/javascript">moveProgressBar('23.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #password</span><span class='duration'>0.00200s</span></dd>
-    <script type="text/javascript">moveProgressBar('24.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #password_digest</span><span class='duration'>0.00200s</span></dd>
-    <script type="text/javascript">moveProgressBar('25.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #email</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('26.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #password_confirmation</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('28.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.01000s</span></dd>
-  </dl>
-</div>
-<div id="div_group_12" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_12" class="passed">When name is empty</dt>
-    <script type="text/javascript">moveProgressBar('29.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_13" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_13" class="passed">When password is not matching confirmation</dt>
-    <script type="text/javascript">moveProgressBar('30.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
-  </dl>
-</div>
-<div id="div_group_14" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_14" class="passed">Email address is mixed lower and upper case</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_14');</script>
-    <script type="text/javascript">makeRed('example_group_14');</script>
-    <script type="text/javascript">moveProgressBar('32.0');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">should be saved with lower case</span>
-      <span class="duration">0.00600s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>undefined method `matches?&#39; for &quot;test@example.com&quot;:String</pre></div>
-        <div class="backtrace"><pre>./spec/models/user_spec.rb:94:in `block (3 levels) in <top (required)>'</pre></div>
-    <pre class="ruby"><code><span class="linenum">92</span>			@user.email = mix_case_email
-<span class="linenum">93</span>			@user.save
-<span class="offending"><span class="linenum">94</span>			expect(@user.reload.email).to eq = mix_case_email.downcase</span>
-<span class="linenum">95</span>		end
-<span class="linenum">96</span>	end
-<span class="linenum">97</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
-  </dl>
-</div>
-<div id="div_group_15" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_15" class="passed">When password is too short</dt>
-    <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
-  </dl>
-</div>
-<div id="div_group_16" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_16" class="passed">When email is empty</dt>
-    <script type="text/javascript">moveProgressBar('34.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_17" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_17" class="passed">When email is not unique</dt>
-    <script type="text/javascript">moveProgressBar('35.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
-  </dl>
-</div>
-<div id="div_group_18" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_18" class="passed">When email has incorrect format</dt>
-    <script type="text/javascript">moveProgressBar('37.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be invalid</span><span class='duration'>0.00500s</span></dd>
-  </dl>
-</div>
-<div id="div_group_19" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_19" class="passed">When email has correct format</dt>
-    <script type="text/javascript">moveProgressBar('38.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_20" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_20" class="passed">When password is missing</dt>
-    <script type="text/javascript">moveProgressBar('39.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
-  </dl>
-</div>
-<div id="div_group_21" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_21" class="passed">Beer</dt>
-    <script type="text/javascript">moveProgressBar('41.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #brewery_id</span><span class='duration'>0.00300s</span></dd>
-    <script type="text/javascript">moveProgressBar('42.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #ibu</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('43.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('44.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #ebc</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('46.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #beer_type_id</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('47.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00100s</span></dd>
-    <script type="text/javascript">moveProgressBar('48.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should respond to #abv</span><span class='duration'>0.00200s</span></dd>
-  </dl>
-</div>
-<div id="div_group_22" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_22" class="passed">Minimal but still valid Beer object</dt>
-    <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_23" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_23" class="passed">Beer with missing required fields</dt>
-  </dl>
-</div>
-<div id="div_group_24" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_24" class="passed">Missing brewery_id</dt>
-    <script type="text/javascript">moveProgressBar('51.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00500s</span></dd>
-  </dl>
-</div>
-<div id="div_group_25" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_25" class="passed">beer_type_id is zero</dt>
-    <script type="text/javascript">moveProgressBar('52.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_26" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_26" class="passed">Missing beer_type_id</dt>
-    <script type="text/javascript">moveProgressBar('53.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_27" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_27" class="passed">brewery_id is zero</dt>
-    <script type="text/javascript">moveProgressBar('55.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
-  </dl>
-</div>
-<div id="div_group_28" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_28" class="passed">Missing name</dt>
-    <script type="text/javascript">moveProgressBar('56.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00100s</span></dd>
-  </dl>
-</div>
-<div id="div_group_29" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_29" class="passed">Empty, thus invalid Beer object</dt>
-    <script type="text/javascript">moveProgressBar('57.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
-  </dl>
-</div>
-<div id="div_group_30" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_30" class="passed">StaticPages</dt>
-  </dl>
-</div>
-<div id="div_group_31" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_31" class="passed">Startpage</dt>
-    <script type="text/javascript">moveProgressBar('58.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Start&quot;</span><span class='duration'>0.01400s</span></dd>
-    <script type="text/javascript">moveProgressBar('60.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Start&quot;</span><span class='duration'>0.04000s</span></dd>
-  </dl>
-</div>
-<div id="div_group_32" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_32" class="passed">Öl-listan</dt>
-    <script type="text/javascript">moveProgressBar('61.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Öl-lista&quot;</span><span class='duration'>0.00500s</span></dd>
-    <script type="text/javascript">moveProgressBar('62.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Öl-lista&quot;</span><span class='duration'>0.00900s</span></dd>
-  </dl>
-</div>
-<div id="div_group_33" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_33" class="passed">Bryggeri-listan</dt>
-    <script type="text/javascript">moveProgressBar('64.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Bryggeri-lista&quot;</span><span class='duration'>0.00400s</span></dd>
-    <script type="text/javascript">moveProgressBar('65.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Bryggeri-lista&quot;</span><span class='duration'>0.02700s</span></dd>
-  </dl>
-</div>
-<div id="div_group_34" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_34" class="passed">Kontakt-sidan</dt>
-    <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Kontakt&quot;</span><span class='duration'>0.00500s</span></dd>
-    <script type="text/javascript">moveProgressBar('67.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Kontakt&quot;</span><span class='duration'>0.00900s</span></dd>
-  </dl>
-</div>
-<div id="div_group_35" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_35" class="passed">Beer pages</dt>
-  </dl>
-</div>
-<div id="div_group_36" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_36" class="passed">Index</dt>
-  </dl>
-</div>
-<div id="div_group_37" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_37" class="passed">Page</dt>
-    <script type="text/javascript">moveProgressBar('69.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Öl&quot;</span><span class='duration'>0.06000s</span></dd>
-    <script type="text/javascript">moveProgressBar('70.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have link &quot;Test Beer&quot;, {:href=&gt;&quot;/beers/1/edit&quot;}</span><span class='duration'>0.00800s</span></dd>
-  </dl>
-</div>
-<div id="div_group_38" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_38" class="passed">Beer-link</dt>
-    <script type="text/javascript">moveProgressBar('71.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Test Beer&quot;</span><span class='duration'>0.04400s</span></dd>
-  </dl>
-</div>
-<div id="div_group_39" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_39" class="passed">Brewery pages</dt>
-  </dl>
-</div>
-<div id="div_group_40" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_40" class="passed">Create new Brewery page</dt>
-  </dl>
-</div>
-<div id="div_group_41" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_41" class="passed">Visit create new  Brewery page</dt>
-    <script type="text/javascript">moveProgressBar('73.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Lägg till bryggeri&quot;</span><span class='duration'>0.01100s</span></dd>
-  </dl>
-</div>
-<div id="div_group_42" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_42" class="passed">Create brewery</dt>
-  </dl>
-</div>
-<div id="div_group_43" class="example_group passed">
-  <dl style="margin-left: 45px;">
-  <dt id="example_group_43" class="passed">With invalid data</dt>
-    <script type="text/javascript">moveProgressBar('74.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not create brewery</span><span class='duration'>0.01900s</span></dd>
-  </dl>
-</div>
-<div id="div_group_44" class="example_group passed">
-  <dl style="margin-left: 60px;">
-  <dt id="example_group_44" class="passed">After submit</dt>
-    <script type="text/javascript">moveProgressBar('75.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Lägg till bryggeri&quot;</span><span class='duration'>0.01300s</span></dd>
-    <script type="text/javascript">moveProgressBar('76.9');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;error&quot;</span><span class='duration'>0.04500s</span></dd>
-  </dl>
-</div>
-<div id="div_group_45" class="example_group passed">
-  <dl style="margin-left: 45px;">
-  <dt id="example_group_45" class="passed">With minimal valid information</dt>
-    <script type="text/javascript">moveProgressBar('78.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">Should Create a brewery</span><span class='duration'>0.02500s</span></dd>
-  </dl>
-</div>
-<div id="div_group_46" class="example_group passed">
-  <dl style="margin-left: 60px;">
-  <dt id="example_group_46" class="passed">After brewery is saved and brewery-list is shown</dt>
-    <script type="text/javascript">moveProgressBar('79.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Bryggerier&quot;</span><span class='duration'>0.04200s</span></dd>
-  </dl>
-</div>
-<div id="div_group_47" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_47" class="passed">Edit Brewery page</dt>
-  </dl>
-</div>
-<div id="div_group_48" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_48" class="passed">Visit Brewery-page edit</dt>
-    <script type="text/javascript">moveProgressBar('80.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Redigera&quot;</span><span class='duration'>0.02600s</span></dd>
-    <script type="text/javascript">moveProgressBar('82.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Brewry&quot;</span><span class='duration'>0.04300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_49" class="example_group passed">
-  <dl style="margin-left: 30px;">
-  <dt id="example_group_49" class="passed">Edit brewery</dt>
-  </dl>
-</div>
-<div id="div_group_50" class="example_group passed">
-  <dl style="margin-left: 45px;">
-  <dt id="example_group_50" class="passed">With invlaid information</dt>
-    <script type="text/javascript">moveProgressBar('83.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not create a new brewery</span><span class='duration'>0.02300s</span></dd>
-  </dl>
-</div>
-<div id="div_group_51" class="example_group passed">
-  <dl style="margin-left: 60px;">
-  <dt id="example_group_51" class="passed">should render errors</dt>
-    <script type="text/javascript">moveProgressBar('84.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;error&quot;</span><span class='duration'>0.05600s</span></dd>
-  </dl>
-</div>
-<div id="div_group_52" class="example_group passed">
-  <dl style="margin-left: 45px;">
-  <dt id="example_group_52" class="passed">With valid information</dt>
-  </dl>
-</div>
-<div id="div_group_53" class="example_group passed">
-  <dl style="margin-left: 60px;">
-  <dt id="example_group_53" class="passed">Without changes</dt>
-    <script type="text/javascript">moveProgressBar('85.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not change the amont of breweries</span><span class='duration'>0.01800s</span></dd>
-  </dl>
-</div>
-<div id="div_group_54" class="example_group passed">
-  <dl style="margin-left: 75px;">
-  <dt id="example_group_54" class="passed">Should not render errors</dt>
-    <script type="text/javascript">moveProgressBar('87.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not have content &quot;error&quot;</span><span class='duration'>0.04800s</span></dd>
-  </dl>
-</div>
-<div id="div_group_55" class="example_group passed">
-  <dl style="margin-left: 75px;">
-  <dt id="example_group_55" class="passed">Should render show-page</dt>
-    <script type="text/javascript">moveProgressBar('88.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not have content &quot;error&quot;</span><span class='duration'>0.04500s</span></dd>
-    <script type="text/javascript">moveProgressBar('89.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Brewry&quot;</span><span class='duration'>0.02700s</span></dd>
-  </dl>
-</div>
-<div id="div_group_56" class="example_group passed">
-  <dl style="margin-left: 60px;">
-  <dt id="example_group_56" class="passed">With changes</dt>
-    <script type="text/javascript">moveProgressBar('91.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not change the amont of breweries</span><span class='duration'>0.01900s</span></dd>
-  </dl>
-</div>
-<div id="div_group_57" class="example_group passed">
-  <dl style="margin-left: 75px;">
-  <dt id="example_group_57" class="passed">Should not render errors</dt>
-    <script type="text/javascript">moveProgressBar('92.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not have content &quot;error&quot;</span><span class='duration'>0.04800s</span></dd>
-  </dl>
-</div>
-<div id="div_group_58" class="example_group passed">
-  <dl style="margin-left: 75px;">
-  <dt id="example_group_58" class="passed">Should render show-page</dt>
-    <script type="text/javascript">moveProgressBar('93.5');</script>
-    <dd class="example passed"><span class="passed_spec_name">should not have content &quot;error&quot;</span><span class='duration'>0.04800s</span></dd>
-    <script type="text/javascript">moveProgressBar('94.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;NewName&quot;</span><span class='duration'>0.04600s</span></dd>
-    <script type="text/javascript">moveProgressBar('96.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have content &quot;NewNat&quot;</span><span class='duration'>0.04900s</span></dd>
-  </dl>
-</div>
-<div id="div_group_59" class="example_group passed">
-  <dl style="margin-left: 15px;">
-  <dt id="example_group_59" class="passed">Delete Brewery</dt>
-    <script type="text/javascript">moveProgressBar('97.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">should have link &quot;Ta bort&quot;, {:href=&gt;&quot;/breweries/1&quot;}</span><span class='duration'>0.00500s</span></dd>
-    <script type="text/javascript">moveProgressBar('98.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">Should delete a brewery</span><span class='duration'>0.01000s</span></dd>
-  </dl>
-</div>
-<div id="div_group_60" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_60" class="passed">BreweryContact</dt>
-    <script type="text/javascript">makeYellow('div_group_60');</script>
-    <script type="text/javascript">makeYellow('example_group_60');</script>
+  <dt id="example_group_10" class="passed">When password is too short</dt>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example not_implemented"><span class="not_implemented_spec_name">add some examples to (or delete) C:/Sites/god_ol/spec/models/brewery_contact_spec.rb (PENDING: No reason given)</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.61709 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "78 examples, 1 failure, 1 pending";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.15301 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "15 examples, 0 failures";</script>
 </div>
 </div>
 </body>
 </html>
 
-Randomized with seed 33975
+Randomized with seed 61065
 
