@@ -1,34 +1,35 @@
 <div id="logo">
-	<p>God Öl - 2</p>
+	<img src="/images/logo.png" alt="God Öl logo" />
 </div>
-
-<div id="login">
-	<form>
-		<div class="">
-			<label for="login-email">E-mail</label><br />
-			<input id="login-email" type="text" />
-		</div>
-		<div>
-			<label for="login-password">Password</label><br />
-			<input id="login-password" type="password" />
-		</div>
-	</form>
-	<div class="clear"></div>
-	<div id="signup">
-		<%= link_to "Registrera", signup_path %><br />
-		<%= link_to "Glömt lösenord?", signup_path %>
-	</div>
-	<div>
-		<input type="submit" id="login-btn" value="Logga in" />
-	</div>
-</div>
-
+<% if signed_in? %>
 <div id="adminnav">
 	<ul>
-		<li><%= link_to "Öl", beers_path %></li>
-		<li><%= link_to "Bryggerier", breweries_path %></li>
-		<li><a href="#">Log out</a></li>
+		<% #if current_user.admin? && !current_user?(user) %>
+		<li>
+			<%= link_to "Öl", beers_path %>
+			<ul>
+				<li><%= link_to "Lägg till öl", new_beer_path %></li>
+				<li><%= link_to "Öl-typer", beer_types_path %></li>
+			</ul>
+		</li>
+		<li>
+			<%= link_to "Bryggerier", breweries_path %>
+			<ul>
+				<li><%= link_to "Lägg till Bryggeri", new_brewery_path %></li>
+				<li><%= link_to "Kontakttyper", contact_types_path %></li>
+			</ul>
+		</li>
+		<li>
+			<%= link_to "Användare", users_path %>
+		</li>
+		<% #end %>
+		<li><%= link_to "Logga ut", signout_path, method: "delete" %></li>
 	</ul>
 </div>
+<% else %>
+<div id="login">
+	<%= render 'layouts/signin' %>
+</div>
+<% end %>
 
 <div class="clear"></div>

@@ -3,29 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #beer-list{
-	float:left;
-	width:940px;
-	margin:10px 0;
-	//border-top:1px solid #00f;
-	//border-right:1px solid #ff0;
 	
-	.list-row{
-		float:left;
-		width:940px;
-		background-color:#e6e6e6;
-		//border-bottom:1px solid #0f0;
-		
-		.list-col{
+	.row{
+		.col{
 			float:left;
-			margin-right:10px;
-			padding:2px 0 2px 5px;
-			width: 220px;
-			//border-left:1px solid #f00;
 		}
-	}
-	
-	.list-row:nth-child(even){
-		background-color:#eeeeee;
+		.beer{
+			width:250px;
+		}
+		.beer-type{
+			width:200px;
+		}
+		.brewery{
+			width:250px;
+		}
+		.delete{
+			width:100px;
+		}
 	}
 }
 
@@ -39,12 +33,6 @@
 		margin:5px 0;
 		clear:both;
 		
-		input[type="submit"]{
-			float:right;
-			font-weight:bold;
-			margin-right:32px;
-			padding:8px 25px;
-		}
 	}
 
 	.form-label{
@@ -61,22 +49,11 @@
 	}
 
 	.form-input{
-		display:block;
-		float:left;
-		width:200px;
-
-		input,
-		select{
-			padding:3px;
-			background-color:#fff;
-			border:1px solid #ddd;
-		}
-		
 		input{
 			width:190px;
 		}
 		select{
-			width:198px;
+			width:200px;
 		}
 	}
 }

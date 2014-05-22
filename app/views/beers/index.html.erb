@@ -1,27 +1,25 @@
 <% provide(:title, 'Öl') %>
 <dic class="c12">
 	<h1><%= yield(:title) %></h1>
-	<div>
-		<%= link_to "Öl-typer", beer_types_path %>
-	</div>
 	
 	<div class="">
+		<h2>Snabbformulär</h2>
 		<%= render 'form' %>
 	</div>
 	
-	<div id="beer-list">
-		<div class="list-row">
-			<div class="list-col">Öl</div>
-			<div class="list-col">Typ</div>
-			<div class="list-col">Bryggeri</div>
-			<div class="list-col">Ta bort</div>
+	<div id="beer-list" class="small-list gray">
+		<div class="row header">
+			<div class="col beer">Öl</div>
+			<div class="col beer-type">Typ</div>
+			<div class="col brewery">Bryggeri</div>
+			<div class="col delete">Ta bort</div>
 		</div>
 	<% @beers.each do |beer| %>
-		<div class="list-row">
-			<div class="list-col"><%= link_to beer.name, edit_beer_path(beer) %></div>
-			<div class="list-col"><%= beer.beer_type.name %></div>
-			<div class="list-col"><%= link_to beer.brewery.name, edit_brewery_path(beer.brewery) %></div>
-			<div class="list-col"><%= link_to "Ta bort", beer_path(beer) , method: :delete %></div>
+		<div class="row">
+			<div class="col beer"><%= link_to beer.name, edit_beer_path(beer) %></div>
+			<div class="col beer-type"><%= beer.beer_type.name %></div>
+			<div class="col brewery"><%= link_to beer.brewery.name, edit_brewery_path(beer.brewery) %></div>
+			<div class="col delete"><%= link_to "Ta bort", beer_path(beer) , method: :delete %></div>
 		</div>
 	<% end %>
 	</div>

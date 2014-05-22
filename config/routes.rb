@@ -4,10 +4,15 @@ Rails.application.routes.draw do
   end
   
   resources :beers, except: :show
-  resources :beer_types, except: [ :show, :edit, :index ]
-  resources :contact_types, except: [ :show, :edit, :index ]
+  resources :beer_types, except: [ :show, :edit, :new ]
+  resources :contact_types, except: [ :show, :edit, :new ]
   
-  resources :users, except: [ :show, :index ]
+  resources :users, except: [ :show ]
+  get 'users/:id/toggle_admin' => 'users#toggle_admin', as: :toggle_admin
+  
+  resources :sessions, only: [ :new, :create, :destroy]
+  match 'signin', to: 'sessions#new', via: 'get'
+  match 'signout', to: 'sessions#destroy', via: 'delete'
 
   root 'static_pages#start'
 
@@ -16,22 +21,6 @@ Rails.application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/beer_list', to: 'static_pages#beer_list', via: 'get'
   match '/brewery_list', to: 'static_pages#brewery_list', via: 'get'
-  
-  #get 'beer_types', to: 'beer_types#index'
-  #get 'beer_type', to: 'beer_types#index'
-  #get 'beer_type/new', to: 'beer_types#new'
-  #post 'beer_type', to: 'beer_types#create'
-  #get 'beer_type/:id/edit', to: 'beer_types#edit', as: 'beer_type_edit'
-  #patch 'beer_type', to: 'beer_types#update'
-  #delete 'beer_type', to: 'beer_types#destroy'
-
-  #get 'contact_types', to: 'contact_types#index'
-  #get 'contact_type', to:  'contact_types#index'
-  #get 'contact_types/new', to: 'contact_types#new'
-  #post 'contact_types', to: 'contact_types#create'
-  #get 'contact_types/:id/edit', to: 'contact_types#edit', as: 'contact_type_edit'
-  #patch 'contact_types', to: 'contact_types#update'
-  #delete 'contact_types', to: 'contact_types#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
