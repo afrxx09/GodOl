@@ -24,18 +24,6 @@
 </div>
 
 <div>
-	<h2>Nya Öl</h2>
-	<div class="small-list orange">
-		<div class="row"><div class="col"><a href="#">K:rlek vår/sommar 2014</a></div></div>
-		<div class="row"><div class="col"><a href="#">Nebuchadnezzar</a></div></div>
-		<div class="row"><div class="col"><a href="#">Electric nurse</a></div></div>
-		<div class="row"><div class="col"><a href="#">5 A.M. Saint</a></div></div>
-		<div class="row"><div class="col"><a href="#">Centennial</a></div></div>
-	</div>
-	<div class="clear"></div>
-</div>
-
-<div>
 	<h2>Populära Öl: maj</h2>
 	<div class="small-list orange">
 		<div class="row"><div class="col"><a href="#">Sleepy Bulldog</a></div></div>
@@ -43,6 +31,16 @@
 		<div class="row"><div class="col"><a href="#">S:t Eriks IPA</a></div></div>
 		<div class="row"><div class="col"><a href="#">Pabts Blue Ribbon</a></div></div>
 		<div class="row"><div class="col"><a href="#">5 A.M. Saint</a></div></div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div>
+	<h2>Nya Öl</h2>
+	<div class="small-list orange">
+		<% @new_beers.each do |nb| %>
+		<div class="row"><div class="col"><%= link_to nb.name, beer_path(nb) %></a></div></div>
+		<% end %>
 	</div>
 	<div class="clear"></div>
 </div>

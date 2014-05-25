@@ -4,6 +4,10 @@ class BeersController < ApplicationController
 		@beer = Beer.new
 	end
 	
+	def show
+		@beer = Beer.find(params[:id])
+	end
+	
 	def new
 		@beer = Beer.new
 	end
@@ -41,6 +45,6 @@ class BeersController < ApplicationController
 	
 	private
 		def beer_params
-			params.require(:beer).permit(:brewery_id, :beer_type_id, :name, :abv, :ibu, :ebc)
+			params.require(:beer).permit(:brewery_id, :beer_type_id, :name, :abv, :ibu, :ebc, :systembolaget, :img)
 		end
 end

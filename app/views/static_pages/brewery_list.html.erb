@@ -1,3 +1,50 @@
 <% provide(:title, 'Bryggeri-lista') %>
-<h1><%= yield(:title) %></h1>
-<p>lorem ispum</p>
+<div class="c12">
+	<h1><%= yield(:title) %></h1>
+
+	<div id="brewery-search" class="c6">
+		<%= form_tag(brewery_list_path, :method => :get) do |f| %>
+			<p>Sökning görs på: Namn, Land, Stad och Stat</p>
+			<%= text_field_tag :search, params[:search], :autofocus => true %>
+			<%= submit_tag "Sök" %>
+		<% end %>
+	</div>
+
+	<div id="brewery-filter" class="c6">
+		<%= form_tag(brewery_list_path, :method => :get) do |f| %>
+			<p>Filtrera på land</p>
+			<% countries = Brewery.select(:nationality).distinct.map {|country| [country.nationality, country.nationality] } %>
+			<%= select_tag :filter, options_for_select(countries), :include_blank => true %>
+			<%= submit_tag "Filtrera" %>
+		<% end %>
+	</div>
+
+	<div class="clear"></div>
+
+	<div id="brewery-db" class="big-list gray">
+		
+		<div class="row header">
+			<div class="col image"></div>
+			<div class="col brewery">Bryggeri <span>a</span> / <span>d</span></div>
+			<div class="col nationality">Land</div>
+			<div class="col city">Stad</div>
+			<div class="col beer-count">Antal öl</div>
+		</div>
+		
+		<% @breweries.each do |brewery| %>
+		<div class="row">
+			<div class="col image"><%= image_tag brewery.img.url %></div>
+			<div class="col brewery"><%= link_to brewery.name, brewery_path(brewery) %></div>
+			<div class="col nationality"><%= brewery.nationality %></div>
+			<div class="col city">
+				<%= brewery.city %>
+				<% if brewery.state? %>
+				, <%= brewery.state %>
+				<% end %>
+			</div>
+			<div class="col beer-count"><%= brewery.beers.count %></div>
+		</div>
+		<% end %>
+
+	</div>
+</div>

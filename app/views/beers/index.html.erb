@@ -3,8 +3,10 @@
 	<h1><%= yield(:title) %></h1>
 	
 	<div class="">
-		<h2>Snabbformulär</h2>
-		<%= render 'form' %>
+		<p><a href="#" class="toggle-button" data-toggle-container="#quick-beer-form">visa / dölj Snabbformulär</a></p>
+		<div id="quick-beer-form">
+			<%= render 'form' %>
+		</div>
 	</div>
 	
 	<div id="beer-list" class="small-list gray">

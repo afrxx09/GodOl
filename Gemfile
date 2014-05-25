@@ -17,6 +17,7 @@ group :test do
   gem 'factory_girl_rails', '4.2.1'
 end
 
+gem "paperclip", "~> 4.1"
 
 gem 'bcrypt-ruby', '3.1.2'
 

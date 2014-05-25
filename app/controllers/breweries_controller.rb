@@ -3,6 +3,10 @@ class BreweriesController < ApplicationController
 		@breweries = Brewery.all
 	end
 	
+	def show
+		@brewery = Brewery.find(params[:id])
+	end
+	
 	def new
 		@brewery = Brewery.new
 	end
@@ -40,6 +44,6 @@ class BreweriesController < ApplicationController
 	
 	private
 		def brewery_params
-			params.require(:brewery).permit(:name, :address, :address2, :city, :state, :zip, :nationality, :description)
+			params.require(:brewery).permit(:name, :address, :address2, :city, :state, :zip, :nationality, :description, :img)
 		end
 end

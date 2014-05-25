@@ -14,3 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var Toggle = {
+	
+	init : function(){
+		$('.toggle-button').on('click', function(e){
+			e.preventDefault();
+			var toggle_container = $(this).data('toggle-container');
+			$(toggle_container).toggle();
+		});
+	}
+};
+
+$(document).ready(function(){
+	Toggle.init();
+});

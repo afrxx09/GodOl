@@ -1,3 +1,115 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#beer-db{
+	.row{
+		
+		.col{
+			float:left;
+			
+			img{
+				margin:0;
+				height:50px;
+			}
+		}
+		.image{
+			text-align:center;
+			width:75px;
+			margin:0;
+		}
+		.beer{
+			width:200px;
+		}
+		.stats{
+			width:175px;
+			font-size:12px;
+		}
+		.brewery{
+			width:200px;
+		}
+		.systembolaget{
+			width:125px;
+			float:right;
+		}
+	}
+	.row.header{
+		background-color:transparent;
+		
+		.col{
+			margin:0;
+			font-weight:bold;
+			font-size:1em;
+		}
+	}
+}
+
+#brewery-search,
+#beer-search{
+	margin:20px 0;
+	
+	input[type="text"]{
+		width:300px;
+	}
+}
+
+#brewery-filter,
+#beer-filter{
+	margin:20px 0;
+	
+	select{
+		width:300px;
+	}
+}
+
+#brewery-db{
+	.row{
+		.col{
+			float:left;
+			margin-top:6px;
+			
+			img{
+				margin:0;
+				height:30px;
+			}
+		}
+		
+		.image{
+			text-align:center;
+			width:75px;
+			margin:0;
+		}
+		.brewery{
+			width:250px;
+			padding:0;
+			margin:0;
+			a{
+				margin:0;
+				display:block;
+				padding: 10px 0;
+			}
+		}
+		.nationality{
+			width:200px;
+		}
+		.city{
+			width:250px;
+		}
+		.beer-count{
+			float:right;
+			width:75px;
+			text-align:center;
+		}
+	}
+	.row.header{
+		background-color:transparent;
+		
+		.col{
+			margin:0;
+			font-weight:bold;
+		}
+		.col.brewery{
+			margin-top:6px;
+		}
+	}
+}

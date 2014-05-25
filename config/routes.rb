@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :brewery_contacts
   end
   
-  resources :beers, except: :show
+  resources :beers
   resources :beer_types, except: [ :show, :edit, :new ]
   resources :contact_types, except: [ :show, :edit, :new ]
   

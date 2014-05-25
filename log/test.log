@@ -39972,3 +39972,68 @@ Migrating to AddRememberTokenToUsers (20140522195727)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSystembolagetArtNrToBeers (20140524195438)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "beers" ADD "systembolaget" integer[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140524195438"]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageToBeers (20140524220223)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "beers" ADD "image_file_name" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "beers" ADD "image_content_type" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "beers" ADD "image_file_size" integer[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "beers" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140524220223"]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Migrating to AddImgToBeers (20140524224015)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "beers" ADD "img_file_name" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "beers" ADD "img_content_type" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "beers" ADD "img_file_size" integer
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "beers" ADD "img_updated_at" datetime[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140524224015"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddImgToBreweries (20140525142300)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "breweries" ADD "img_file_name" varchar(255)[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "breweries" ADD "img_content_type" varchar(255)
+  [1m[36m (0.0ms)[0m  [1mALTER TABLE "breweries" ADD "img_file_size" integer[0m
+  [1m[35m (0.0ms)[0m  ALTER TABLE "breweries" ADD "img_updated_at" datetime
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140525142300"]]
+  [1m[35m (6.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_remember_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_remember_token' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m

@@ -154,6 +154,24 @@ div.c12 div.c3{
 	.small-list.orange .row:nth-child(odd){background-color:#FFC866;}
 	.small-list.orange .row:nth-child(even){background-color:#FFD786;}
 	.small-list.orange .row:hover{background-color:#FFE2A4;}
+	
+.big-list{
+	
+}
+	.big-list .row{
+		width:100%;
+		float:left;
+	}
+	
+	.big-list .row .col{
+		padding:5px 10px;
+	}
+	
+	.big-list.gray .row.header{background-color:#ccc;}
+	.big-list.gray .row:nth-child(odd){background-color:#eee;}
+	.big-list.gray .row:nth-child(even){background-color:#e6e6e6;}
+	.big-list.gray .row:hover{background-color:#f6f6f6;}
+	
 .clear{
 	clear:both;
 }

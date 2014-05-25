@@ -1,3 +1,61 @@
 <% provide(:title, 'Öl-lista') %>
-<h1><%= yield(:title) %></h1>
-<p>lorem ispum</p>
+<div class="c12">
+	<h1><%= yield(:title) %></h1>
+
+	<div id="beer-search" class="c6">
+		<%= form_tag(beer_list_path, :method => :get) do |f| %>
+			<p>Söker på öl-namn, bryggerinamn och artikelnummer på systembolaget</p>
+			<%= text_field_tag :search, params[:search], :autofocus => true %>
+			<%= submit_tag "Sök" %>
+		<% end %>
+	</div>
+	<div id="beer-filter" class="c6">
+		<%= form_tag(beer_list_path, :method => :get) do |f| %>
+			<p>Filtrera på land</p>
+			<% countries = Brewery.select(:nationality).distinct.map {|country| [country.nationality, country.nationality] } %>
+			<%= select_tag :filter, options_for_select(countries), :include_blank => true %>
+			<%= submit_tag "Filtrera" %>
+		<% end %>
+	</div>
+
+	<div id="beer-db" class="big-list gray">
+	
+		<div class="row header">
+			<div class="col image"></div>
+			<div class="col beer">Öl <span>a</span> / <span>d</span></div>
+			<div class="col stats">Info</div>
+			<div class="col brewery">Bryggeri</div>
+			<div class="col systembolaget">Systembolaget</div>
+		</div>
+		
+		<% @beers.each do |beer| %>
+		<div class="row">
+			<div class="col image"><%= image_tag beer.img.url %></div>
+			<div class="col beer">
+				<%= link_to beer.name, beer_path(beer) %><br />
+				<%= beer.beer_type.name %>
+			</div>
+			<div class="col stats">
+				Alkoholhalt: <%= beer.abv %> %<br />
+				Bitterhet: <%= beer.ibu %> IBU<br />
+				Färg: <%= beer.ebc %> EBC
+			</div>
+			<div class="col brewery">
+				<%= link_to beer.brewery.name, brewery_path(beer.brewery) %><br />
+				<%= beer.brewery.city %> <%= beer.brewery.nationality %>
+			</div>
+			<div class="col systembolaget">
+				<% if beer.systembolaget?
+					url = 'http://www.systembolaget.se/Sok-dryck/Dryck/?varuNr=' + beer.systembolaget.to_s
+					link = beer.systembolaget.to_s
+				%>
+				Artikel nr: <%= link_to link, url, :target => "_blank" %>
+				<% else %>
+					saknas
+				<% end %>
+				
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>

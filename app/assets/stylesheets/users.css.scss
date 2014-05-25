@@ -1,3 +1,27 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#user-list{
+	
+	.row{
+		.col{
+			float:left;
+		}
+		.id{
+			width:50px;
+		}
+		.level{
+			width:100px;
+		}
+		.name{
+			width:250px;
+		}
+		.email{
+			width:100px;
+		}
+		.delete{
+			width:100px;
+		}
+	}
+}
