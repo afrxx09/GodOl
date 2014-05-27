@@ -1,0 +1,19 @@
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+<div>
+	<%= f.label :email, 'E-post' %>
+	<%= f.text_field :email %>
+</div>
+<div>
+	<%= f.label :password, 'Lösenord' %>
+	<%= f.password_field :password %>
+</div>
+<div class="clear"></div>
+<div id="signup">
+	<%= link_to "Registrera dig", signup_path %><br />
+	<%= link_to "Glömt lösenord?", signup_path %>
+</div>
+<div>
+	<%= f.submit 'Logga in', id: "login-btn" %>
+</div>
+<% end %>

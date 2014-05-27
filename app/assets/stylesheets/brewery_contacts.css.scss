@@ -1,3 +1,60 @@
 // Place all the styles related to the BreweryContacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#brewery-contact-type-list{
+	
+	.row{
+		width:100%;
+		
+		.col{
+			float:left;
+		}
+		
+		.type{
+			width:50px;
+		}
+		
+		.contact{
+			width:135px;
+		}
+		
+		.delete{
+			float:right;
+			width:60px;
+		}
+	}
+	
+	.row.header{
+		background-color:transparent;
+		
+		.col{
+			font-weight:bold;
+		}
+	}
+}
+
+#brewery-contact-form{
+	margin-top:10px;
+	
+	.form-row{
+		width:100%;
+		margin:5px 0;
+		
+		label{
+			display:block;
+			font-weight:bold;
+		}
+		input[type="text"]{
+			display:block;
+			width:200px;
+		}
+		select
+		{
+			display:block;
+			width:210px;
+		}
+		
+	}
+}

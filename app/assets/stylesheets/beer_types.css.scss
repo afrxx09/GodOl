@@ -7,36 +7,34 @@
 	width:620px;
 	margin:10px 0;
 	
-	.list-row{
-		float:left;
-		width:620px;
-		background-color:#e6e6e6;
+	.row{
 		
-		.list-col{
+		.col{
 			float:left;
 			margin-right:10px;
 			padding:2px 0 2px 5px;
 		}
 		
 		.id{
+			float:left;
 			width:50px;
 		}
 		.name{
+			float:left;
 			width:350px;
 		}
 		.count{
+			float:left;
 			width:75px;
 		}
 		.delete{
+			float:right;
 			width:75px;
 		}
 	}
-	.list-row.header{
+	.row.header{
 		font-weight:bold;
-		background-color:#ddd;
-	}
-	.list-row:nth-child(even){
-		background-color:#eeeeee;
+		background-color:transparent;
 	}
 }
 
@@ -50,27 +48,20 @@
 		
 		.form-label{
 			display:block;
-			float:left;
-			width:75px;
 			font-weight:bold;
-			text-align:right;
-			margin-right:10px;
+			
+			label{
+				display:block;
+			}
 		}
 		
 		.form-input{
-			float:left;
-			width:150px;
 			
-			input[type="text"]{
-				width:150px;
-				padding:3px;
+			input{
+				width:250px;
 			}
 			
 		}
 		
-		input[type="submit"]{
-			margin-left:85px;
-			padding:5px 15px;
-		}
 	}
 }

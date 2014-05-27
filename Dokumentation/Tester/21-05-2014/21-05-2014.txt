@@ -1,0 +1,7 @@
+Efter att ha arbetat igenom layout och presentation en hel del så har testerna uppdaterats så att testerna letar efter "rätt" saker. Innan kunde en knapp heta "delete" och nu heter de "Ta bort" osv.
+
+Även tagit bort tester för de views som rensats bort.
+
+Utökat testerna för user-modellen.
+
+gjort grunläggande tester för user-views

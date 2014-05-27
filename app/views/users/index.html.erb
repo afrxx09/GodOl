@@ -1,0 +1,29 @@
+<% provide(:title, 'Användare') %>
+<dic class="c12">
+	<h1><%= yield(:title) %></h1>
+	
+	<div id="user-list" class="small-list gray">
+		<div class="row header">
+			<div class="col id">Id</div>
+			<div class="col level">Level</div>
+			<div class="col name">Namn</div>
+			<div class="col email">E.post</div>
+			<div class="col delete">Ta bort</div>
+		</div>
+	<% @users.each do |user| %>
+		<div class="row">
+			<div class="col id"><%= user.id %></div>
+			<div class="col level">
+				<% if user.admin %>
+					<%= link_to 'Admin', toggle_admin_path(user) %>
+				<% else %>
+					<%= link_to 'Användare', toggle_admin_path(user) %>
+				<% end %>
+			</div>
+			<div class="col name"><%= link_to user.name, edit_user_path(user) %></div>
+			<div class="col email"><%= user.email %></div>
+			<div class="col delete"><%= link_to "Ta bort", user_path(user) , method: :delete %></div>
+		</div>
+	<% end %>
+	</div>
+</div>

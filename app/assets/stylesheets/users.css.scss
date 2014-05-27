@@ -18,10 +18,44 @@
 			width:250px;
 		}
 		.email{
-			width:100px;
+			width:200px;
 		}
 		.delete{
+			float:right;
 			width:100px;
+		}
+	}
+}
+
+#edit-user-form{
+	margin:10px 0;
+
+	.form-row{
+		float:left;
+		width:100%;
+		margin:5px 0;
+		clear:both;
+	}
+
+	.form-label{
+		display:block;
+		float:left;
+		width:75px;
+		margin-right:10px;
+		text-align:right;
+		font-weight:bold;
+
+		.req{
+			color:#e33;
+		}
+	}
+
+	.form-input{
+		input{
+			width:190px;
+		}
+		select{
+			width:200px;
 		}
 	}
 }

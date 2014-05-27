@@ -51,6 +51,10 @@
 	input[type="text"]{
 		width:300px;
 	}
+	
+	input[type="submit"]{
+		float:none;
+	}
 }
 
 #brewery-filter,
@@ -59,6 +63,9 @@
 	
 	select{
 		width:300px;
+	}
+	input[type="submit"]{
+		float:none;
 	}
 }
 

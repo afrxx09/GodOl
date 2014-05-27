@@ -81,11 +81,15 @@ img.brewery-nat{
 		display:block;
 		float:left;
 		width:150px;
-		margin-right:15px;
-		text-align:right;
+		margin-right:10px;
 		font-weight:bold;
-
+		
+		label{
+			float:right;
+		}
+		
 		.req{
+			float:right;
 			color:#e33;
 		}
 	}
@@ -93,18 +97,17 @@ img.brewery-nat{
 	.form-input{
 		display:block;
 		float:left;
-		width:200px;
-
-		input,
-		textarea,
-		select{
-			padding:3px;
-			background-color:#fff;
-			border:1px solid #ddd;
+		
+		input{
+			width:200px;
 		}
-
+		
+		select{
+			width:210px;
+		}
+		
 		textarea{
-			width:300px;
+			width:400px;
 			height:150px;
 		}
 	}

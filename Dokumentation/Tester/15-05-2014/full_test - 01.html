@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>RSpec results</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <style type="text/css">
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 80%;
+  }
+  </style>
+  <script type="text/javascript">
+    // <![CDATA[
+
+function addClass(element_id, classname) {
+  document.getElementById(element_id).className += (" " + classname);
+}
+
+function removeClass(element_id, classname) {
+  var elem = document.getElementById(element_id);
+  var classlist = elem.className.replace(classname,'');
+  elem.className = classlist;
+}
+
+function moveProgressBar(percentDone) {
+  document.getElementById("rspec-header").style.width = percentDone +"%";
+}
+
+function makeRed(element_id) {
+  removeClass(element_id, 'passed');
+  removeClass(element_id, 'not_implemented');
+  addClass(element_id,'failed');
+}
+
+function makeYellow(element_id) {
+  var elem = document.getElementById(element_id);
+  if (elem.className.indexOf("failed") == -1) {  // class doesn't includes failed
+    if (elem.className.indexOf("not_implemented") == -1) { // class doesn't include not_implemented
+      removeClass(element_id, 'passed');
+      addClass(element_id,'not_implemented');
+    }
+  }
+}
+
+function apply_filters() {
+  var passed_filter = document.getElementById('passed_checkbox').checked;
+  var failed_filter = document.getElementById('failed_checkbox').checked;
+  var pending_filter = document.getElementById('pending_checkbox').checked;
+
+  assign_display_style("example passed", passed_filter);
+  assign_display_style("example failed", failed_filter);
+  assign_display_style("example not_implemented", pending_filter);
+
+  assign_display_style_for_group("example_group passed", passed_filter);
+  assign_display_style_for_group("example_group not_implemented", pending_filter, pending_filter || passed_filter);
+  assign_display_style_for_group("example_group failed", failed_filter, failed_filter || pending_filter || passed_filter);
+}
+
+function get_display_style(display_flag) {
+  var style_mode = 'none';
+  if (display_flag == true) {
+    style_mode = 'block';
+  }
+  return style_mode;
+}
+
+function assign_display_style(classname, display_flag) {
+  var style_mode = get_display_style(display_flag);
+  var elems = document.getElementsByClassName(classname)
+  for (var i=0; i<elems.length;i++) {
+    elems[i].style.display = style_mode;
+  }
+}
+
+function assign_display_style_for_group(classname, display_flag, subgroup_flag) {
+  var display_style_mode = get_display_style(display_flag);
+  var subgroup_style_mode = get_display_style(subgroup_flag);
+  var elems = document.getElementsByClassName(classname)
+  for (var i=0; i<elems.length;i++) {
+    var style_mode = display_style_mode;
+    if ((display_flag != subgroup_flag) && (elems[i].getElementsByTagName('dt')[0].innerHTML.indexOf(", ") != -1)) {
+      elems[i].style.display = subgroup_style_mode;
+    } else {
+      elems[i].style.display = display_style_mode;
+    }
+  }
+}
+
+    // ]]>
+  </script>
+  <style type="text/css">
+#rspec-header {
+  background: #65C400; color: #fff; height: 4em;
+}
+
+.rspec-report h1 {
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  font-size: 1.8em;
+  position: absolute;
+}
+
+#label {
+  float:left;
+}
+
+#display-filters {
+  float:left;
+  padding: 28px 0 0 40%;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+}
+
+#summary {
+  float:right;
+  padding: 5px 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  text-align: right;
+}
+
+#summary p {
+  margin: 0 0 0 2px;
+}
+
+#summary #totals {
+  font-size: 1.2em;
+}
+
+.example_group {
+  margin: 0 10px 5px;
+  background: #fff;
+}
+
+dl {
+  margin: 0; padding: 0 0 5px;
+  font: normal 11px "Lucida Grande", Helvetica, sans-serif;
+}
+
+dt {
+  padding: 3px;
+  background: #65C400;
+  color: #fff;
+  font-weight: bold;
+}
+
+dd {
+  margin: 5px 0 5px 5px;
+  padding: 3px 3px 3px 18px;
+}
+
+dd .duration {
+  padding-left: 5px;
+  text-align: right;
+  right: 0px;
+  float:right;
+}
+
+dd.example.passed {
+  border-left: 5px solid #65C400;
+  border-bottom: 1px solid #65C400;
+  background: #DBFFB4; color: #3D7700;
+}
+
+dd.example.not_implemented {
+  border-left: 5px solid #FAF834;
+  border-bottom: 1px solid #FAF834;
+  background: #FCFB98; color: #131313;
+}
+
+dd.example.pending_fixed {
+  border-left: 5px solid #0000C2;
+  border-bottom: 1px solid #0000C2;
+  color: #0000C2; background: #D3FBFF;
+}
+
+dd.example.failed {
+  border-left: 5px solid #C20000;
+  border-bottom: 1px solid #C20000;
+  color: #C20000; background: #FFFBD3;
+}
+
+
+dt.not_implemented {
+  color: #000000; background: #FAF834;
+}
+
+dt.pending_fixed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+dt.failed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+
+#rspec-header.not_implemented {
+  color: #000000; background: #FAF834;
+}
+
+#rspec-header.pending_fixed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+#rspec-header.failed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+
+.backtrace {
+  color: #000;
+  font-size: 12px;
+}
+
+a {
+  color: #BE5C00;
+}
+
+/* Ruby code, style similar to vibrant ink */
+.ruby {
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  background-color: black;
+  padding: 0.1em 0 0.2em 0;
+}
+
+.ruby .keyword { color: #FF6600; }
+.ruby .constant { color: #339999; }
+.ruby .attribute { color: white; }
+.ruby .global { color: white; }
+.ruby .module { color: white; }
+.ruby .class { color: white; }
+.ruby .string { color: #66FF00; }
+.ruby .ident { color: white; }
+.ruby .method { color: #FFCC00; }
+.ruby .number { color: white; }
+.ruby .char { color: white; }
+.ruby .comment { color: #9933CC; }
+.ruby .symbol { color: white; }
+.ruby .regex { color: #44B4CC; }
+.ruby .punct { color: white; }
+.ruby .escape { color: white; }
+.ruby .interp { color: white; }
+.ruby .expr { color: white; }
+
+.ruby .offending { background-color: gray; }
+.ruby .linenum {
+  width: 75px;
+  padding: 0.1em 1em 0.2em 0;
+  color: #000000;
+  background-color: #FFFBD3;
+}
+
+  </style>
+</head>
+<body>
+<div class="rspec-report">
+
+<div id="rspec-header">
+  <div id="label">
+    <h1>RSpec Code Examples</h1>
+  </div>
+
+  <div id="display-filters">
+    <input id="passed_checkbox" name="passed_checkbox" type="checkbox" checked onchange="apply_filters()" value="1"> <label for="passed_checkbox">Passed</label>
+    <input id="failed_checkbox" name="failed_checkbox" type="checkbox" checked onchange="apply_filters()" value="2"> <label for="failed_checkbox">Failed</label>
+    <input id="pending_checkbox" name="pending_checkbox" type="checkbox" checked onchange="apply_filters()" value="3"> <label for="pending_checkbox">Pending</label>
+  </div>
+
+  <div id="summary">
+    <p id="totals">&nbsp;</p>
+    <p id="duration">&nbsp;</p>
+  </div>
+</div>
+
+
+<div class="results">
+<div id="div_group_1" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_1" class="passed">StaticPages</dt>
+  </dl>
+</div>
+<div id="div_group_2" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_2" class="passed">Kontakt-sidan</dt>
+    <script type="text/javascript">moveProgressBar('1.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Kontakt&quot;</span><span class='duration'>0.12901s</span></dd>
+    <script type="text/javascript">moveProgressBar('2.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Kontakt&quot;</span><span class='duration'>0.00400s</span></dd>
+  </dl>
+</div>
+<div id="div_group_3" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_3" class="passed">Startpage</dt>
+    <script type="text/javascript">moveProgressBar('3.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Start&quot;</span><span class='duration'>0.01900s</span></dd>
+    <script type="text/javascript">moveProgressBar('5.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Start&quot;</span><span class='duration'>0.00400s</span></dd>
+  </dl>
+</div>
+<div id="div_group_4" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_4" class="passed">Bryggeri-listan</dt>
+    <script type="text/javascript">moveProgressBar('6.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Bryggeri-lista&quot;</span><span class='duration'>0.02900s</span></dd>
+    <script type="text/javascript">moveProgressBar('7.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Bryggeri-lista&quot;</span><span class='duration'>0.00400s</span></dd>
+  </dl>
+</div>
+<div id="div_group_5" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_5" class="passed">Öl-listan</dt>
+    <script type="text/javascript">moveProgressBar('9.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Öl-lista&quot;</span><span class='duration'>0.01100s</span></dd>
+    <script type="text/javascript">moveProgressBar('10.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;God Öl | Öl-lista&quot;</span><span class='duration'>0.00400s</span></dd>
+  </dl>
+</div>
+<div id="div_group_6" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_6" class="passed">BreweryContact</dt>
+    <script type="text/javascript">makeYellow('rspec-header');</script>
+    <script type="text/javascript">makeYellow('div_group_6');</script>
+    <script type="text/javascript">makeYellow('example_group_6');</script>
+    <script type="text/javascript">moveProgressBar('11.6');</script>
+    <dd class="example not_implemented"><span class="not_implemented_spec_name">add some examples to (or delete) C:/Sites/god_ol/spec/models/brewery_contact_spec.rb (PENDING: No reason given)</span></dd>
+  </dl>
+</div>
+<div id="div_group_7" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_7" class="passed">Beer pages</dt>
+  </dl>
+</div>
+<div id="div_group_8" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_8" class="passed">Show</dt>
+  </dl>
+</div>
+<div id="div_group_9" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_9" class="passed">Page</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_9');</script>
+    <script type="text/javascript">makeRed('example_group_9');</script>
+    <script type="text/javascript">moveProgressBar('12.9');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/beer_pages_spec.rb:31</span>
+      <span class="duration">0.00800s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>Missing template beers/show, application/show with {:locale=&gt;[:en], :formats=&gt;[:html], :variants=&gt;[], :handlers=&gt;[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * &quot;C:/Sites/god_ol/app/views&quot;
+</pre></div>
+        <div class="backtrace"><pre>C:in `find_template'
+./spec/requests/beer_pages_spec.rb:27:in `block (3 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for C:in `find_template'
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('14.2');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/beer_pages_spec.rb:30</span>
+      <span class="duration">0.00400s</span>
+      <div class="failure" id="failure_2">
+        <div class="message"><pre>Missing template beers/show, application/show with {:locale=&gt;[:en], :formats=&gt;[:html], :variants=&gt;[], :handlers=&gt;[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * &quot;C:/Sites/god_ol/app/views&quot;
+</pre></div>
+        <div class="backtrace"><pre>C:in `find_template'
+./spec/requests/beer_pages_spec.rb:27:in `block (3 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for C:in `find_template'
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('15.5');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/beer_pages_spec.rb:32</span>
+      <span class="duration">0.00400s</span>
+      <div class="failure" id="failure_3">
+        <div class="message"><pre>Missing template beers/show, application/show with {:locale=&gt;[:en], :formats=&gt;[:html], :variants=&gt;[], :handlers=&gt;[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * &quot;C:/Sites/god_ol/app/views&quot;
+</pre></div>
+        <div class="backtrace"><pre>C:in `find_template'
+./spec/requests/beer_pages_spec.rb:27:in `block (3 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for C:in `find_template'
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_10" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_10" class="passed">Index</dt>
+  </dl>
+</div>
+<div id="div_group_11" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_11" class="passed">Beer-link</dt>
+    <script type="text/javascript">makeRed('div_group_11');</script>
+    <script type="text/javascript">makeRed('example_group_11');</script>
+    <script type="text/javascript">moveProgressBar('16.8');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should have content &quot;Test Beer&quot;</span>
+      <span class="duration">0.11301s</span>
+      <div class="failure" id="failure_4">
+        <div class="message"><pre>expected #has_content?(&quot;Test Beer&quot;) to return true, got false</pre></div>
+        <div class="backtrace"><pre>./spec/requests/beer_pages_spec.rb:20:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">18</span>		describe "Beer-link" do
+<span class="linenum">19</span>			before { click_link beer.name }
+<span class="offending"><span class="linenum">20</span>			it { should have_content(beer.name) }</span>
+<span class="linenum">21</span>		end
+<span class="linenum">22</span>		
+<span class="linenum">23</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_12" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_12" class="passed">Page</dt>
+    <script type="text/javascript">makeRed('div_group_12');</script>
+    <script type="text/javascript">makeRed('example_group_12');</script>
+    <script type="text/javascript">moveProgressBar('18.1');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should have link &quot;Test Beer&quot;, {:href=&gt;&quot;/beers/1&quot;}</span>
+      <span class="duration">0.00900s</span>
+      <div class="failure" id="failure_5">
+        <div class="message"><pre>expected #has_link?(&quot;Test Beer&quot;, {:href=&gt;&quot;/beers/1&quot;}) to return true, got false</pre></div>
+        <div class="backtrace"><pre>./spec/requests/beer_pages_spec.rb:15:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">13</span>		describe "Page" do
+<span class="linenum">14</span>			it { should have_content('Öl') }
+<span class="offending"><span class="linenum">15</span>			it { should have_link(beer.name, href: beer_path(beer)) }</span>
+<span class="linenum">16</span>		end
+<span class="linenum">17</span>		
+<span class="linenum">18</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('19.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Öl&quot;</span><span class='duration'>0.02100s</span></dd>
+  </dl>
+</div>
+<div id="div_group_13" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_13" class="passed">Beer</dt>
+    <script type="text/javascript">moveProgressBar('20.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #beer_type_id</span><span class='duration'>0.00200s</span></dd>
+    <script type="text/javascript">moveProgressBar('22.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #ebc</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('23.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #ibu</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('24.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #abv</span><span class='duration'>0.00000s</span></dd>
+    <script type="text/javascript">moveProgressBar('25.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00000s</span></dd>
+    <script type="text/javascript">moveProgressBar('27.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #brewery_id</span><span class='duration'>0.00000s</span></dd>
+    <script type="text/javascript">moveProgressBar('28.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00000s</span></dd>
+  </dl>
+</div>
+<div id="div_group_14" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_14" class="passed">Beer with missing required fields</dt>
+  </dl>
+</div>
+<div id="div_group_15" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_15" class="passed">Empty, thus invalid Beer object</dt>
+    <script type="text/javascript">moveProgressBar('29.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_16" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_16" class="passed">brewery_id is zero</dt>
+    <script type="text/javascript">moveProgressBar('31.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_17" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_17" class="passed">Missing name</dt>
+    <script type="text/javascript">moveProgressBar('32.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_18" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_18" class="passed">beer_type_id is zero</dt>
+    <script type="text/javascript">moveProgressBar('33.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_19" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_19" class="passed">Missing brewery_id</dt>
+    <script type="text/javascript">moveProgressBar('35.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_20" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_20" class="passed">Missing beer_type_id</dt>
+    <script type="text/javascript">moveProgressBar('36.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_21" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_21" class="passed">Minimal but still valid Beer object</dt>
+    <script type="text/javascript">moveProgressBar('37.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_22" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_22" class="passed">UserPages</dt>
+  </dl>
+</div>
+<div id="div_group_23" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_23" class="passed">signup page</dt>
+    <script type="text/javascript">moveProgressBar('38.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Registrera&quot;</span><span class='duration'>0.01700s</span></dd>
+    <script type="text/javascript">moveProgressBar('40.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have selector &quot;h1&quot;, &quot;Registrera&quot;</span><span class='duration'>0.00600s</span></dd>
+  </dl>
+</div>
+<div id="div_group_24" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_24" class="passed">Brewery pages</dt>
+  </dl>
+</div>
+<div id="div_group_25" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_25" class="passed">Edit Brewery page</dt>
+  </dl>
+</div>
+<div id="div_group_26" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_26" class="passed">Edit brewery</dt>
+  </dl>
+</div>
+<div id="div_group_27" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_27" class="passed">With valid information</dt>
+  </dl>
+</div>
+<div id="div_group_28" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_28" class="passed">With changes</dt>
+    <script type="text/javascript">makeRed('div_group_28');</script>
+    <script type="text/javascript">makeRed('example_group_28');</script>
+    <script type="text/javascript">moveProgressBar('41.5');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should not change the amont of breweries</span>
+      <span class="duration">0.07000s</span>
+      <div class="failure" id="failure_6">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:114:in `block (7 levels) in <top (required)>'
+./spec/requests/brewery_pages_spec.rb:114:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">112</span>					
+<span class="linenum">113</span>					it "should not change the amont of breweries" do
+<span class="offending"><span class="linenum">114</span>						expect { click_button submit }.not_to change(Brewery, :count)</span>
+<span class="linenum">115</span>					end
+<span class="linenum">116</span>					
+<span class="linenum">117</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_29" class="example_group passed">
+  <dl style="margin-left: 75px;">
+  <dt id="example_group_29" class="passed">Should render show-page</dt>
+    <script type="text/javascript">makeRed('div_group_29');</script>
+    <script type="text/javascript">makeRed('example_group_29');</script>
+    <script type="text/javascript">moveProgressBar('42.8');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:125</span>
+      <span class="duration">0.01700s</span>
+      <div class="failure" id="failure_7">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:123:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">121</span>					
+<span class="linenum">122</span>					describe "Should render show-page" do
+<span class="offending"><span class="linenum">123</span>						before { click_button submit }</span>
+<span class="linenum">124</span>						it { should_not have_content('error') }
+<span class="linenum">125</span>						it { should have_content("NewName") }
+<span class="linenum">126</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('44.1');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:124</span>
+      <span class="duration">0.04100s</span>
+      <div class="failure" id="failure_8">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:123:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">121</span>					
+<span class="linenum">122</span>					describe "Should render show-page" do
+<span class="offending"><span class="linenum">123</span>						before { click_button submit }</span>
+<span class="linenum">124</span>						it { should_not have_content('error') }
+<span class="linenum">125</span>						it { should have_content("NewName") }
+<span class="linenum">126</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('45.4');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:126</span>
+      <span class="duration">0.01400s</span>
+      <div class="failure" id="failure_9">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:123:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">121</span>					
+<span class="linenum">122</span>					describe "Should render show-page" do
+<span class="offending"><span class="linenum">123</span>						before { click_button submit }</span>
+<span class="linenum">124</span>						it { should_not have_content('error') }
+<span class="linenum">125</span>						it { should have_content("NewName") }
+<span class="linenum">126</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_30" class="example_group passed">
+  <dl style="margin-left: 75px;">
+  <dt id="example_group_30" class="passed">Should not render errors</dt>
+    <script type="text/javascript">makeRed('div_group_30');</script>
+    <script type="text/javascript">makeRed('example_group_30');</script>
+    <script type="text/javascript">moveProgressBar('46.7');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:119</span>
+      <span class="duration">0.01400s</span>
+      <div class="failure" id="failure_10">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:118:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">116</span>					
+<span class="linenum">117</span>					describe "Should not render errors" do
+<span class="offending"><span class="linenum">118</span>						before { click_button submit }</span>
+<span class="linenum">119</span>						it { should_not have_content('error') }
+<span class="linenum">120</span>					end
+<span class="linenum">121</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_31" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_31" class="passed">Without changes</dt>
+    <script type="text/javascript">makeRed('div_group_31');</script>
+    <script type="text/javascript">makeRed('example_group_31');</script>
+    <script type="text/javascript">moveProgressBar('48.0');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should not change the amont of breweries</span>
+      <span class="duration">0.01200s</span>
+      <div class="failure" id="failure_11">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:90:in `block (7 levels) in <top (required)>'
+./spec/requests/brewery_pages_spec.rb:90:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">88</span>					
+<span class="linenum">89</span>					it "should not change the amont of breweries" do
+<span class="offending"><span class="linenum">90</span>						expect { click_button submit }.not_to change(Brewery, :count)</span>
+<span class="linenum">91</span>					end
+<span class="linenum">92</span>					
+<span class="linenum">93</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_32" class="example_group passed">
+  <dl style="margin-left: 75px;">
+  <dt id="example_group_32" class="passed">Should render show-page</dt>
+    <script type="text/javascript">makeRed('div_group_32');</script>
+    <script type="text/javascript">makeRed('example_group_32');</script>
+    <script type="text/javascript">moveProgressBar('49.3');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:101</span>
+      <span class="duration">0.01100s</span>
+      <div class="failure" id="failure_12">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:99:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">97</span>					
+<span class="linenum">98</span>					describe "Should render show-page" do
+<span class="offending"><span class="linenum">99</span>						before { click_button submit }</span>
+<span class="linenum">100</span>						it { should_not have_content('error') }
+<span class="linenum">101</span>						it { should have_content(brewery.name) }
+<span class="linenum">102</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('50.6');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:100</span>
+      <span class="duration">0.01100s</span>
+      <div class="failure" id="failure_13">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:99:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">97</span>					
+<span class="linenum">98</span>					describe "Should render show-page" do
+<span class="offending"><span class="linenum">99</span>						before { click_button submit }</span>
+<span class="linenum">100</span>						it { should_not have_content('error') }
+<span class="linenum">101</span>						it { should have_content(brewery.name) }
+<span class="linenum">102</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_33" class="example_group passed">
+  <dl style="margin-left: 75px;">
+  <dt id="example_group_33" class="passed">Should not render errors</dt>
+    <script type="text/javascript">makeRed('div_group_33');</script>
+    <script type="text/javascript">makeRed('example_group_33');</script>
+    <script type="text/javascript">moveProgressBar('51.9');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:95</span>
+      <span class="duration">0.01100s</span>
+      <div class="failure" id="failure_14">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:94:in `block (7 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">92</span>					
+<span class="linenum">93</span>					describe "Should not render errors" do
+<span class="offending"><span class="linenum">94</span>						before { click_button submit }</span>
+<span class="linenum">95</span>						it { should_not have_content('error') }
+<span class="linenum">96</span>					end
+<span class="linenum">97</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_34" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_34" class="passed">With invlaid information</dt>
+    <script type="text/javascript">makeRed('div_group_34');</script>
+    <script type="text/javascript">makeRed('example_group_34');</script>
+    <script type="text/javascript">moveProgressBar('53.2');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should not create a new brewery</span>
+      <span class="duration">0.03500s</span>
+      <div class="failure" id="failure_15">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:76:in `block (6 levels) in <top (required)>'
+./spec/requests/brewery_pages_spec.rb:76:in `block (5 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">74</span>				
+<span class="linenum">75</span>				it "should not create a new brewery" do
+<span class="offending"><span class="linenum">76</span>					expect { click_button submit }.not_to change(Brewery, :count)</span>
+<span class="linenum">77</span>				end
+<span class="linenum">78</span>				
+<span class="linenum">79</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_35" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_35" class="passed">should render errors</dt>
+    <script type="text/javascript">makeRed('div_group_35');</script>
+    <script type="text/javascript">makeRed('example_group_35');</script>
+    <script type="text/javascript">moveProgressBar('54.5');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:81</span>
+      <span class="duration">0.01300s</span>
+      <div class="failure" id="failure_16">
+        <div class="message"><pre>Unable to find button &quot;Update Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:80:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">78</span>				
+<span class="linenum">79</span>				describe "should render errors" do
+<span class="offending"><span class="linenum">80</span>					before { click_button submit }</span>
+<span class="linenum">81</span>					it { should have_content('error') }
+<span class="linenum">82</span>				end
+<span class="linenum">83</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_36" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_36" class="passed">Visit Brewery-page edit</dt>
+    <script type="text/javascript">moveProgressBar('55.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have content &quot;Brewry&quot;</span><span class='duration'>0.04300s</span></dd>
+    <script type="text/javascript">moveProgressBar('57.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Redigera&quot;</span><span class='duration'>0.01100s</span></dd>
+  </dl>
+</div>
+<div id="div_group_37" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_37" class="passed">Create new Brewery page</dt>
+  </dl>
+</div>
+<div id="div_group_38" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_38" class="passed">Create brewery</dt>
+  </dl>
+</div>
+<div id="div_group_39" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_39" class="passed">With minimal valid information</dt>
+    <script type="text/javascript">makeRed('div_group_39');</script>
+    <script type="text/javascript">makeRed('example_group_39');</script>
+    <script type="text/javascript">moveProgressBar('58.4');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">Should Create a brewery</span>
+      <span class="duration">0.01100s</span>
+      <div class="failure" id="failure_17">
+        <div class="message"><pre>Unable to find button &quot;Create Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:40:in `block (6 levels) in <top (required)>'
+./spec/requests/brewery_pages_spec.rb:40:in `block (5 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">38</span>				
+<span class="linenum">39</span>				it "Should Create a brewery" do
+<span class="offending"><span class="linenum">40</span>					expect { click_button submit }.to change(Brewery, :count).by(1)</span>
+<span class="linenum">41</span>				end
+<span class="linenum">42</span>				
+<span class="linenum">43</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_40" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_40" class="passed">After brewery is saved</dt>
+    <script type="text/javascript">makeRed('div_group_40');</script>
+    <script type="text/javascript">makeRed('example_group_40');</script>
+    <script type="text/javascript">moveProgressBar('59.7');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:45</span>
+      <span class="duration">0.00900s</span>
+      <div class="failure" id="failure_18">
+        <div class="message"><pre>Unable to find button &quot;Create Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:44:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">42</span>				
+<span class="linenum">43</span>				describe "After brewery is saved" do
+<span class="offending"><span class="linenum">44</span>					before { click_button submit }</span>
+<span class="linenum">45</span>					it { should have_content('Breweryname') }
+<span class="linenum">46</span>				end
+<span class="linenum">47</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_41" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_41" class="passed">With invalid data</dt>
+    <script type="text/javascript">makeRed('div_group_41');</script>
+    <script type="text/javascript">makeRed('example_group_41');</script>
+    <script type="text/javascript">moveProgressBar('61.0');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should not create brewery</span>
+      <span class="duration">0.00700s</span>
+      <div class="failure" id="failure_19">
+        <div class="message"><pre>Unable to find button &quot;Create Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:22:in `block (6 levels) in <top (required)>'
+./spec/requests/brewery_pages_spec.rb:22:in `block (5 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">20</span>			describe "With invalid data" do
+<span class="linenum">21</span>				it "should not create brewery" do
+<span class="offending"><span class="linenum">22</span>					expect { click_button submit }.not_to change(Brewery, :count)</span>
+<span class="linenum">23</span>				end
+<span class="linenum">24</span>				
+<span class="linenum">25</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_42" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_42" class="passed">After submit</dt>
+    <script type="text/javascript">makeRed('div_group_42');</script>
+    <script type="text/javascript">makeRed('example_group_42');</script>
+    <script type="text/javascript">moveProgressBar('62.3');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:29</span>
+      <span class="duration">0.00600s</span>
+      <div class="failure" id="failure_20">
+        <div class="message"><pre>Unable to find button &quot;Create Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:26:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">24</span>				
+<span class="linenum">25</span>				describe "After submit" do
+<span class="offending"><span class="linenum">26</span>					before { click_button submit }</span>
+<span class="linenum">27</span>					
+<span class="linenum">28</span>					it { should have_title('Lägg till bryggeri') }
+<span class="linenum">29</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('63.6');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:28</span>
+      <span class="duration">0.00600s</span>
+      <div class="failure" id="failure_21">
+        <div class="message"><pre>Unable to find button &quot;Create Brewery&quot;</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:26:in `block (6 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">24</span>				
+<span class="linenum">25</span>				describe "After submit" do
+<span class="offending"><span class="linenum">26</span>					before { click_button submit }</span>
+<span class="linenum">27</span>					
+<span class="linenum">28</span>					it { should have_title('Lägg till bryggeri') }
+<span class="linenum">29</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_43" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_43" class="passed">Visit create new  Brewery page</dt>
+    <script type="text/javascript">moveProgressBar('64.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have title &quot;Lägg till bryggeri&quot;</span><span class='duration'>0.00500s</span></dd>
+  </dl>
+</div>
+<div id="div_group_44" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_44" class="passed">Delete Brewery</dt>
+    <script type="text/javascript">moveProgressBar('66.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">Should delete a brewery</span><span class='duration'>0.04000s</span></dd>
+    <script type="text/javascript">moveProgressBar('67.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have link &quot;Delete&quot;, {:href=&gt;&quot;/breweries/1&quot;}</span><span class='duration'>0.00600s</span></dd>
+  </dl>
+</div>
+<div id="div_group_45" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_45" class="passed">Show Brewery page</dt>
+  </dl>
+</div>
+<div id="div_group_46" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_46" class="passed">View brewery-details by link</dt>
+  </dl>
+</div>
+<div id="div_group_47" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_47" class="passed">Confirm link to brewery</dt>
+    <script type="text/javascript">makeRed('div_group_47');</script>
+    <script type="text/javascript">makeRed('example_group_47');</script>
+    <script type="text/javascript">moveProgressBar('68.8');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should have link &quot;TestBrewery&quot;, {:href=&gt;&quot;/breweries/1&quot;}</span>
+      <span class="duration">0.00600s</span>
+      <div class="failure" id="failure_22">
+        <div class="message"><pre>expected #has_link?(&quot;TestBrewery&quot;, {:href=&gt;&quot;/breweries/1&quot;}) to return true, got false</pre></div>
+        <div class="backtrace"><pre>./spec/requests/brewery_pages_spec.rb:157:in `block (5 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">155</span>				before { visit breweries_path }
+<span class="linenum">156</span>			
+<span class="offending"><span class="linenum">157</span>				it { should have_link(brewery.name, href: brewery_path(brewery)) }</span>
+<span class="linenum">158</span>				
+<span class="linenum">159</span>			end
+<span class="linenum">160</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_48" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_48" class="passed">Visit brewery page by url</dt>
+    <script type="text/javascript">makeRed('div_group_48');</script>
+    <script type="text/javascript">makeRed('example_group_48');</script>
+    <script type="text/javascript">moveProgressBar('70.1');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:146</span>
+      <span class="duration">0.00500s</span>
+      <div class="failure" id="failure_23">
+        <div class="message"><pre>Missing template breweries/show, application/show with {:locale=&gt;[:en], :formats=&gt;[:html], :variants=&gt;[], :handlers=&gt;[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * &quot;C:/Sites/god_ol/app/views&quot;
+</pre></div>
+        <div class="backtrace"><pre>C:in `find_template'
+./spec/requests/brewery_pages_spec.rb:143:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for C:in `find_template'
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('71.4');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">example at ./spec/requests/brewery_pages_spec.rb:145</span>
+      <span class="duration">0.00500s</span>
+      <div class="failure" id="failure_24">
+        <div class="message"><pre>Missing template breweries/show, application/show with {:locale=&gt;[:en], :formats=&gt;[:html], :variants=&gt;[], :handlers=&gt;[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * &quot;C:/Sites/god_ol/app/views&quot;
+</pre></div>
+        <div class="backtrace"><pre>C:in `find_template'
+./spec/requests/brewery_pages_spec.rb:143:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">-1</span># Couldn't get snippet for C:in `find_template'
+<span class="linenum">0</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_49" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_49" class="passed">User</dt>
+    <script type="text/javascript">moveProgressBar('72.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #email</span><span class='duration'>0.00300s</span></dd>
+    <script type="text/javascript">moveProgressBar('74.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00000s</span></dd>
+    <script type="text/javascript">moveProgressBar('75.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00900s</span></dd>
+  </dl>
+</div>
+<div id="div_group_50" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_50" class="passed">When email is not unique</dt>
+    <script type="text/javascript">moveProgressBar('76.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00400s</span></dd>
+  </dl>
+</div>
+<div id="div_group_51" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_51" class="passed">When email is emnpty</dt>
+    <script type="text/javascript">moveProgressBar('77.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_52" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_52" class="passed">When email has correct format</dt>
+    <script type="text/javascript">moveProgressBar('79.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_53" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_53" class="passed">When name is empty</dt>
+    <script type="text/javascript">moveProgressBar('80.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_54" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_54" class="passed">When email has incorrect format</dt>
+    <script type="text/javascript">moveProgressBar('81.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be invalid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_55" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_55" class="passed">Brewery</dt>
+    <script type="text/javascript">moveProgressBar('83.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #description</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('84.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #address2</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('85.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #zip</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('87.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #address</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('88.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('89.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #nationality</span><span class='duration'>0.00100s</span></dd>
+    <script type="text/javascript">moveProgressBar('90.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #state</span><span class='duration'>0.00200s</span></dd>
+    <script type="text/javascript">moveProgressBar('92.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #city</span><span class='duration'>0.00200s</span></dd>
+    <script type="text/javascript">moveProgressBar('93.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_56" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_56" class="passed">Brewery with missing required fields</dt>
+  </dl>
+</div>
+<div id="div_group_57" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_57" class="passed">Missing nationality</dt>
+    <script type="text/javascript">moveProgressBar('94.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_58" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_58" class="passed">Missing name</dt>
+    <script type="text/javascript">moveProgressBar('96.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_59" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_59" class="passed">New empty, thus invalid Brewery</dt>
+    <script type="text/javascript">moveProgressBar('97.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.00500s</span></dd>
+  </dl>
+</div>
+<div id="div_group_60" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_60" class="passed">Minimal but still valid Brewery object</dt>
+    <script type="text/javascript">moveProgressBar('98.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.00200s</span></dd>
+  </dl>
+</div>
+<div id="div_group_61" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_61" class="passed">BeersController</dt>
+  </dl>
+</div>
+<div id="div_group_62" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_62" class="passed">GET &#39;new&#39;</dt>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">returns http success</span><span class='duration'>0.01500s</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>1.43308 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "77 examples, 24 failures, 1 pending";</script>
+</div>
+</div>
+</body>
+</html>
+
+Randomized with seed 45584
+

@@ -4,7 +4,7 @@
 
 	<div id="beer-search" class="c6">
 		<%= form_tag(beer_list_path, :method => :get) do |f| %>
-			<p>Söker på öl-namn, bryggerinamn och artikelnummer på systembolaget</p>
+			<p>Söker på öl, bryggeri och systembolagets artikelnr</p>
 			<%= text_field_tag :search, params[:search], :autofocus => true %>
 			<%= submit_tag "Sök" %>
 		<% end %>
@@ -22,7 +22,7 @@
 	
 		<div class="row header">
 			<div class="col image"></div>
-			<div class="col beer">Öl <span>a</span> / <span>d</span></div>
+			<div class="col beer">Öl</div>
 			<div class="col stats">Info</div>
 			<div class="col brewery">Bryggeri</div>
 			<div class="col systembolaget">Systembolaget</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140525142300) do
+ActiveRecord::Schema.define(version: 20140526192132) do
 
   create_table "beer_types", force: true do |t|
     t.string   "name"
@@ -70,6 +70,51 @@ ActiveRecord::Schema.define(version: 20140525142300) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "logged_beer_evaluations", force: true do |t|
+    t.integer  "logged_beer_id"
+    t.integer  "body"
+    t.integer  "linger"
+    t.integer  "bitter"
+    t.integer  "sour"
+    t.integer  "sweet"
+    t.integer  "fruity"
+    t.integer  "floral"
+    t.integer  "hoppy"
+    t.integer  "spicy"
+    t.integer  "malty"
+    t.integer  "toffee"
+    t.integer  "burnt"
+    t.integer  "chocolate"
+    t.integer  "sulphury"
+    t.integer  "carbonation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "logged_beer_evaluations", ["logged_beer_id"], name: "index_logged_beer_evaluations_on_logged_beer_id"
+
+  create_table "logged_beer_scores", force: true do |t|
+    t.integer  "logged_beer_id"
+    t.integer  "appearance"
+    t.integer  "aroma"
+    t.integer  "pallate"
+    t.integer  "flavour"
+    t.integer  "overall"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "logged_beer_scores", ["logged_beer_id"], name: "index_logged_beer_scores_on_logged_beer_id"
+
+  create_table "logged_beers", force: true do |t|
+    t.integer  "beer_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "logged_beers", ["beer_id", "user_id"], name: "index_logged_beers_on_beer_id_and_user_id"
 
   create_table "users", force: true do |t|
     t.string   "name"

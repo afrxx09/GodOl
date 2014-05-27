@@ -1,4 +1,6 @@
 class Beer < ActiveRecord::Base
+	has_many :logged_beers
+	
 	belongs_to :beer_type
 	belongs_to :brewery
 	

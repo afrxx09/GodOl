@@ -1,66 +1,64 @@
-<div id="beer-form">
-	<%= form_for(@beer) do |f| %>
+<%= form_for(@beer) do |f| %>
 
-		<% if @beer.errors.any? %>
-			<div id="error_explanation">
-				<h2><%= pluralize(@beer.errors.count, "error") %> prohibited this beer from being saved:</h2>
-				<ul>
-				<% @beer.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-				<% end %>
-				</ul>
-			</div>
-		<% end %>
-		
-		<div class="c4">
-			<div class="form-row">
-				<div class="form-label"><%= f.label :name %></div>
-				<div class="form-input"><%= f.text_field :name %></div>
-			</div>
-			
-			<div class="form-row">
-				<div class="form-label"><%= f.label :brewery_id %></div>
-				<div class="form-input"><%= collection_select(:beer, :brewery_id, Brewery.all ,:id, :name) %></div>
-			</div>
-		
+	<% if @beer.errors.any? %>
+		<div id="error_explanation">
+			<h2><%= pluralize(@beer.errors.count, "error") %> prohibited this beer from being saved:</h2>
+			<ul>
+			<% @beer.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+			</ul>
 		</div>
-		
-		<div class="c4">
-		
-			<div class="form-row">
-				<div class="form-label"><%= f.label :beer_type_id %></div>
-				<div class="form-input"><%= collection_select(:beer, :beer_type_id, BeerType.all ,:id, :name) %></div>
-			</div>
-			
-			<div class="form-row">
-				<div class="form-label"><%= f.label :abv %></div>
-				<div class="form-input"><%= f.text_field :abv %></div>
-			</div>
-		
-		
-		</div>
-		
-		<div class="c4">
-		
-			<div class="form-row">
-				<div class="form-label"><%= f.label :ibu %></div>
-				<div class="form-input"><%= f.text_field :ibu %></div>
-			</div>
-			
-			<div class="form-row">
-				<div class="form-label"><%= f.label :ebc %></div>
-				<div class="form-input"><%= f.text_field :ebc %></div>
-			</div>
-			
-			<div class="form-row">
-				<div class="form-label"><%= f.label :systembolaget %></div>
-				<div class="form-input"><%= f.text_field :systembolaget %></div>
-			</div>
+	<% end %>
+	
+	<div class="c4">
+		<div class="form-row">
+			<div class="form-label"><%= f.label :name %></div>
+			<div class="form-input"><%= f.text_field :name %></div>
 		</div>
 		
 		<div class="form-row">
-			<%= f.submit "Lägg till öl" %>
+			<div class="form-label"><%= f.label :brewery_id %></div>
+			<div class="form-input"><%= collection_select(:beer, :brewery_id, Brewery.all ,:id, :name) %></div>
+		</div>
+	
+	</div>
+	
+	<div class="c4">
+	
+		<div class="form-row">
+			<div class="form-label"><%= f.label :beer_type_id %></div>
+			<div class="form-input"><%= collection_select(:beer, :beer_type_id, BeerType.all ,:id, :name) %></div>
 		</div>
 		
-	<% end %>
-</div>
+		<div class="form-row">
+			<div class="form-label"><%= f.label :abv %></div>
+			<div class="form-input"><%= f.text_field :abv %></div>
+		</div>
+	
+	
+	</div>
+	
+	<div class="c4">
+	
+		<div class="form-row">
+			<div class="form-label"><%= f.label :ibu %></div>
+			<div class="form-input"><%= f.text_field :ibu %></div>
+		</div>
+		
+		<div class="form-row">
+			<div class="form-label"><%= f.label :ebc %></div>
+			<div class="form-input"><%= f.text_field :ebc %></div>
+		</div>
+		
+		<div class="form-row">
+			<div class="form-label"><%= f.label :systembolaget %></div>
+			<div class="form-input"><%= f.text_field :systembolaget %></div>
+		</div>
+	</div>
+	
+	<div class="form-row">
+		<%= f.submit "Lägg till öl" %>
+	</div>
+	
+<% end %>

@@ -1,0 +1,44 @@
+<% provide(:title, 'Redigera kontouppgifter') %>
+<div class="c12">
+	<h1><%= yield(:title) %></h1>
+
+	<%= form_for(@user) do |u| %>
+
+		<% if @user.errors.any? %>
+			<div id="error_explanation">
+				<div class="alert alert-error">
+					The form contains <%= pluralize(@user.errors.count, "error") %>.
+				</div>
+				<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li>* <%= msg %></li>
+				<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<div id="edit-user-form">
+			<div class="form-row">
+				<%= u.label :name %>
+				<%= u.text_field :name %>
+			</div>
+			<div class="form-row">
+				<%= u.label :email %>
+				<%= u.text_field :email %>
+			</div>
+			
+			<div class="form-row">
+				<%= u.label :password, "Lösenord" %>
+				<%= u.password_field :password %>
+			</div>
+			
+			<div class="form-row">
+				<%= u.label :confirmation, "Bekräfta lösenord" %>
+				<%= u.password_field :confirmation %>
+			</div>
+			
+			<div class="form-row">
+				<%= u.submit "Spara" %>
+			</div>
+		</div>
+	<% end %>
+</div>

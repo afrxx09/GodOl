@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#quick-beer-form{
-	display:none;
-}
-
 #beer-list{
 	
 	.row{
@@ -42,11 +38,13 @@
 	.form-label{
 		display:block;
 		float:left;
-		width:75px;
+		width:120px;
 		margin-right:10px;
-		text-align:right;
 		font-weight:bold;
-
+		
+		label{
+			float:right;
+		}
 		.req{
 			color:#e33;
 		}
@@ -54,10 +52,47 @@
 
 	.form-input{
 		input{
-			width:190px;
+			width:240px;
 		}
 		select{
-			width:200px;
+			width:250px;
+		}
+	}
+}
+
+#beer-quick-form{
+	margin:10px 0;
+	display:none;
+
+	.form-row{
+		float:left;
+		width:100%;
+		margin:5px 0;
+		clear:both;
+		
+	}
+	
+	.form-label{
+		display:block;
+		float:left;
+		width:120px;
+		margin-right:10px;
+		font-weight:bold;
+		
+		label{
+			display:block;
+		}
+		.req{
+			color:#e33;
+		}
+	}
+
+	.form-input{
+		input{
+			width:240px;
+		}
+		select{
+			width:250px;
 		}
 	}
 }

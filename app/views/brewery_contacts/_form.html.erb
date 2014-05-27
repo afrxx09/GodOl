@@ -1,13 +1,21 @@
 <%= form_for [@brewery, @brewery.brewery_contacts.build] do |f_bc| %>
-	<div>
-		<%= f_bc.label :brewery_contact %>
-		<%= f_bc.text_field :brewery_contact %>
+
+	<div id="brewery-contact-form">
+	
+		<div class="form-row">
+			<%= f_bc.label :brewery_contact %>
+			<%= f_bc.text_field :brewery_contact %>
+		</div>
+		
+		<div class="form-row">
+			<%= f_bc.label :contact_type_id %>
+			<%= collection_select(:brewery_contact, :contact_type_id, ContactType.all ,:id, :name) %>
+		</div>
+	
+		<div class="form-row">
+			<%= f_bc.submit "Skapa kontakt" %>
+		</div>
+		
 	</div>
 	
-	<div>
-		<%= f_bc.label :contact_type_id %>
-		<%= collection_select(:brewery_contact, :contact_type_id, ContactType.all ,:id, :name) %>
-	</div>
-	
-	<%= f_bc.submit %>
 <% end %>

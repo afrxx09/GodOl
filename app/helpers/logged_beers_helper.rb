@@ -1,0 +1,2 @@
+module LoggedBeersHelper
+end
