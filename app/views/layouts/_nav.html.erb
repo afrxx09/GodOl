@@ -1,10 +1,9 @@
 <ul>
-
 	<li><%= link_to 'Start', root_path %></li>
-	<li><%= link_to 'Öl-lista', beer_list_path %></li>
-	<li><%= link_to 'Bryggeri-lista', brewery_list_path %></li>
+	<li><%= link_to 'Öl', beer_list_path %></li>
+	<li><%= link_to 'Bryggerier', brewery_list_path %></li>
 	<li><%= link_to 'Kontakt', contact_path %></li>
 	<% if signed_in? %>
-	<li><a href="#">Öl-logg</a></li>
+	<li><%= link_to 'Öl-logg', logged_beers_path %></li>
 	<% end %>
 </ul>

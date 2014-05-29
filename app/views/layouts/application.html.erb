@@ -29,6 +29,9 @@
 			<div id="main-wrap">
 				
 				<div id="main-container">
+					<% if flash[:notice] %>
+					<div class="notice"><%= flash[:notice] %></div>
+					<% end %>
 					<%= yield %>
 				</div>
 			</div>

@@ -10,19 +10,24 @@
 	</div>
 	
 	<div id="beer-list" class="small-list gray">
+		
 		<div class="row header">
 			<div class="col beer">Öl</div>
 			<div class="col beer-type">Typ</div>
 			<div class="col brewery">Bryggeri</div>
 			<div class="col delete">Ta bort</div>
 		</div>
-	<% @beers.each do |beer| %>
+		
+		<% @beers.each do |beer| %>
 		<div class="row">
 			<div class="col beer"><%= link_to beer.name, edit_beer_path(beer) %></div>
 			<div class="col beer-type"><%= beer.beer_type.name %></div>
 			<div class="col brewery"><%= link_to beer.brewery.name, edit_brewery_path(beer.brewery) %></div>
 			<div class="col delete"><%= link_to "Ta bort", beer_path(beer) , method: :delete %></div>
 		</div>
-	<% end %>
+		<% end %>
+		
+		<div class="clear"></div>
+		
 	</div>
 </div>

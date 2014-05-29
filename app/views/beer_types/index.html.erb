@@ -1,28 +1,37 @@
 <% provide(:title, 'Öl-typer') %>
-<div class="c8">
+<div class="c12">
+	
 	<h1><%= yield(:title) %></h1>
-
-	<div id="beer-type-list" class="small-list gray">
-		<div class="row header">
-			<div class="col id">Id</div>
-			<div class="col name">Namn</div>
-			<div class="col count">Antal</div>
-			<div class="col delete">Hantera</div>
+	
+	<div class="c8">
+		<div id="beer-type-list" class="small-list gray">
+			
+			<div class="row header">
+				<div class="col id">Id</div>
+				<div class="col name">Namn</div>
+				<div class="col count">Antal</div>
+				<div class="col delete">Hantera</div>
+			</div>
+			
+			<% @beer_types.each do |bt| %>
+			<div class="row">
+				<div class="col id"><%= bt.id %></div>
+				<div class="col name"><%= bt.name %></div>
+				<div class="col count"><%= bt.beers.length %></div>
+				<div class="col delete"><%= link_to "Ta bort", beer_type_path(bt), method: :delete %></div>
+			</div>
+			<% end %>
+			
+			<div class="clear"></div>
+			
 		</div>
-		<% @beer_types.each do |bt| %>
-		<div class="row">
-			<div class="col id"><%= bt.id %></div>
-			<div class="col name"><%= bt.name %></div>
-			<div class="col count"><%= bt.beers.length %></div>
-			<div class="col delete"><%= link_to "Ta bort", beer_type_path(bt), method: :delete %></div>
-		</div>
-		<% end %>
 	</div>
+
+	<div class="c4">
+		<h2>Lägg till Öl-typ</h2>
+		<div id="beer-type-form">
+			<%= render 'form' %>
+		</div>
+	</div>
+	
 </div>
-
-<div class="c4">
-	<h2>Lägg till Öl-typ</h2>
-	<div id="beer-type-form">
-		<%= render 'form' %>
-	</div>
-</div>	

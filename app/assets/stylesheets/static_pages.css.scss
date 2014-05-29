@@ -6,7 +6,6 @@
 	.row{
 		
 		.col{
-			float:left;
 			
 			img{
 				margin:0;
@@ -34,7 +33,6 @@
 		}
 	}
 	.row.header{
-		background-color:transparent;
 		
 		.col{
 			margin:0;
@@ -72,7 +70,6 @@
 #brewery-db{
 	.row{
 		.col{
-			float:left;
 			margin-top:6px;
 			
 			img{
@@ -109,8 +106,6 @@
 		}
 	}
 	.row.header{
-		background-color:transparent;
-		
 		.col{
 			margin:0;
 			font-weight:bold;
@@ -119,4 +114,20 @@
 			margin-top:6px;
 		}
 	}
+}
+
+#popular-beers-list,
+#new-beers-list{
+	
+	.beer{
+		width:120px;
+	}
+	.beer-type{
+		width:100px;
+	}
+	.abv{
+		float:right;
+		width:50px;
+	}
+	
 }

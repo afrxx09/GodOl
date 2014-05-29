@@ -3,33 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #brewery-list{
-	float:left;
-	width:940px;
-	margin:10px 0;
-	
-	.list-header{
-		background-color:#d6d6d6;
-	}
 
-	.list-row{
-		background-color:#e6e6e6;
-	}
-
-	.list-row,
-	.list-header{
-		float:left;
-		width:940px;
+	.row{
 		
-		.list-col{
-			float:left;
-			margin-right:10px;
-			padding:2px 0 2px 5px;
-			width: 220px;
+		.brewery{
+			width:300px;
 		}
-	}
-	
-	.list-row:nth-child(even){
-		background-color:#eeeeee;
+		.nationality{
+			width:300px;
+		}
+		.count{
+			width:200px;
+		}
+		.delete{
+			float:right;
+			width:100px;
+		}
 	}
 }
 

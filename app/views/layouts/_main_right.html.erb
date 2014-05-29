@@ -1,46 +1,69 @@
 <div>
 	<h2>Beer me!</h2>
-	<form>
-		<select>
-			<option value="">Ale</option>
-			<option value="">Pale Ale</option>
-			<option value="">IPA</option>
-			<option value="">Dubbel-IPA</option>
-		</select>
-		<select>
-			<option value="">0%-3%</option>
-			<option value="">4%-5%</option>
-			<option value="">6%-7%</option>
-			<option value="">8% +</option>
-		</select>
-		<select>
-			<option value="">0-9kr</option>
-			<option value="">10kr-12kr</option>
-			<option value="">13kr-19kr</option>
-			<option value="">20kr +</option>
-		</select>
-		<button>Beer me!</button>
-	</form>
+	<div class="form">
+		<%= form_tag(beer_me_path, :method => :get) do |f| %>
+			<div class="row">
+				
+				<div class="col">
+					<% beer_types = BeerType.all.map {|bt| [bt.name, bt.id] } %>
+					<%= select_tag :beer_type, options_for_select(beer_types) %>
+				</div>
+				
+				<div class="col">
+					<%= select_tag :alcohol, options_for_select([['0-3%', ''], ['4-5%', 2]]) %>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+				<%= submit_tag "Beer me!" %>
+			</div>
+			
+			<div class="clear"></div>
+		<% end %>
+	</div>
 </div>
 
 <div>
 	<h2>Populära Öl: maj</h2>
-	<div class="small-list orange">
-		<div class="row"><div class="col"><a href="#">Sleepy Bulldog</a></div></div>
-		<div class="row"><div class="col"><a href="#">Punk IPA</a></div></div>
-		<div class="row"><div class="col"><a href="#">S:t Eriks IPA</a></div></div>
-		<div class="row"><div class="col"><a href="#">Pabts Blue Ribbon</a></div></div>
-		<div class="row"><div class="col"><a href="#">5 A.M. Saint</a></div></div>
+	<div id="popular-beers-list" class="small-list orange">
+		
+		<% @popular_beers.each do |nb| %>
+		<div class="row">
+			<div class="col beer"><%= link_to nb.name, beer_path(nb) %></div>
+			<div class="col beer-type"><%= link_to nb.beer_type.name, beer_path(nb) %></div>
+			<div class="col abv">
+				<% if nb.abv %>
+				<% link = nb.abv.to_s + '%' %>
+				<%= link_to link, beer_path(nb) %>
+				<% end %>
+			</div>
+		</div>
+		<% end %>
+		
+		<div class="clear"></div>
+		
 	</div>
-	<div class="clear"></div>
 </div>
 
 <div>
 	<h2>Nya Öl</h2>
-	<div class="small-list orange">
+	<div id="new-beers-list" class="small-list orange">
+		
 		<% @new_beers.each do |nb| %>
-		<div class="row"><div class="col"><%= link_to nb.name, beer_path(nb) %></a></div></div>
+		<div class="row">
+			<div class="col beer"><%= link_to nb.name, beer_path(nb) %></div>
+			<div class="col beer-type"><%= link_to nb.beer_type.name, beer_path(nb) %></div>
+			<div class="col abv">
+				<% if nb.abv %>
+				<% link = nb.abv.to_s + '%' %>
+				<%= link_to link, beer_path(nb) %>
+				<% end %>
+			</div>
+		</div>
 		<% end %>
+		
+		<div class="clear"></div>
+		
 	</div>
-	<div class="clear"></div>
 </div>

@@ -2,8 +2,10 @@ class LoggedBeer < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :beer
 	
-	default_scope -> { order('created_at DESC') }
+	has_one :logged_beer_score
+	has_one :logged_beer_evaluation
 	
-	validates :user_id, presence: true
-	validates :beer_id, presence: true
+	accepts_nested_attributes_for :logged_beer_score, :logged_beer_evaluation
+	
+	default_scope -> { order('created_at DESC') }
 end

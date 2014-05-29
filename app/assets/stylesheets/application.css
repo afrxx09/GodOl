@@ -141,38 +141,51 @@ div.c12 div.c3{
 		width:100%;
 		float:left;
 	}
+	
+	.small-list .row.header{
+		font-weight:bold;
+	}
+	
 	.small-list .row .col{
+		float:left;
 		padding: 3px 5px;
 	}
 	
 	/*colors*/
 	
-	.small-list.gray .row.header{background-color:#ccc;}
 	.small-list.gray .row:nth-child(odd){background-color:#eee;}
 	.small-list.gray .row:nth-child(even){background-color:#e6e6e6;}
 	.small-list.gray .row:hover{background-color:#f6f6f6;}
+	.small-list.gray .row.header{background-color:transparent;}
 	
-	.small-list.orange .row.header{background-color:#CF8400;}
 	.small-list.orange .row:nth-child(odd){background-color:#FFC866;}
 	.small-list.orange .row:nth-child(even){background-color:#FFD786;}
 	.small-list.orange .row:hover{background-color:#FFE2A4;}
+	.small-list.orange .row.header{background-color:transparent;}	
+	
 	
 .big-list{
-	
+	width:100%;
+	float:left;
+	margin:10px 0;
 }
 	.big-list .row{
 		width:100%;
 		float:left;
 	}
+	.big-list .row.header{
+		font-weight:bold;
+	}
 	
 	.big-list .row .col{
+		float:left;
 		padding:5px 10px;
 	}
 	
-	.big-list.gray .row.header{background-color:#ccc;}
 	.big-list.gray .row:nth-child(odd){background-color:#eee;}
 	.big-list.gray .row:nth-child(even){background-color:#e6e6e6;}
 	.big-list.gray .row:hover{background-color:#f6f6f6;}
+	.big-list.gray .row.header{background-color:transparent;}
 	
 .clear{
 	clear:both;

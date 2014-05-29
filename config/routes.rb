@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :beer_types, except: [ :show, :edit, :new ]
   resources :contact_types, except: [ :show, :edit, :new ]
   
+  resources :logged_beers, only: [ :index, :show, :new, :create ]
+  get 'new_beer_log/:id/' => 'logged_beers#new', as: :new_beer_log
+  post 'new_beer_log/:id/create' => 'logged_beers#create', as: :create_beer_log
+  
   resources :users, except: [ :show ]
   get 'users/:id/toggle_admin' => 'users#toggle_admin', as: :toggle_admin
   
@@ -15,6 +19,8 @@ Rails.application.routes.draw do
   match 'signout', to: 'sessions#destroy', via: 'delete'
 
   root 'static_pages#start'
+  
+  match '/beer_me', to: 'static_pages#beer_me', via: 'get'
 
   match '/signup', to: 'users#new', via: 'get'
   match '/start', to: 'static_pages#start', via: 'get'

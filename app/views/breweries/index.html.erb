@@ -2,20 +2,25 @@
 <div class="c12">
 	<h1><%= yield(:title) %></h1>
 
-	<div id="brewery-list">
-		<div class="list-header">
-			<div class="list-col">Bryggeri</div>
-			<div class="list-col">Land</div>
-			<div class="list-col">Antal</div>
-			<div class="list-col">Ta bort</div>
+	<div id="brewery-list" class="small-list gray">
+	
+		<div class="row header">
+			<div class="col brewery">Bryggeri</div>
+			<div class="col nationality">Land</div>
+			<div class="col count">Öl #</div>
+			<div class="col delete">Ta bort</div>
 		</div>
-	<% @breweries.each do |b| %>
-		<div class="list-row">
-			<div class="list-col"><%= link_to b.name, edit_brewery_path(b) %></div>
-			<div class="list-col"><%= b.nationality %></div>
-			<div class="list-col"><%= b.beers.length %></div>
-			<div class="list-col"><%= link_to "Ta bort", brewery_path(b) , method: :delete %></div>
+		
+		<% @breweries.each do |b| %>
+		<div class="row">
+			<div class="col brewery"><%= link_to b.name, edit_brewery_path(b) %></div>
+			<div class="col nationality"><%= b.nationality %></div>
+			<div class="col count"><%= b.beers.length %></div>
+			<div class="col delete"><%= link_to "Ta bort", brewery_path(b) , method: :delete %></div>
 		</div>
-	<% end %>
+		<% end %>
+		
+		<div class="clear"></div>
+		
 	</div>
 </div>

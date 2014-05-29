@@ -6,11 +6,6 @@
 #brewery-contact-type-list{
 	
 	.row{
-		width:100%;
-		
-		.col{
-			float:left;
-		}
 		
 		.type{
 			width:50px;
@@ -23,14 +18,6 @@
 		.delete{
 			float:right;
 			width:60px;
-		}
-	}
-	
-	.row.header{
-		background-color:transparent;
-		
-		.col{
-			font-weight:bold;
 		}
 	}
 }

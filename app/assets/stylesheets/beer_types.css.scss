@@ -3,28 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #beer-type-list{
-	float:left;
-	width:620px;
-	margin:10px 0;
 	
 	.row{
 		
-		.col{
-			float:left;
-			margin-right:10px;
-			padding:2px 0 2px 5px;
-		}
 		
 		.id{
-			float:left;
 			width:50px;
 		}
 		.name{
-			float:left;
 			width:350px;
 		}
 		.count{
-			float:left;
 			width:75px;
 		}
 		.delete{

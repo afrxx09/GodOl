@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 			sign_in user
 			redirect_to beers_path
 		else
-			
+			redirect_to root_path
 		end
 	end
 	
