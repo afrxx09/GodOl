@@ -23,7 +23,7 @@
 body,html {
 	width:100%;
 	height:100%;
-	font-family: sans-serif;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size:1em;
 	background-color:#fff;
 }
@@ -91,6 +91,14 @@ button:hover, input[type="submit"]:hover{
 	background-color:#3CE51C;
 }
 
+button.disabled, input[type="submit"].disabled{
+	background-color:#999;
+}
+
+button.disabled:hover, input[type="submit"].disabled:hover{
+	background-color:#666;
+}
+
 /* Grids */
 div.c12{
 	float:left;
@@ -121,13 +129,14 @@ div.c3{
 	width:220px;
 	margin:0 10px;
 }
-
+div.c6 div.c3,
 div.c8 div.c4,
 div.c12 div.c8,
 div.c12 div.c6,
 div.c12 div.c4,
 div.c12 div.c3{
 	margin:0 5px;
+	padding:10px 0;
 }
 
 /* classes */
@@ -176,10 +185,13 @@ div.c12 div.c3{
 	.big-list .row.header{
 		font-weight:bold;
 	}
+	.big-list .row.header .col{
+		padding:5px 10px;
+	}
 	
 	.big-list .row .col{
 		float:left;
-		padding:5px 10px;
+		padding:15px 10px;
 	}
 	
 	.big-list.gray .row:nth-child(odd){background-color:#eee;}
@@ -189,6 +201,11 @@ div.c12 div.c3{
 	
 .clear{
 	clear:both;
+}
+
+.small{
+	font-size:12px;
+	font-style:italic;
 }
 
 /* Layout */
@@ -349,10 +366,15 @@ div.c12 div.c3{
 		font-size:16px;
 		font-weight:bold;
 	}
+	
+	#nav ul li a.current{
+		border-bottom:3px solid #62b1d0;
+	}
 
 	#nav ul li a:hover{
 		background-color:#ff9929;
 		border-bottom:3px solid #62b1d0;
+		
 	}
 
 #main-wrap{

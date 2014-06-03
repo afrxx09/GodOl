@@ -32,8 +32,21 @@ class StaticPagesController < ApplicationController
 	end
 	
 	def beer_me
-		if params[:beer_type]
-			@beers = Beer.beer_me(params[:beer_type])
+		beer_type = params[:beer_type]
+		abv = params[:abv].split(',')
+		abv_min = abv[0]
+		abv_max = abv[1]
+		
+		if params[:ibu].empty?
+			@beers = Beer.beer_me(beer_type, abv_min, abv_max)
+		else
+			ibu = params[:ibu].split(',')
+			ibu_min = ibu[0]
+			ibu_max = ibu[1]
+			flash[:notice] = ibu_max
+			@beers = Beer.beer_me_ibu(beer_type, abv_min, abv_max, ibu_min, ibu_max)
+			
 		end
+		
 	end
 end

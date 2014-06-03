@@ -24,35 +24,31 @@
 
 img.brewery-logo{
 	width:150px;
-	float:right;
-	margin-left:10px;
-	margin-bottom:10px;
+	float:left;
+	margin-right:20px;
+	margin-top:20px;
 }
 
-img.brewery-nat{
-	width:16px;
-	margin-left:5px;
-}
 
 #brewery-beer-list{
-	width:100%;
 	margin:10px 0;
 
 	.row{
-		float:left;
-		width:100%;
-		background-color:#e6e6e6;
-
-		.col{
-			float:left;
-			padding:2px 3px;
-			width:94px;
+		.beer{
+			width:100px;
+		}
+		.beer_type{
+			width:100px;
+		}
+		.abv{
+			width:50px;
+		}
+		.rating{
+			width:50px;
 		}
 	}
 
-	.row:nth-child(even){
-		background-color:#eee;
-	}
+	
 }
 
 #brewery-form{

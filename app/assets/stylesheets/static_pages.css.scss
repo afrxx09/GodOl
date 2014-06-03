@@ -22,7 +22,13 @@
 		}
 		.stats{
 			width:175px;
-			font-size:12px;
+			font-size:13px;
+			
+			.label{
+				display:inline-block;
+				font-weight:bold;
+				width:75px;
+			}
 		}
 		.brewery{
 			width:200px;
@@ -118,9 +124,16 @@
 
 #popular-beers-list,
 #new-beers-list{
+	padding:10px 0;
+	margin:10px 0;
+	
+	h2{
+		text-align:center;
+		margin:0;
+	}
 	
 	.beer{
-		width:120px;
+		width:100px;
 	}
 	.beer-type{
 		width:100px;
@@ -130,4 +143,44 @@
 		width:50px;
 	}
 	
+}
+
+#beer-me-form{
+	padding: 10px 0;
+	margin:20px 0;
+	border:1px solid #ccc;
+	background-color:#4BC0FF;
+	
+	.row{
+		float:left;
+		width:100%;
+		margin:5px 0;
+	}
+	
+	h2,p{
+		text-align:center;
+		margin:0;
+	}
+	
+	
+	.beer-me-option{
+		float:left;
+		width:95px;
+		
+		font-weight:bold;
+		text-align:center;
+	}
+	select {
+		float:left;
+		width:90px;
+		margin:0 4px;
+	}
+	#btn-beer-me{
+		text-align:center;
+		
+		input{
+			float:none;
+		}
+		
+	}
 }

@@ -23,7 +23,10 @@ class Beer < ActiveRecord::Base
 		joins(:brewery).where("breweries.nationality = ?", "#{query}")
 	end
 	
-	def self.beer_me(query)
-		where("beer_type_id = ?", "#{query}")
+	def self.beer_me(beer_type, abv_min, abv_max)
+		where("beer_type_id = ? AND abv BETWEEN ? AND ?", "#{beer_type}", "#{abv_min}", "#{abv_max}").limit(5).order("RANDOM()")
+	end
+	def self.beer_me_ibu(beer_type, abv_min, abv_max, ibu_min, ibu_max)
+		where("beer_type_id = ? AND abv BETWEEN ? AND ? AND ibu BETWEEN ? AND ?", "#{beer_type}", "#{abv_min}", "#{abv_max}", "#{ibu_min}", "#{ibu_max}").limit(5).order("RANDOM()")
 	end
 end

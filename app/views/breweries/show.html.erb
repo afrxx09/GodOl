@@ -1,35 +1,64 @@
-<div class="c8">
-	<h1><%= @brewery.name %><img class="brewery-nat" src="/images/brewery-no-image.jpg" /><img class="brewery-logo" src="/images/brewery-no-image.jpg" /></h1>
-	<div><%= @brewery.description %></div>
+<div class="c6">
+	<%= image_tag @brewery.img.url, class: "brewery-logo" %>
+	<h1><%= @brewery.name %></h1>
+	<div>
+		<p>Nationalitet: <%= @brewery.nationality %></p>
+		<p>Etablerings år: <%= @brewery.nationality %></p>
+		<p>Hemsida: <%= @brewery.nationality %></p>
+		<p><%= @brewery.description %></p>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="c3">
+		<% if @brewery.address.empty? &&  @brewery.zip.empty? && @brewery.city.empty? %>
+		
+		<% else %>
+		<%= render 'breweries/show_address' %>
+		<% end %>
+	</div>
+
+	<div class="c3">
+		<% if @brewery.brewery_contacts %>
+		<%= render @brewery.brewery_contacts %>
+		<% end %>
+	</div>
 </div>
 
-<div class="c4">
-	<h2>Öl</h2>
-	<div id="brewery-beer-list">
-	<% @brewery.beers.each do |b| %>
-		<div class="row">
-			<div class="col"><%= link_to b.name, beer_path(b) %></div>
-			<div class="col"><%= b.beer_type.name %></div>
-			<div class="col"><%= b.abv %> %</div>
+<div class="c6">
+	<h2>Öl från <%= @brewery.name %></h2>
+	<div id="brewery-beer-list" class="small-list gray">
+		<div class="row header">
+			<div class="col beer">Öl</div>
+			<div class="col beer_type">Typ</div>
+			<div class="col abv">abv</div>
+			<div class="col rating">Betyg</div>
+			<div class="col count">#</div>
 		</div>
-	<% end %>
+		<% @brewery.beers.each do |b| %>
+		<div class="row">
+			<div class="col beer"><%= link_to b.name, beer_path(b) %></div>
+			<div class="col beer_type"><%= b.beer_type.name %></div>
+			<div class="col abv">
+				<% if b.abv %>
+					<%= b.abv %>%
+				<% else %>
+					_
+				<% end %>
+			</div>
+			<div class="col rating">
+				<% rating = b.logged_beers.joins(:logged_beer_score).average(:overall) %>
+				<% if rating %>
+					<%= rating.round(2) %>
+				<% else %>
+					_
+				<% end %>
+			</div>
+			<div class="col count">
+				<%= b.logged_beers.joins(:logged_beer_score).count %>
+			</div>
+		</div>
+		<% end %>
 	</div>
 	<div class="clear"></div>
-</div>
-
-<div class="c12">
-	<div class="c4">
-		<h2>Adress</h2>
-		<div>
-			<%= @brewery.address %><br />
-			<%= @brewery.address2 %>
-		</div>
-		<div><%= @brewery.zip %> <%= @brewery.city %></div>
-		<div><%= @brewery.state %> <%= @brewery.nationality %></div>
-	</div>
-
-	<div class="c4">
-		<h3>Kontaktinfo</h3>
-		<%= render @brewery.brewery_contacts %>
-	</div>
 </div>

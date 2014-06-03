@@ -5,10 +5,63 @@
 #logged-beer-list{
 	
 	.row{
+		a{
+			display:block;
+		}
+		.count{
+			width:40px;
+		}
+		.beer{
+			width:150px;	
+		}
+		.brewery{
+			width:150px;	
+		}
+		.aroma{
+			width:50px;
+		}
+		.appearance{
+			width:50px;
+		}
+		.flavour{
+			width:50px;
+		}
+		.pallate{
+			width:50px;
+		}
+		.overall{
+			width:50px;
+		}
+		.total{
+			width:50px;
+		}
+		.date{
+			float:right;
+			width:90px;
+		}
+	}
+}
+
+#logged-beer-image{
+	width:150px;
+	margin:0;
+}
+
+#logged-beer-evaluation-form,
+#logged-beer-score-form{
+	
+	.row{
+		float:left;
+		width:100%;
+		margin:3px 0;
 		
-		
-		.col{
-		
+		label{
+			float:left;
+			width:100px;
+		}
+		select{
+			float:left;
+			width:50px;
 		}
 	}
 }

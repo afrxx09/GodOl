@@ -36,9 +36,14 @@
 				<%= beer.beer_type.name %>
 			</div>
 			<div class="col stats">
-				Alkoholhalt: <%= beer.abv %> %<br />
-				Bitterhet: <%= beer.ibu %> IBU<br />
-				Färg: <%= beer.ebc %> EBC
+				<%
+				 abv = beer.abv ? beer.abv.to_s + '%' : '' 
+				 ibu = beer.ibu ? beer.abv.to_s + ' IBU' : ''
+				 ebc = beer.ebc ? beer.abv.to_s + ' EBC' : ''
+				%>
+				<span class="label">Alkoholhalt</span><%= abv %><br />
+				<span class="label">Bitterhet</span><%= ibu %><br />
+				<span class="label">Färg</span><%= ebc %>
 			</div>
 			<div class="col brewery">
 				<%= link_to beer.brewery.name, brewery_path(beer.brewery) %><br />

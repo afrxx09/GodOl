@@ -1,12 +1,68 @@
-<div>
-	<div><%= @beer.id %></div>
-	<div><%= @beer.beer_type.name %></div>
-	<div><%= @beer.brewery.name %></div>
-	<div><%= @beer.name %></div>
-	<div><%= @beer.abv %></div>
-	<div><%= @beer.ibu %></div>
-	<div><%= @beer.ebc %></div>
+<div class="c8">
+	<%= image_tag @beer.img.url, id: "beer-image" %>
+	<h2><%= @beer.name %></h2>
+	<div>
+		<p>Bryggeri: <%= link_to @beer.brewery.name, brewery_path(@beer.brewery) %></p>
+		<p>Typ: <%= @beer.beer_type.name %></p>
+		
+		<p>ABV: <%= @beer.abv %>%</p>
+		<p>IBU: <%= @beer.ibu %></p>
+		<p>EBC: <%= @beer.ebc %></p>
+	</div>
 </div>
-<div>
-	<%= link_to "Logga öl", new_beer_log_path(@beer) %>
+<div class="c4">
+	<h2>Betyg</h2>
+	<p>Baseras på användares betygstättning.<p>
+	<div id="beer-rating-list" class="small-list gray">
+		
+		<% rating = @beer.logged_beers.joins(:logged_beer_score) %>
+		<%
+		if rating.any?
+			aroma = rating.average(:aroma).round(2)
+			appearance = rating.average(:appearance).round(2)
+			flavour = rating.average(:flavour).round(2)
+			pallate = rating.average(:pallate).round(2)
+			overall = rating.average(:overall).round(2)
+			total = overall + pallate + flavour + appearance + aroma
+		%>
+		<p>Antal bedömningar: <%= rating.count %></p>
+		<div class="row">
+			<div class="col label">Arom</div>
+			<div class="col value"><%= aroma %> / 5</div>
+		</div>
+		<div class="row">
+			<div class="col label">Utseende</div>
+			<div class="col value"><%= appearance %> / 5</div>
+		</div>
+		<div class="row">
+			<div class="col label">Smak</div>
+			<div class="col value"><%= flavour %> / 5</div>
+		</div>
+		<div class="row">
+			<div class="col label">Eftersmak</div>
+			<div class="col value"><%= pallate %> / 5</div>
+		</div>
+		<div class="row">
+			<div class="col label">Generell bedömning</div>
+			<div class="col value"><%= overall %> / 5</div>
+		</div>
+		<div class="row">
+			<div class="col label">Total</div>
+			<div class="col value"><%= total %> / 25</div>
+		</div>
+		
+		<% else %>
+		
+		<div class="row">Ingen statisik tillgänglig</div>
+		
+		<% end %>
+	
+		<div class="clear"></div>
+	</div>
+	<% if signed_in? %>
+	<%= button_to "Logga öl", new_beer_log_path(@beer), :method => :get %>
+	<% else %>
+	<%= button_to "Logga öl", new_beer_log_path(@beer), :method => :get, :disabled => true, class: "disabled" %>
+	Måste vara inloggad för att logga öl
+	<% end %>
 </div>

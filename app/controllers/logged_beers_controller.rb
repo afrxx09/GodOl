@@ -11,6 +11,7 @@ class LoggedBeersController < ApplicationController
 	end
 	
 	def new
+		@beer = Beer.find(params[:id])
 		@logged_beer = LoggedBeer.new(:beer_id => params[:id])
 		@logged_beer.build_logged_beer_score
 		@logged_beer.build_logged_beer_evaluation
@@ -25,10 +26,10 @@ class LoggedBeersController < ApplicationController
 			if @logged_beer.save
 				redirect_to logged_beers_path
 			else
-				redirect_to beer_list_path
+				redirect_to new_beer_log_path(@beer)
 			end
 		else
-			redirect_to beer_list_path
+			redirect_to new_beer_log_path(@beer)
 		end
 		
 	end

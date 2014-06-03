@@ -1,7 +1,20 @@
 <div>
-	<h2>Beer me!</h2>
-	<div class="form">
+	
+	<div id="beer-me-form" class="form">
+		<h2>Beer me!</h2>
+		
+		<p>
+			Vill du testa något nytt men vet inte vad?
+			"Beer-me" slumpar fram öl efter dina önskemål!
+		</p>
 		<%= form_tag(beer_me_path, :method => :get) do |f| %>
+			
+			<div class="row">
+				<div class="col beer-me-option">Typ</div>
+				<div class="col beer-me-option">Alkohol</div>
+				<div class="col beer-me-option">IBU</div>
+			</div>
+			
 			<div class="row">
 				
 				<div class="col">
@@ -10,12 +23,16 @@
 				</div>
 				
 				<div class="col">
-					<%= select_tag :alcohol, options_for_select([['0-3%', ''], ['4-5%', 2]]) %>
+					<%= select_tag :abv, options_for_select([['0-3%', '0,3'], ['4-5%', '4,5'], ['6-7%', '6,7'], ['8-9%', '8,9']]) %>
+				</div>
+				
+				<div class="col">
+					<%= select_tag :ibu, options_for_select([['0-10', '0,10'],['10-20', '10,20'],['20-30', '20,30']]), include_blank: true %>
 				</div>
 				
 			</div>
 			
-			<div class="row">
+			<div id="btn-beer-me" class="row">
 				<%= submit_tag "Beer me!" %>
 			</div>
 			
@@ -24,9 +41,11 @@
 	</div>
 </div>
 
-<div>
+<div id="popular-beers-list">
+
 	<h2>Populära Öl: maj</h2>
-	<div id="popular-beers-list" class="small-list orange">
+	
+	<div class="small-list orange">
 		
 		<% @popular_beers.each do |nb| %>
 		<div class="row">
@@ -41,14 +60,17 @@
 		</div>
 		<% end %>
 		
-		<div class="clear"></div>
-		
 	</div>
+	
+	<div class="clear"></div>
+	
 </div>
 
-<div>
+<div id="new-beers-list">
+	
 	<h2>Nya Öl</h2>
-	<div id="new-beers-list" class="small-list orange">
+	
+	<div class="small-list orange">
 		
 		<% @new_beers.each do |nb| %>
 		<div class="row">
@@ -63,7 +85,8 @@
 		</div>
 		<% end %>
 		
-		<div class="clear"></div>
-		
 	</div>
+	
+	<div class="clear"></div>
+	
 </div>
