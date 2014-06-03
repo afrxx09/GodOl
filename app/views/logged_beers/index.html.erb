@@ -1,0 +1,49 @@
+<div class="c12">
+	<h1>Öl-logg</h1>
+	
+	<div id="logged-beer-list" class="big-list gray">
+		
+		<div class="row header">
+			<div class="col beer">Öl</div>
+			<div class="col brewery">Bryggeri</div>
+			<div class="col aroma">Arom</div>
+			<div class="col appearance">Utseende</div>
+			<div class="col flavour">Smak</div>
+			<div class="col pallate">Munkänsla</div>
+			<div class="col overall">Betyg</div>
+			<div class="col total">Total</div>
+			<div class="col date">Datum</div>
+		</div>
+		
+		<%
+		@logged_beers.each do |lb|
+			
+			if lb.logged_beer_score
+				lbs = lb.logged_beer_score
+				
+				aroma = lbs.aroma.round(2)
+				appearance = lbs.appearance.round(2)
+				flavour = lbs.flavour.round(2)
+				pallate = lbs.pallate.round(2)
+				overall = lbs.overall.round(2)
+				total = overall + pallate + flavour + appearance + aroma
+			%>
+			
+			<div class="row">
+				<div class="col beer"><%= link_to lb.beer.name, logged_beer_path(lb) %></div>
+				<div class="col brewery"><%= lb.beer.brewery.name %></div>
+				<div class="col aroma"><%= aroma %></div>
+				<div class="col appearance"><%= appearance %></div>
+				<div class="col flavour"><%= flavour %></div>
+				<div class="col pallate"><%= pallate %></div>
+				<div class="col overall"><%= overall %></div>
+				<div class="col total"><%= total %>/25</div>
+				<div class="col date"><%= lb.created_at.strftime("%Y-%m-%d") %></div>
+			</div>
+			<% end %>
+		<% end %>
+		
+		<div class="clear"></div>
+		
+	</div>
+</div>

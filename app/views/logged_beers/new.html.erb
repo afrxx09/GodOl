@@ -1,0 +1,134 @@
+<div class="c12">
+
+	<div class="c3">
+		<h2><%= @beer.name %></h2>
+		<%= image_tag @beer.img.url, id: "logged-beer-image" %>
+		<div>
+			<p>Bryggeri: <%= link_to @beer.brewery.name, brewery_path(@beer.brewery) %></p>
+			<p>Typ: <%= @beer.beer_type.name %></p>
+			
+			<p>ABV: <%= @beer.abv %>%</p>
+			<p>IBU: <%= @beer.ibu %></p>
+			<p>EBC: <%= @beer.ebc %></p>
+		</div>
+	</div>
+	
+	<div class="c3" id="logged-beer-score-form">
+		<h2>Betyg</h2>
+		<p>Betygsätt ölets olika attribut.</p>
+		<%= form_for @logged_beer do |f| %>
+		
+			<%= f.hidden_field :beer_id %>
+			<%= f.hidden_field :user_id %>
+			
+			<%= f.fields_for :logged_beer_score do |lbs| %>
+			<div class="row">
+				<%= lbs.label :aroma %>
+				<%= lbs.select :aroma, (0..5) %>
+			</div>
+			
+			<div class="row">
+				<%= lbs.label :appearance %>
+				<%= lbs.select :appearance, (0..5) %>
+			</div>
+			
+			<div class="row">
+				<%= lbs.label :flavour %>
+				<%= lbs.select :flavour, (0..5) %>
+			</div>
+			
+			<div class="row">
+				<%= lbs.label :pallate, "Munkänsla" %>
+				<%= lbs.select :pallate, (0..5) %>
+			</div>
+			
+			<div class="row">
+				<%= lbs.label :overall %>
+				<%= lbs.select :overall, (0..5) %>
+			</div>
+		<% end %>
+	</div>
+		
+	<div id="logged-beer-evaluation-form" class="c6">
+		<h2>Utvärda smaker</h2>
+		<p>
+			Utvärdera ölets olika smaker och dess intensitet.<br />
+			<span class="small">(ej obligatorisk)</span>
+		</p>
+		<%= f.fields_for :logged_beer_evaluation do |lbe| %>
+			<div class="c3">
+				<div class="row">
+					<%= lbe.label :body %>
+					<%= lbe.select :body, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :linger %>
+					<%= lbe.select :linger, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :bitter %>
+					<%= lbe.select :bitter, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :sour %>
+					<%= lbe.select :sour, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :sweet %>
+					<%= lbe.select :sweet, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :fruity %>
+					<%= lbe.select :fruity, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :floral %>
+					<%= lbe.select :floral, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :hoppy %>
+					<%= lbe.select :hoppy, (0..5) %>
+				</div>
+			
+			</div>
+			<div class="c3">
+			
+				<div class="row">
+					<%= lbe.label :spicy %>
+					<%= lbe.select :spicy, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :malty %>
+					<%= lbe.select :malty, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :toffee %>
+					<%= lbe.select :toffee, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :burnt %>
+					<%= lbe.select :burnt, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :chocolate %>
+					<%= lbe.select :chocolate, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :sulphury %>
+					<%= lbe.select :sulphury, (0..5) %>
+				</div>
+				<div class="row">
+					<%= lbe.label :carbonation %>
+					<%= lbe.select :carbonation, (0..5) %>
+				</div>
+			
+			
+			</div>
+			<div class="clear"></div>
+		<% end %>
+		<%= f.submit "Spara i loggen" %>
+		
+		</div>
+		
+	<% end %>
+</div>

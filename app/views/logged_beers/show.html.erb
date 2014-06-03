@@ -1,0 +1,169 @@
+<div class="c12">
+	
+	<div class="c4">
+		<h1>Öl-logg: <%= @logged_beer.beer.name %></h1>
+		<%= image_tag @logged_beer.beer.img.url, id: "logged-beer-image" %>
+		<div>
+			<p>Öl: <%= @logged_beer.beer.name %></p>
+			<p>Bryggeri: <%= link_to @logged_beer.beer.brewery.name, brewery_path(@logged_beer.beer.brewery) %></p>
+			<p>Typ: <%= @logged_beer.beer.beer_type.name %></p>
+			
+			<p>ABV: <%= @logged_beer.beer.abv %>%</p>
+			<p>IBU: <%= @logged_beer.beer.ibu %></p>
+			<p>EBC: <%= @logged_beer.beer.ebc %></p>
+		</div>
+	</div>
+	
+	<div class="c4">
+		<h2>Betyg</h2>
+		<%
+		lbs = @logged_beer.logged_beer_score
+		if lbs
+			appearance = lbs.appearance
+			aroma = lbs.aroma
+			pallate = lbs.pallate
+			flavour = lbs.flavour
+			overall = lbs.overall
+			total = appearance + aroma + pallate + flavour + overall
+		%>
+		<div class="">
+			
+			<div class="">
+				<div class="">Utseende</div>
+				<div class=""><%= appearance %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Arom</div>
+				<div class=""><%= aroma %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Munkänsla</div>
+				<div class=""><%= pallate %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Smak</div>
+				<div class=""><%= flavour %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Övergripande Betyg</div>
+				<div class=""><%= overall %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Total</div>
+				<div class=""><%= total %> / 25</div>
+			</div>
+		</div>
+		<% else %>
+		 Inget
+		<% end %>
+	</div>
+	
+	<div class="c4">
+		<h2>Utvärdering</h2>
+		<%
+			lbe = @logged_beer.logged_beer_evaluation
+			if lbe
+				body = lbe.body
+				linger = lbe.linger
+				bitter = lbe.bitter
+				sour = lbe.sour
+				sweet = lbe.sweet
+				fruity = lbe.fruity
+				floral = lbe.floral
+				hoppy = lbe.hoppy
+				spicy = lbe.spicy
+				malty = lbe.malty
+				toffee = lbe.toffee
+				burnt = lbe.burnt
+				chocolate = lbe.chocolate
+				sulphury = lbe.sulphury
+				carbonation = lbe.carbonation
+		%>
+		<div class="">
+			
+			<div class="">
+				<div class="">Fyllighet</div>
+				<div class=""><%= body %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Lång eftersmak</div>
+				<div class=""><%= linger %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Bitter</div>
+				<div class=""><%= bitter %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Sur</div>
+				<div class=""><%= sour %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Söt</div>
+				<div class=""><%= sweet %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Fruktig</div>
+				<div class=""><%= fruity %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Blommig</div>
+				<div class=""><%= floral %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Humle</div>
+				<div class=""><%= hoppy %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Hetta</div>
+				<div class=""><%= spicy %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Malt</div>
+				<div class=""><%= malty %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Toffee</div>
+				<div class=""><%= toffee %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Bränd</div>
+				<div class=""><%= burnt %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Choklad</div>
+				<div class=""><%= chocolate %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Svavel</div>
+				<div class=""><%= sulphury %></div>
+			</div>
+			
+			<div class="">
+				<div class="">Kolsyra</div>
+				<div class=""><%= carbonation %></div>
+			</div>
+			
+			<% else %>
+				Inget
+			<% end %>
+		</div>
+	</div>
+</div>
