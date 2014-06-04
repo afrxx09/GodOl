@@ -213,16 +213,13 @@ div.c12 div.c3{
 	width:100%;
 	min-height:100%;
 	margin:0;
-	background: -webkit-linear-gradient(#eee 190px, #fff 350px); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#eee 190px, #fff 350px); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#eee 190px, #fff 350px); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#eee 190px, #fff 350px); /* Standard */
+	background:#fff;
 }
 
 #header-wrap{
 	width:100%;
 	height:112px;
-	background:#226078;
+	background:#00f;
 }
 
 #header-container{
