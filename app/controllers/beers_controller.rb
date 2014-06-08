@@ -16,6 +16,7 @@ class BeersController < ApplicationController
 		@beer = Beer.new(beer_params)
 
 		if @beer.save
+			flash[:success] = @beer.name + " sparades"
 			redirect_to beers_path
 		else
 			render 'new'
@@ -30,6 +31,7 @@ class BeersController < ApplicationController
 		@beer = Beer.find(params[:id])
 
 		if @beer.update(beer_params)
+			flash[:success] = @beer.name + " uppdaterades"
 			redirect_to beers_path
 		else
 			render 'edit'

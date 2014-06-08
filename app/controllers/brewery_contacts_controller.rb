@@ -3,14 +3,14 @@ class BreweryContactsController < ApplicationController
 	def create
 		@brewery = Brewery.find(params[:brewery_id])
 		@brewery_contact = @brewery.brewery_contacts.create(brewery_contact_params)
-		redirect_to brewery_path(@brewery)
+		redirect_to edit_brewery_path(@brewery)
 	end
 	
 	def destroy
 		@brewery = Brewery.find(params[:brewery_id])
 		@brewery_contact = @brewery.brewery_contacts.find(params[:id])
 		@brewery_contact.destroy
-		redirect_to brewery_path(@brewery)
+		redirect_to edit_brewery_path(@brewery)
 	end
 	
 	private

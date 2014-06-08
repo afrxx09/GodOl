@@ -24,12 +24,13 @@ class LoggedBeersController < ApplicationController
 		
 		if @beer
 			if @logged_beer.save
+				flash[:success] = @beer.name + " har sparat i loggen"
 				redirect_to logged_beers_path
 			else
-				redirect_to new_beer_log_path(@beer)
+				render 'new'
 			end
 		else
-			redirect_to new_beer_log_path(@beer)
+			redirect_to logged_beers_path
 		end
 		
 	end

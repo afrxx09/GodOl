@@ -15,17 +15,35 @@
 //= require turbolinks
 //= require_tree .
 
-var Toggle = {
+var App = {
 	
-	init : function(){
-		$('.toggle-button').on('click', function(e){
-			e.preventDefault();
-			var toggle_container = $(this).data('toggle-container');
-			$(toggle_container).toggle();
-		});
+	Init : function(){
+		console.log('asd');
+		this.Toggle.init();
+		this.Flash.init();
+	},
+	
+	Toggle : {
+		
+		init : function(){
+			$('.toggle-button').on('click', function(e){
+				e.preventDefault();
+				var toggle_container = $(this).data('toggle-container');
+				$(toggle_container).toggle();
+			});
+		}
+	},
+
+	Flash : {
+		init : function(){
+			$('.alert .btn-close').on('click', function(e){
+				e.preventDefault();
+				var flash_container = $(this).closest('.alert');
+				flash_container.fadeOut(250);
+			});
+		}
 	}
 };
 
-$(document).ready(function(){
-	Toggle.init();
-});
+$(document).ready(function(){App.Init();});
+$(document).on('page:load', function(){App.Init();});

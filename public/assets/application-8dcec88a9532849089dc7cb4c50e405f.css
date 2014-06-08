@@ -1,46 +1,50 @@
-/* line 10, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 9, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .nothing-at-all2 {
+  width: 100%;
+}
+/* line 13, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-list .row .id {
   width: 50px;
 }
-/* line 13, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 16, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-list .row .name {
   width: 350px;
 }
-/* line 16, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 19, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-list .row .count {
   width: 75px;
 }
-/* line 19, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 22, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-list .row .delete {
   float: right;
   width: 75px;
 }
-/* line 25, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 28, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-list .row.header {
   font-weight: bold;
   background-color: transparent;
 }
 
-/* line 31, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 35, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-form {
   margin: 10px 0;
 }
-/* line 34, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 38, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-form .form-row {
   width: 100%;
   float: left;
   margin: 5px 0;
 }
-/* line 39, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 43, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-form .form-row .form-label {
   display: block;
   font-weight: bold;
 }
-/* line 43, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 47, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-form .form-row .form-label label {
   display: block;
 }
-/* line 50, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+/* line 54, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
 #beer-type-form .form-row .form-input input {
   width: 250px;
 }
@@ -334,11 +338,6 @@ img.brewery-logo {
   width: 150px;
   padding: 3px;
 }
-/* line 51, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
-#contact-type-form .form-row input[type="submit"] {
-  margin-left: 110px;
-  padding: 5px 15px;
-}
 /* line 8, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
 #logged-beer-list .row a {
   display: block;
@@ -625,37 +624,46 @@ img.brewery-logo {
   width: 100px;
 }
 
-/* line 27, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form {
+/* line 29, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form,
+#sign-up-form,
+#login-form {
   margin: 10px 0;
 }
-/* line 30, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form .form-row {
+/* line 32, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form .form-row,
+#sign-up-form .form-row,
+#login-form .form-row {
   float: left;
   width: 100%;
   margin: 5px 0;
   clear: both;
 }
-/* line 37, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form .form-label {
+/* line 39, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form label,
+#sign-up-form label,
+#login-form label {
   display: block;
   float: left;
-  width: 75px;
+  width: 150px;
   margin-right: 10px;
   text-align: right;
   font-weight: bold;
 }
-/* line 45, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form .form-label .req {
-  color: #e33;
+/* line 49, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form input[type="text"],
+#edit-user-form input[type="password"],
+#sign-up-form input[type="text"],
+#sign-up-form input[type="password"],
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 250px;
 }
-/* line 51, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form .form-input input {
-  width: 190px;
-}
-/* line 54, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
-#edit-user-form .form-input select {
-  width: 200px;
+/* line 52, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form input[type="submit"],
+#sign-up-form input[type="submit"],
+#login-form input[type="submit"] {
+  margin-right: 37px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -696,7 +704,7 @@ h1, h2, h3, h4, h5, h6{
 p{
 	margin-top:.25em;
 	margin-bottom:.5em;
-	line-height:1.25em;
+	line-height:1.5em;
 }
 
 img{
@@ -759,6 +767,69 @@ button.disabled:hover, input[type="submit"].disabled:hover{
 	background-color:#666;
 }
 
+/*Form Error*/
+.field_with_errors input,
+.field_with_errors select{
+	border:1px solid #f00;
+}
+form .req{
+	color:#f00;
+	font-weight:bold;
+}
+
+#error_explanation{
+	margin-top:10px;
+	background-color:#fee;
+	padding:10px;
+}
+#error_explanation .alert-error{
+	font-size:20px;
+	font-weight:bold;
+	color:#f00;
+}
+#error_explanation ul{
+	list-style:none;
+}
+
+#error_explanation ul li{
+	color:#f00;
+}
+
+/*Flash messages*/
+.alert {
+	padding:20px;
+	margin:20px 0;
+	font-weight:bold;
+	font-size:18px;
+	border-radius:2px;
+}
+
+.alert .btn-close{
+	float:right;
+	margin:0;
+	padding:0 5px;
+	border:1px solid #000;
+	background-color:#fff;
+	cursor:pointer;
+}
+
+.alert.alert-success{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
+
+.alert.alert-warning{
+	background-color:#ffc;
+	color:#330;
+	border:1px solid #cc8;
+}
+
+.alert.alert-welcome{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
 /* Grids */
 div.c12{
 	float:left;
@@ -873,10 +944,7 @@ div.c12 div.c3{
 	width:100%;
 	min-height:100%;
 	margin:0;
-	background: -webkit-linear-gradient(#eee 190px, #fff 350px); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#eee 190px, #fff 350px); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#eee 190px, #fff 350px); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#eee 190px, #fff 350px); /* Standard */
+	background:#fff;
 }
 
 #header-wrap{
@@ -970,6 +1038,10 @@ div.c12 div.c3{
 		font-weight:bold;
 		text-decoration:none;
 	}
+	#adminnav ul li a img{
+		float:right;
+		margin-top:-5px;
+	}
 
 	#adminnav ul li a:hover{
 		text-decoration:underline;
@@ -993,7 +1065,7 @@ div.c12 div.c3{
 
 #nav-wrap{
 	width:100%;
-	height:40px;
+	height:55px;
 	background-color:#ffa340;
 }
 
@@ -1018,23 +1090,29 @@ div.c12 div.c3{
 
 	#nav ul li a{
 		display:block;
-		padding:10px 20px;
+		padding:15px 30px 20px 45px;
 		height:17px;
 		color:#000;
 		text-decoration:none;
-		border-bottom:3px solid #ffa340;
-		font-size:16px;
+		border-top:3px solid #ffa340;
+		font-size:18px;
 		font-weight:bold;
 	}
 	
+	#nav ul li a img{
+		margin:-15px 0 0 -45px;
+		float:left;
+	}
+	
 	#nav ul li a.current{
-		border-bottom:3px solid #62b1d0;
+		background-color:#E57119;
+		border-top:3px solid #E57119;
+		color:#fff;
 	}
 
 	#nav ul li a:hover{
-		background-color:#ff9929;
-		border-bottom:3px solid #62b1d0;
-		
+		border-top:3px solid #fff;
+		color:#fff;
 	}
 
 #main-wrap{

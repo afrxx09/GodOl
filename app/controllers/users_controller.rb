@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 	before_action :signed_in_user, only: [:edit, :update]
 	before_action :correct_user,   only: [:edit, :update]
-	#before_action :admin_user,     only: [:index, :destroy, :edit, :update, :destroy]
+	before_action :admin_user,     only: [:index, :destroy, :edit, :update, :destroy]
 	
 	def index
 		@users = User.order(admin: :desc)
@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-			redirect_to root_path
+			flash[:welcome] = "Välkommen till god öl! Du kan nu logga in med dina uppgifter."
+			redirect_to signin_path
 		else
 			render 'new'
 		end
@@ -28,7 +29,8 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 
 		if @user.update(user_params)
-			redirect_to root_path
+			flash[:success] = "Kontouppgifterna har sparats"
+			render 'edit'
 		else
 			render 'edit'
 		end
@@ -36,6 +38,7 @@ class UsersController < ApplicationController
 	
 	def destroy
 		@user = User.find(params[:id])
+		flash[:success] = "Användaren \"" + @user.name + "\" thar tagits bort"
 		@user.destroy
 		
 		redirect_to users_path
@@ -44,6 +47,11 @@ class UsersController < ApplicationController
 	def toggle_admin
 		user = User.find(params[:id])
 		user.toggle!(:admin)
+		if user.admin
+			flash[:success] = "Användaren " + user.name + " är nu admin."
+		else
+			flash[:success] = "Användaren " + user.name + " är inte längre admin."
+		end
 		redirect_to users_path
 	end
 	

@@ -9,6 +9,7 @@ class BeerTypesController < ApplicationController
 		@beer_type = BeerType.new(beer_type_params)
 
 		if @beer_type.save
+			flash[:success] = @beer_type.name + " Uppdaterats"
 			redirect_to beer_types_path
 		else
 			render 'index'

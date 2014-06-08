@@ -1,0 +1,27 @@
+<% provide(:title, "Logga in") %>
+<div class="c6">
+    <h1>Logga in</h1>
+
+    <div>
+        <div id="login-form">
+        
+            <%= form_for(:session, url: sessions_path) do |f| %>
+                <div class="form-row">
+                    <%= f.label :email %>
+                    <%= f.text_field :email %>
+                </div>
+                <div class="form-row">
+                    <%= f.label :password %>
+                    <%= f.password_field :password %>
+                </div>
+                <div class="form-row">
+                    <%= f.submit "Sign in" %>
+                </div>
+                
+            <% end %>
+            <div>
+                <p>Ny användare? <%= link_to "Skapa konto här", signup_path %></p>
+            </div>
+        </div>
+    </div>
+</div>

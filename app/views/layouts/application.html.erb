@@ -19,7 +19,7 @@
 			
 			<div id="nav-wrap">
 				<div id="nav-container">
-					<div id="nav" class="c12">
+					<div id="nav">
 						<%= render 'layouts/nav' %>
 					</div>
 					<div class="clear"></div>
@@ -28,12 +28,16 @@
 			
 			<div id="main-wrap">
 				
-				
 				<div id="main-container">
-					<% if flash[:notice] %>
-					<div class="notice"><%= flash[:notice] %></div>
-					<% end %>
+					
+					<div id="flash-messages">
+						<% flash.each do |key, value| %>
+						<div class="alert alert-<%= key %>"><%= value %></div>
+						<% end %>
+					</div>
+					
 					<%= yield %>
+					
 				</div>
 			</div>
 			

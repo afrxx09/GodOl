@@ -24,7 +24,9 @@
 	}
 }
 
-#edit-user-form{
+#edit-user-form,
+#sign-up-form,
+#login-form{
 	margin:10px 0;
 
 	.form-row{
@@ -34,25 +36,20 @@
 		clear:both;
 	}
 
-	.form-label{
+	label{
 		display:block;
 		float:left;
-		width:75px;
+		width:150px;
 		margin-right:10px;
 		text-align:right;
 		font-weight:bold;
-
-		.req{
-			color:#e33;
-		}
 	}
-
-	.form-input{
-		input{
-			width:190px;
-		}
-		select{
-			width:200px;
-		}
+	
+	input[type="text"],
+	input[type="password"]{
+		width:250px;
+	}
+	input[type="submit"]{
+		margin-right:37px;
 	}
 }

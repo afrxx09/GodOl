@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6{
 p{
 	margin-top:.25em;
 	margin-bottom:.5em;
-	line-height:1.25em;
+	line-height:1.5em;
 }
 
 img{
@@ -99,6 +99,69 @@ button.disabled:hover, input[type="submit"].disabled:hover{
 	background-color:#666;
 }
 
+/*Form Error*/
+.field_with_errors input,
+.field_with_errors select{
+	border:1px solid #f00;
+}
+form .req{
+	color:#f00;
+	font-weight:bold;
+}
+
+#error_explanation{
+	margin-top:10px;
+	background-color:#fee;
+	padding:10px;
+}
+#error_explanation .alert-error{
+	font-size:20px;
+	font-weight:bold;
+	color:#f00;
+}
+#error_explanation ul{
+	list-style:none;
+}
+
+#error_explanation ul li{
+	color:#f00;
+}
+
+/*Flash messages*/
+.alert {
+	padding:20px;
+	margin:20px 0;
+	font-weight:bold;
+	font-size:18px;
+	border-radius:2px;
+}
+
+.alert .btn-close{
+	float:right;
+	margin:0;
+	padding:0 5px;
+	border:1px solid #000;
+	background-color:#fff;
+	cursor:pointer;
+}
+
+.alert.alert-success{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
+
+.alert.alert-warning{
+	background-color:#ffc;
+	color:#330;
+	border:1px solid #cc8;
+}
+
+.alert.alert-welcome{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
 /* Grids */
 div.c12{
 	float:left;
@@ -219,7 +282,7 @@ div.c12 div.c3{
 #header-wrap{
 	width:100%;
 	height:112px;
-	background:#00f;
+	background:#226078;
 }
 
 #header-container{
@@ -307,6 +370,10 @@ div.c12 div.c3{
 		font-weight:bold;
 		text-decoration:none;
 	}
+	#adminnav ul li a img{
+		float:right;
+		margin-top:-5px;
+	}
 
 	#adminnav ul li a:hover{
 		text-decoration:underline;
@@ -330,7 +397,7 @@ div.c12 div.c3{
 
 #nav-wrap{
 	width:100%;
-	height:40px;
+	height:55px;
 	background-color:#ffa340;
 }
 
@@ -355,23 +422,29 @@ div.c12 div.c3{
 
 	#nav ul li a{
 		display:block;
-		padding:10px 20px;
+		padding:15px 30px 20px 45px;
 		height:17px;
 		color:#000;
 		text-decoration:none;
-		border-bottom:3px solid #ffa340;
-		font-size:16px;
+		border-top:3px solid #ffa340;
+		font-size:18px;
 		font-weight:bold;
 	}
 	
+	#nav ul li a img{
+		margin:-15px 0 0 -45px;
+		float:left;
+	}
+	
 	#nav ul li a.current{
-		border-bottom:3px solid #62b1d0;
+		background-color:#E57119;
+		border-top:3px solid #E57119;
+		color:#fff;
 	}
 
 	#nav ul li a:hover{
-		background-color:#ff9929;
-		border-bottom:3px solid #62b1d0;
-		
+		border-top:3px solid #fff;
+		color:#fff;
 	}
 
 #main-wrap{

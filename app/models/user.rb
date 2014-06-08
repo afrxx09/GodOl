@@ -4,11 +4,11 @@ class User < ActiveRecord::Base
 	before_save { email.downcase! }
 	before_create :create_remember_token
 	
-	validates :name, presence: true, length: { maximum: 50 }
+	validates :name, presence: { message: "Måste ange namn" }, length: { maximum: 50, message: "Max 50 tecken" }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-	validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+	validates :email, presence: {message: "Måste ange e-post"}, format: { with: VALID_EMAIL_REGEX, message: "Ogiltig e-post" }, uniqueness: { case_sensitive: false, message: "E-postadressen finns redan registrerad" }
 	has_secure_password
-	validates :password, length: { minimum: 6 }
+	validates :password, length: { minimum: 6, messaage: "Lösenordet måste bestå av minst 6 tecken." }
 	
 	def User.new_remember_token
 		SecureRandom.urlsafe_base64

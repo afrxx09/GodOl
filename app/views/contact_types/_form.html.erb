@@ -1,15 +1,6 @@
 <%= form_for @contact_type do |f| %>
 	
-	<% if @contact_type.errors.any? %>
-		<div id="error_explanation">
-			<h2><%= pluralize(@contact_type.errors.count, "error") %> prohibited this contact_type from being saved:</h2>
-			<ul>
-			<% @contact_type.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-			<% end %>
-			</ul>
-		</div>
-	<% end %>
+	<%= render 'shared/error_messages', object: f.object %>
 	
 	<div class="form-row">
 		<div class="form-label"><%= f.label :name, "Typ-namn" %></div>

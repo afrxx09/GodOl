@@ -1,9 +1,34 @@
 <ul>
-	<li><%= link_to 'Start', root_path, class: current_page(root_path) %></li>
-	<li><%= link_to 'Öl', beer_list_path, class: current_page(beer_list_path) %></li>
-	<li><%= link_to 'Bryggerier', brewery_list_path, class: current_page(brewery_list_path) %></li>
-	<li><%= link_to 'Kontakt', contact_path, class: current_page(contact_path) %></li>
+	<li>
+		<%= link_to root_path, class: current_page(root_path) do %>
+			<%= image_tag "icons/home.png", size: "48" %>Start
+		<% end %>
+	</li>
+	<li>
+		<%= link_to beer_list_path, class: current_page(beer_list_path) do %>
+			<%= image_tag "icons/beer.png", size: "48" %>Öl
+		<% end %>
+	</li>
+	<li>
+		<%= link_to brewery_list_path, class: current_page(brewery_list_path) do %>
+			<%= image_tag "icons/truck.png", size: "48" %>Bryggerier
+		<% end %>
+	</li>
+	<li>
+		<%= link_to contact_path, class: current_page(contact_path) do %>
+			<%= image_tag "icons/email.png", size: "48" %>Kontakt
+		<% end %>
+	</li>
 	<% if signed_in? %>
-	<li><%= link_to 'Öl-logg', logged_beers_path, class: current_page(logged_beers_path) %></li>
+	<li>
+		<%= link_to logged_beers_path, class: current_page(logged_beers_path) do %>
+		<%= image_tag "icons/logg.png", size: "48" %>Loggbok
+		<% end %>
+	</li>
+	<li>
+		<%= link_to edit_user_path(current_user), class: current_page(edit_user_path(current_user)) do %>
+			<%= image_tag "icons/cog.png", size: "48" %>Kontoinställningar
+		<% end %>
+	</li>
 	<% end %>
 </ul>
