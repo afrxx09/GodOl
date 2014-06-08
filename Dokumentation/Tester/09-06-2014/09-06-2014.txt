@@ -1,0 +1,3 @@
+Eftersom testerna är så pass gamla nu så letar de efter gamla variabler. Testerna hittar inte inputfälten via namn då de var på engelska innan och är på svenska nu. Titlar på statiska sidor har ändrats så när den letar efter en titel på en sida för att kontrollera att sidan laddas korrekt så hittar den inte de heller.
+
+Jag har också gjort om routingen sedan testerna skrev så de söker efter fel URL:er ibland.
