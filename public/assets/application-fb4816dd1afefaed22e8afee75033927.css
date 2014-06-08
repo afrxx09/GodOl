@@ -1,0 +1,1276 @@
+/* line 9, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .nothing-at-all2 {
+  width: 100%;
+}
+/* line 13, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .id {
+  width: 50px;
+}
+/* line 16, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .name {
+  width: 350px;
+}
+/* line 19, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .count {
+  width: 75px;
+}
+/* line 22, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row .delete {
+  float: right;
+  width: 75px;
+}
+/* line 28, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-list .row.header {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+/* line 35, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-form {
+  margin: 10px 0;
+}
+/* line 38, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-form .form-row {
+  width: 100%;
+  float: left;
+  margin: 5px 0;
+}
+/* line 43, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-form .form-row .form-label {
+  display: block;
+  font-weight: bold;
+}
+/* line 47, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-form .form-row .form-label label {
+  display: block;
+}
+/* line 54, C:/Sites/god_ol/app/assets/stylesheets/beer_types.css.scss */
+#beer-type-form .form-row .form-input input {
+  width: 250px;
+}
+/* line 8, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-list .row .col {
+  float: left;
+}
+/* line 11, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-list .row .beer {
+  width: 250px;
+}
+/* line 14, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-list .row .beer-type {
+  width: 200px;
+}
+/* line 17, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-list .row .brewery {
+  width: 250px;
+}
+/* line 20, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-list .row .delete {
+  float: right;
+  width: 100px;
+}
+
+/* line 27, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form {
+  margin: 10px 0;
+}
+/* line 31, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+  clear: both;
+}
+/* line 39, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-label {
+  display: block;
+  float: left;
+  width: 120px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* line 46, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-label label {
+  float: right;
+}
+/* line 49, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-label .req {
+  color: #e33;
+}
+/* line 55, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-input input {
+  width: 240px;
+}
+/* line 58, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-form .form-input select {
+  width: 250px;
+}
+
+/* line 64, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form {
+  margin: 10px 0;
+  display: none;
+}
+/* line 68, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+  clear: both;
+}
+/* line 76, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-label {
+  display: block;
+  float: left;
+  width: 120px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* line 83, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-label label {
+  display: block;
+}
+/* line 86, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-label .req {
+  color: #e33;
+}
+/* line 92, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-input input {
+  width: 240px;
+}
+/* line 95, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-quick-form .form-input select {
+  width: 250px;
+}
+
+/* line 103, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-details #beer-image {
+  width: 200px;
+  float: right;
+  margin-right: 20px;
+}
+/* line 110, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-details .beer-info {
+  width: 250px;
+}
+/* line 112, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-details .beer-info p {
+  margin: 3px 0;
+  padding: 3px;
+  border-bottom: 1px dotted #ccc;
+}
+/* line 117, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-details .beer-info strong {
+  display: inline-block;
+  width: 75px;
+}
+
+/* line 130, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-rating-list .row .label {
+  width: 150px;
+}
+/* line 133, C:/Sites/god_ol/app/assets/stylesheets/beers.css.scss */
+#beer-rating-list .row .value {
+  float: right;
+  width: 100px;
+}
+/* line 9, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-list .row .brewery {
+  width: 300px;
+}
+/* line 12, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-list .row .nationality {
+  width: 300px;
+}
+/* line 15, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-list .row .count {
+  width: 200px;
+}
+/* line 18, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-list .row .delete {
+  float: right;
+  width: 100px;
+}
+
+/* line 25, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+img.brewery-logo {
+  width: 150px;
+  float: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+/* line 33, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list {
+  margin: 10px 0;
+}
+/* line 37, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list .row .beer {
+  width: 150px;
+}
+/* line 40, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list .row .beer_type {
+  width: 120px;
+}
+/* line 43, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list .row .abv {
+  width: 50px;
+}
+/* line 46, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list .row .rating {
+  width: 50px;
+}
+/* line 49, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-beer-list .row .count {
+  float: right;
+}
+
+/* line 57, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form {
+  margin: 10px 0;
+}
+/* line 61, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+  clear: both;
+}
+/* line 67, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-row input[type="submit"] {
+  margin-right: 50px;
+}
+/* line 72, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-label {
+  display: block;
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+/* line 79, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-label label {
+  float: right;
+}
+/* line 83, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-label .req {
+  float: right;
+  color: #e33;
+}
+/* line 89, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-input {
+  display: block;
+  float: left;
+}
+/* line 93, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-input input {
+  width: 200px;
+}
+/* line 97, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-input select {
+  width: 210px;
+}
+/* line 101, C:/Sites/god_ol/app/assets/stylesheets/breweries.css.scss */
+#brewery-form .form-input textarea {
+  width: 400px;
+  height: 150px;
+}
+/* line 10, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-type-list .row .type {
+  width: 50px;
+}
+/* line 14, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-type-list .row .contact {
+  width: 135px;
+}
+/* line 18, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-type-list .row .delete {
+  float: right;
+  width: 60px;
+}
+
+/* line 25, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-form {
+  margin-top: 10px;
+}
+/* line 28, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-form .form-row {
+  width: 100%;
+  margin: 5px 0;
+}
+/* line 32, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-form .form-row label {
+  display: block;
+  font-weight: bold;
+}
+/* line 36, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-form .form-row input[type="text"] {
+  display: block;
+  width: 200px;
+}
+/* line 41, C:/Sites/god_ol/app/assets/stylesheets/brewery_contacts.css.scss */
+#brewery-contact-form .form-row select {
+  display: block;
+  width: 210px;
+}
+/* line 7, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-list .row .id {
+  width: 50px;
+}
+/* line 10, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-list .row .name {
+  width: 350px;
+}
+/* line 13, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-list .row .count {
+  width: 75px;
+}
+/* line 16, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-list .row .delete {
+  float: right;
+  width: 75px;
+}
+
+/* line 23, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-form {
+  margin: 10px 0;
+}
+/* line 26, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-form .form-row {
+  width: 100%;
+  float: left;
+  margin: 5px 0;
+}
+/* line 31, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-form .form-row .form-label {
+  display: block;
+  float: left;
+  width: 100px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 10px;
+}
+/* line 40, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-form .form-row .form-input {
+  float: left;
+  width: 150px;
+}
+/* line 44, C:/Sites/god_ol/app/assets/stylesheets/contact_types.css.scss */
+#contact-type-form .form-row .form-input input[type="text"] {
+  width: 150px;
+  padding: 3px;
+}
+/* line 8, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row a {
+  display: block;
+}
+/* line 11, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .count {
+  width: 40px;
+}
+/* line 14, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .beer {
+  width: 150px;
+}
+/* line 17, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .brewery {
+  width: 150px;
+}
+/* line 20, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .aroma {
+  width: 50px;
+}
+/* line 23, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .appearance {
+  width: 60px;
+}
+/* line 26, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .flavour {
+  width: 50px;
+}
+/* line 29, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .pallate {
+  width: 60px;
+}
+/* line 32, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .overall {
+  width: 50px;
+}
+/* line 35, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .total {
+  width: 50px;
+}
+/* line 38, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-list .row .date {
+  float: right;
+  width: 90px;
+}
+
+/* line 45, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-image {
+  width: 150px;
+  margin: 0;
+}
+
+/* line 53, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-evaluation-form .row,
+#logged-beer-score-form .row {
+  float: left;
+  width: 100%;
+  margin: 3px 0;
+}
+/* line 58, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-evaluation-form .row label,
+#logged-beer-score-form .row label {
+  float: left;
+  width: 100px;
+}
+/* line 62, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-evaluation-form .row select,
+#logged-beer-score-form .row select {
+  float: left;
+  width: 50px;
+}
+
+/* line 71, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .beer-info p {
+  margin: 3px;
+  padding: 3px;
+  border-bottom: 1px dotted #ccc;
+}
+/* line 76, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .beer-info strong {
+  display: inline-block;
+  width: 100px;
+}
+/* line 81, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row {
+  float: left;
+  width: 100%;
+  margin: 3px 0;
+}
+/* line 85, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row .col {
+  float: left;
+}
+/* line 89, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row .label {
+  float: left;
+  width: 100px;
+}
+/* line 94, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row .value {
+  display: block;
+  width: 150px;
+}
+/* line 99, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row .bar {
+  display: inline-block;
+  width: 100px;
+  border: 1px solid #bbb;
+  background: #016b00;
+  background: -moz-linear-gradient(left, #d86b04 25%, #016b00 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #d86b04), color-stop(100%, #016b00));
+  background: -webkit-linear-gradient(left, #d86b04 25%, #016b00 100%);
+  background: -o-linear-gradient(left, #d86b04 25%, #016b00 100%);
+  background: -ms-linear-gradient(left, #d86b04 25%, #016b00 100%);
+  background: linear-gradient(to right, #d86b04 25%, #016b00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d86b04', endColorstr='#016b00',GradientType=1 );
+}
+/* line 113, C:/Sites/god_ol/app/assets/stylesheets/logged_beers.css.scss */
+#logged-beer-details .row .bar-fill {
+  display: inline-block;
+  float: right;
+  background: #fff;
+}
+/* line 10, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .col img {
+  margin: 0;
+  height: 50px;
+}
+/* line 15, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .image {
+  text-align: center;
+  width: 75px;
+  margin: 0;
+}
+/* line 20, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .beer {
+  width: 200px;
+}
+/* line 23, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .stats {
+  width: 175px;
+  font-size: 13px;
+}
+/* line 27, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .stats .label {
+  display: inline-block;
+  font-weight: bold;
+  width: 75px;
+}
+/* line 33, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .brewery {
+  width: 200px;
+}
+/* line 36, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row .systembolaget {
+  width: 125px;
+  float: right;
+}
+/* line 43, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-db .row.header .col {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* line 52, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search,
+#beer-search {
+  margin: 0;
+}
+/* line 55, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row,
+#beer-search .row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+}
+/* line 61, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row .col,
+#beer-search .row .col {
+  float: left;
+  margin-right: 10px;
+}
+/* line 65, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row .col label,
+#beer-search .row .col label {
+  display: block;
+  padding: 3px 5px;
+}
+/* line 69, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row .col input,
+#beer-search .row .col input {
+  display: block;
+}
+/* line 73, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row .col input[type="text"],
+#beer-search .row .col input[type="text"] {
+  width: 350px;
+}
+/* line 77, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-search .row .col input[type="submit"],
+#beer-search .row .col input[type="submit"] {
+  margin-top: -5px;
+  float: left;
+}
+
+/* line 86, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-filter,
+#beer-filter {
+  margin: 20px 0;
+}
+/* line 89, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-filter select,
+#beer-filter select {
+  width: 300px;
+}
+/* line 92, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-filter input[type="submit"],
+#beer-filter input[type="submit"] {
+  float: none;
+}
+
+/* line 99, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .col {
+  margin-top: 6px;
+}
+/* line 102, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .col img {
+  margin: 0;
+  height: 30px;
+}
+/* line 108, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .image {
+  text-align: center;
+  width: 75px;
+  margin: 0;
+}
+/* line 113, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .brewery {
+  width: 250px;
+  padding: 0;
+  margin: 0;
+}
+/* line 117, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .brewery a {
+  margin: 0;
+  display: block;
+  padding: 10px 0;
+}
+/* line 123, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .nationality {
+  width: 200px;
+}
+/* line 126, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .city {
+  width: 250px;
+}
+/* line 129, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row .beer-count {
+  float: right;
+  width: 75px;
+  text-align: center;
+}
+/* line 136, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row.header .col {
+  margin: 0;
+  font-weight: bold;
+}
+/* line 140, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#brewery-db .row.header .col.brewery {
+  margin-top: 6px;
+}
+
+/* line 147, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#popular-beers-list,
+#new-beers-list {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+/* line 151, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#popular-beers-list h2,
+#new-beers-list h2 {
+  text-align: center;
+  margin: 0;
+}
+/* line 156, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#popular-beers-list .beer,
+#new-beers-list .beer {
+  width: 100px;
+}
+/* line 159, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#popular-beers-list .beer-type,
+#new-beers-list .beer-type {
+  width: 100px;
+}
+/* line 162, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#popular-beers-list .abv,
+#new-beers-list .abv {
+  float: right;
+  width: 50px;
+}
+
+/* line 169, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form {
+  padding: 10px 0;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  background-color: #4BC0FF;
+}
+/* line 175, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form .row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+}
+/* line 181, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form h2, #beer-me-form p {
+  text-align: center;
+  margin: 0;
+}
+/* line 187, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form .beer-me-option {
+  float: left;
+  width: 95px;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 194, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form select {
+  float: left;
+  width: 90px;
+  margin: 0 4px;
+}
+/* line 199, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form #btn-beer-me {
+  text-align: center;
+}
+/* line 202, C:/Sites/god_ol/app/assets/stylesheets/static_pages.css.scss */
+#beer-me-form #btn-beer-me input {
+  float: none;
+}
+/* line 8, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#user-list .row .id {
+  width: 50px;
+}
+/* line 11, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#user-list .row .level {
+  width: 150px;
+}
+/* line 14, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#user-list .row .name {
+  width: 200px;
+}
+/* line 17, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#user-list .row .email {
+  width: 200px;
+}
+/* line 20, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#user-list .row .delete {
+  float: right;
+  width: 100px;
+}
+
+/* line 29, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form,
+#sign-up-form,
+#login-form {
+  margin: 10px 0;
+}
+/* line 32, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form .form-row,
+#sign-up-form .form-row,
+#login-form .form-row {
+  float: left;
+  width: 100%;
+  margin: 5px 0;
+  clear: both;
+}
+/* line 39, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form label,
+#sign-up-form label,
+#login-form label {
+  display: block;
+  float: left;
+  width: 150px;
+  margin-right: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+/* line 49, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form input[type="text"],
+#edit-user-form input[type="password"],
+#sign-up-form input[type="text"],
+#sign-up-form input[type="password"],
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 250px;
+}
+/* line 52, C:/Sites/god_ol/app/assets/stylesheets/users.css.scss */
+#edit-user-form input[type="submit"],
+#sign-up-form input[type="submit"],
+#login-form input[type="submit"] {
+  margin-right: 37px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+ 
+/* Elements */
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body,html {
+	width:100%;
+	height:100%;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:1em;
+	background-color:#fff;
+}
+
+h1, h2, h3, h4, h5, h6{
+	margin-top:.5em;
+	color:#025167;
+}
+
+p{
+	margin-top:.25em;
+	margin-bottom:.5em;
+	line-height:1.5em;
+}
+
+img{
+	margin-right:10px;
+	margin-bottom:10px;
+}
+
+ul{
+	margin-top:.5em;
+	margin-left:20px;
+}
+
+li{
+	color:#216477;
+}
+
+a, a:visited{
+	color:#216477;
+}
+
+a:hover{
+	color:#057D9F;
+}
+
+/* Form */
+label{
+	display:inline-block;
+	float:left;
+}
+input, textarea, button, select{
+	padding:5px;
+	border:1px solid #ccc;
+	border-radius:2px;
+	outline:none;
+}
+input:focus, textarea:focus, button:focus, select:focus{
+	border:1px solid #ffa340;
+}
+
+button, input[type="submit"]{
+	float:right;
+	padding:10px 30px;
+	border-color:#fff;
+	background-color:#17BF31;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+	text-shadow: 1px 1px 2px #000;
+}
+
+button:hover, input[type="submit"]:hover{
+	background-color:#3CE51C;
+}
+
+button.disabled, input[type="submit"].disabled{
+	background-color:#999;
+}
+
+button.disabled:hover, input[type="submit"].disabled:hover{
+	background-color:#666;
+}
+
+/*Form Error*/
+.field_with_errors input,
+.field_with_errors select{
+	border:1px solid #f00;
+}
+form .req{
+	color:#f00;
+	font-weight:bold;
+}
+
+#error_explanation{
+	margin-top:10px;
+	background-color:#fee;
+	padding:10px;
+}
+#error_explanation .alert-error{
+	font-size:20px;
+	font-weight:bold;
+	color:#f00;
+}
+#error_explanation ul{
+	list-style:none;
+}
+
+#error_explanation ul li{
+	color:#f00;
+}
+
+/*Flash messages*/
+.alert {
+	padding:20px;
+	margin:20px 0;
+	font-weight:bold;
+	font-size:18px;
+	border-radius:2px;
+}
+
+.alert .btn-close{
+	float:right;
+	margin:0;
+	padding:0 5px;
+	border:1px solid #000;
+	background-color:#fff;
+	cursor:pointer;
+}
+
+.alert.alert-success{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
+
+.alert.alert-warning{
+	background-color:#ffc;
+	color:#330;
+	border:1px solid #cc8;
+}
+
+.alert.alert-welcome{
+	background-color:#cfc;
+	color:#030;
+	border:1px solid #8c8;
+}
+/* Grids */
+div.c12{
+	float:left;
+	width:940px;
+	margin:0 10px;
+}
+
+div.c8{
+	float:left;
+	width:620px;
+	margin:0 10px;
+}
+
+div.c6{
+	float:left;
+	width:460px;
+	margin:0 10px;
+}
+
+div.c4{
+	float:left;
+	width:300px;
+	margin:0 10px;
+}
+
+div.c3{
+	float:left;
+	width:220px;
+	margin:0 10px;
+}
+div.c6 div.c3,
+div.c8 div.c4,
+div.c12 div.c8,
+div.c12 div.c6,
+div.c12 div.c4,
+div.c12 div.c3{
+	margin:0 5px;
+	padding:10px 0;
+}
+
+/* classes */
+
+.small-list{
+	width:100%;
+	float:left;
+	margin:10px 0;
+}
+	.small-list .row{
+		width:100%;
+		float:left;
+	}
+	
+	.small-list .row.header{
+		font-weight:bold;
+	}
+	
+	.small-list .row .col{
+		float:left;
+		padding: 3px 5px;
+	}
+	
+	/*colors*/
+	
+	.small-list.gray .row:nth-child(odd){background-color:#eee;}
+	.small-list.gray .row:nth-child(even){background-color:#e6e6e6;}
+	.small-list.gray .row:hover{background-color:#f6f6f6;}
+	.small-list.gray .row.header{background-color:transparent;}
+	
+	.small-list.orange .row:nth-child(odd){background-color:#FFC866;}
+	.small-list.orange .row:nth-child(even){background-color:#FFD786;}
+	.small-list.orange .row:hover{background-color:#FFE2A4;}
+	.small-list.orange .row.header{background-color:transparent;}	
+	
+	
+.big-list{
+	width:100%;
+	float:left;
+	margin:10px 0;
+}
+	.big-list .row{
+		width:100%;
+		float:left;
+	}
+	.big-list .row.header{
+		font-weight:bold;
+	}
+	.big-list .row.header .col{
+		padding:5px 10px;
+	}
+	
+	.big-list .row .col{
+		float:left;
+		padding:15px 10px;
+	}
+	
+	.big-list.gray .row:nth-child(odd){background-color:#eee;}
+	.big-list.gray .row:nth-child(even){background-color:#e6e6e6;}
+	.big-list.gray .row:hover{background-color:#f6f6f6;}
+	.big-list.gray .row.header{background-color:transparent;}
+	
+.clear{
+	clear:both;
+}
+
+.small{
+	font-size:12px;
+	font-style:italic;
+}
+
+/* Layout */
+#wrap{
+	width:100%;
+	min-height:100%;
+	margin:0;
+	background:#fff;
+}
+
+#header-wrap{
+	width:100%;
+	height:112px;
+	background:#226078;
+}
+
+#header-container{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+
+#header{
+	
+}
+
+#logo{
+	position: absolute;
+	top:10px;
+	left:10px;
+	width:250px;
+	height:50px;
+}
+
+#login{
+	position:absolute;
+	width:350px;
+	top:10px;
+	right:0;
+}
+	#login div{
+		float:left;
+		width:165px;
+		padding:0 5px;
+	}
+	#login input{
+		display:block;
+		float:left;
+	}
+	#login input:focus{
+		border:1px solid #ffa340;
+	}
+	#login label{
+		display:block;
+		float:left;
+		font-size:14px;
+		color:#fff;
+	}
+	#signup{
+		width:150px;
+		margin-top:5px;
+		padding:5px;
+		text-align:center;
+		
+	}
+		#signup a{
+			color:#fff;
+			font-size:14px;
+			text-decoration:none;
+		}
+		#signup a:hover{
+			text-decoration:underline;
+		}
+		
+	#login #login-btn{
+		margin:5px 3px 0 0;
+		float:right;
+	}
+
+#adminnav{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+	#adminnav ul{
+		list-style:none;
+		margin:0;
+	}
+
+	#adminnav ul li{
+		float:left;
+	}
+
+	#adminnav ul li a{
+		display:block;
+		padding:5px 10px;
+		color:#fff;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	#adminnav ul li a img{
+		float:right;
+		margin-top:-5px;
+	}
+
+	#adminnav ul li a:hover{
+		text-decoration:underline;
+	}
+	
+	/*level2*/
+	#adminnav ul li ul{
+		visibility:hidden;
+	}
+	#adminnav ul li:hover>ul{
+		visibility:visible;
+	}
+	#adminnav ul li ul li{
+		float:none;
+	}
+	#adminnav ul li ul li a{
+		font-size:12px;
+		font-weight: normal;
+	}
+	
+
+#nav-wrap{
+	width:100%;
+	height:55px;
+	background-color:#ffa340;
+}
+
+#nav-container{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+
+#nav{
+	
+}
+
+	#nav ul{
+		list-style:none;
+		margin:0;
+	}
+
+	#nav ul li{
+		float:left;
+	}
+
+	#nav ul li a{
+		display:block;
+		padding:15px 30px 20px 45px;
+		height:17px;
+		color:#000;
+		text-decoration:none;
+		border-top:3px solid #ffa340;
+		font-size:18px;
+		font-weight:bold;
+	}
+	
+	#nav ul li a img{
+		margin:-15px 0 0 -45px;
+		float:left;
+	}
+	
+	#nav ul li a.current{
+		background-color:#E57119;
+		border-top:3px solid #E57119;
+		color:#fff;
+	}
+
+	#nav ul li a:hover{
+		border-top:3px solid #fff;
+		color:#fff;
+	}
+
+#main-wrap{
+	width:100%;
+	min-height:300px;
+}
+
+#main-container{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+
+#clear-footer{
+	clear:both;
+	height:100px;
+}
+
+#footer-wrap{
+	width:100%;
+	position:relative;
+	bottom:0;
+	margin:-90px auto 0 auto;
+	height:69px;
+	padding:10px 0;
+	background-color:#226078;
+	border-top:1px solid #ccc;
+}
+
+#footer-container{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+
+#footer{
+	font-family:verdana;
+	font-size:14px;
+	text-align:center;
+	color:#fff;
+}
+
+#footer .col{
+	float:left;
+	width:280px;
+	margin:0 10px;	
+}
+
+#footer a{
+	display:block;
+	color:#fff;
+	text-decoration:none;
+}
+
+#footer a:hover{
+	text-decoration:underline;
+}
+
+#footer ul{
+	margin:0;
+	list-style:none;
+}

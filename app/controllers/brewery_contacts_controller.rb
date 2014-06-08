@@ -3,6 +3,7 @@ class BreweryContactsController < ApplicationController
 	def create
 		@brewery = Brewery.find(params[:brewery_id])
 		@brewery_contact = @brewery.brewery_contacts.create(brewery_contact_params)
+		flash[:success] = "Kontaktuppgift sparad"
 		redirect_to edit_brewery_path(@brewery)
 	end
 	
@@ -10,6 +11,7 @@ class BreweryContactsController < ApplicationController
 		@brewery = Brewery.find(params[:brewery_id])
 		@brewery_contact = @brewery.brewery_contacts.find(params[:id])
 		@brewery_contact.destroy
+		flash[:success] = "Kontaktuppgiften har tagits bort"
 		redirect_to edit_brewery_path(@brewery)
 	end
 	

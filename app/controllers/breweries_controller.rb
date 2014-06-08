@@ -15,6 +15,7 @@ class BreweriesController < ApplicationController
 		@brewery = Brewery.new(brewery_params)
 
 		if @brewery.save
+			flash[:success] = "Bryggeriet \""  + @brewery.name + "\" har sparats."
 			redirect_to breweries_path
 		else
 			render 'new'
@@ -29,6 +30,7 @@ class BreweriesController < ApplicationController
 		@brewery = Brewery.find(params[:id])
 
 		if @brewery.update(brewery_params)
+			flash[:success] = "Bryggeriet \""  + @brewery.name + "\" har sparats."
 			redirect_to breweries_path
 		else
 			render 'edit'
@@ -44,6 +46,6 @@ class BreweriesController < ApplicationController
 	
 	private
 		def brewery_params
-			params.require(:brewery).permit(:name, :address, :address2, :city, :state, :zip, :nationality, :description, :img)
+			params.require(:brewery).permit(:name, :address, :address2, :city, :state, :zip, :nationality, :description, :img, :established, :homepage)
 		end
 end

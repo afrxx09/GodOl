@@ -98,12 +98,27 @@
 	}
 }
 
-#beer-image{
-	width:200px;
-	float:left;
-	margin-right:20px;
-	margin-top:20px;
+#beer-details{
+
+	#beer-image{
+		width:200px;
+		float:right;
+		margin-right:20px;
+		
+	}
 	
+	.beer-info{
+		width:250px;
+		p{
+			margin:3px 0;
+			padding:3px;
+			border-bottom:1px dotted #ccc;
+		}
+		strong{
+			display:inline-block;
+			width:75px;
+		}
+	}
 }
 
 #beer-rating-list{

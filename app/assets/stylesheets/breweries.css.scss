@@ -24,7 +24,7 @@
 
 img.brewery-logo{
 	width:150px;
-	float:left;
+	float:right;
 	margin-right:20px;
 	margin-top:20px;
 }
@@ -35,16 +35,19 @@ img.brewery-logo{
 
 	.row{
 		.beer{
-			width:100px;
+			width:150px;
 		}
 		.beer_type{
-			width:100px;
+			width:120px;
 		}
 		.abv{
 			width:50px;
 		}
 		.rating{
 			width:50px;
+		}
+		.count{
+			float:right;
 		}
 	}
 
@@ -60,6 +63,10 @@ img.brewery-logo{
 		width:100%;
 		margin:5px 0;
 		clear:both;
+		
+		input[type="submit"]{
+			margin-right:50px;
+		}
 	}
 
 	.form-label{

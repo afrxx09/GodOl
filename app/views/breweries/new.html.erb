@@ -7,61 +7,70 @@
 
 			<%= render 'shared/error_messages', object: f.object %>
 			
-			<div class="c6">
+			<div class="c8">
+			
 				<div class="form-row">
-					<div class="form-label"><%= f.label :name %><span class="req">*</span></div>
+					<div class="form-label"><%= f.label :name, "Namn" %><span class="req">*</span></div>
 					<div class="form-input"><%= f.text_field :name %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :address %></div>
+					<div class="form-label"><%= f.label :nationality, "Land" %><span class="req">*</span></div>
+					<div class="form-input"><%= country_select("brewery", "nationality") %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :homepage, "Hemsida" %></div>
+					<div class="form-input"><%= f.text_field :homepage %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :established, "Etableringsår" %></div>
+					<div class="form-input"><%= f.text_field :established %></div>
+				</div>
+				
+				<div class="form-row">
+					<div class="form-label"><%= f.label :address, "Adress" %></div>
 					<div class="form-input"><%= f.text_field :address %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :address2 %></div>
+					<div class="form-label"><%= f.label :address2, "Adress 2" %></div>
 					<div class="form-input"><%= f.text_field :address2 %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :city %></div>
+					<div class="form-label"><%= f.label :city, "Stad" %></div>
 					<div class="form-input"><%= f.text_field :city %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :zip %></div>
+					<div class="form-label"><%= f.label :zip, "Postnummer" %></div>
 					<div class="form-input"><%= f.text_field :zip %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :state %></div>
+					<div class="form-label"><%= f.label :state, "Stat" %></div>
 					<div class="form-input"><%= f.text_field :state %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :nationality %><span class="req">*</span></div>
-					<div class="form-input"><%= country_select("brewery", "nationality") %></div>
-				</div>
-				
-			</div>
-			
-			<div class="c6">
-				
-				<div class="form-row">
-					<div class="form-label"><%= f.label :img %></div>
+					<div class="form-label"><%= f.label :img, "Logotyp" %></div>
 					<div class="form-input"><%= f.file_field :img %></div>
 				</div>
 				
 				<div class="form-row">
-					<div class="form-label"><%= f.label :description %></div>
+					<div class="form-label"><%= f.label :description, "Beskrivning" %></div>
 					<div class="form-input"><%= f.text_area :description %></div>
 				</div>
 				
-			</div>
+				<div class="form-row">
+					<%= f.submit "Lägg till" %>
+				</div>
 				
-			<div class="form-row">
-				<%= f.submit "Lägg till" %>
 			</div>
+			
+			
 			
 		<% end %>
 	</div>

@@ -1,13 +1,28 @@
-<div class="c8">
+<div id="beer-details" class="c6">
 	<%= image_tag @beer.img.url, id: "beer-image" %>
 	<h2><%= @beer.name %></h2>
-	<div>
-		<p>Bryggeri: <%= link_to @beer.brewery.name, brewery_path(@beer.brewery) %></p>
-		<p>Typ: <%= @beer.beer_type.name %></p>
-		
-		<p>ABV: <%= @beer.abv %>%</p>
-		<p>IBU: <%= @beer.ibu %></p>
-		<p>EBC: <%= @beer.ebc %></p>
+	
+	<div class="beer-info">
+		<p>
+			<strong>Bryggeri:</strong>
+			<%= link_to @beer.brewery.name, brewery_path(@beer.brewery) %>
+		</p>
+		<p>
+			<strong>Typ:</strong>
+			<%= @beer.beer_type.name %>
+		</p>		
+		<p>
+			<strong>ABV:</strong>
+			<%= @beer.abv %>%
+		</p>
+		<p>
+			<strong>IBU:</strong>
+			<%= @beer.ibu %>
+		</p>
+		<p>
+			<strong>EBC:</strong>
+			<%= @beer.ebc %>
+		</p>
 	</div>
 </div>
 <div class="c4">

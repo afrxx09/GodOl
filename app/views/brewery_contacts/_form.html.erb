@@ -5,12 +5,12 @@
 	<div id="brewery-contact-form">
 	
 		<div class="form-row">
-			<%= f_bc.label :brewery_contact %>
+			<%= f_bc.label :brewery_contact, "Kontaktuppgift" %>
 			<%= f_bc.text_field :brewery_contact %>
 		</div>
 		
 		<div class="form-row">
-			<%= f_bc.label :contact_type_id %>
+			<%= f_bc.label :contact_type_id, "Kontakttyp" %>
 			<%= collection_select(:brewery_contact, :contact_type_id, ContactType.all ,:id, :name) %>
 		</div>
 	

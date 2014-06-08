@@ -8,27 +8,20 @@ class StaticPagesController < ApplicationController
 	end
 
 	def beer_list
-		if params[:search]
-			@beers = Beer.search(params[:search])
-		else
-			if params[:filter]
-				@beers = Beer.filter(params[:filter])
-			else
-				@beers = Beer.all.order(name: :asc)
-			end	
-		end
+		
+		@beers = Beer.all.order(name: :asc)
+		@beers = @beers.search(params[:search]) if !params[:search].blank?
+		@beers = @beers.filter_country(params[:country]) if !params[:country].blank?
+		@beers = @beers.filter_beer_type(params[:beer_type]) if !params[:beer_type].blank?
+
 	end
 
 	def brewery_list
-		if params[:search]
-			@breweries = Brewery.search(params[:search])
-		else
-			if params[:filter]
-				@breweries = Brewery.filter(params[:filter])
-			else
-				@breweries = Brewery.all.order(name: :asc)
-			end	
-		end
+		
+		@breweries = Brewery.all.order(name: :asc)
+		@breweries = @breweries.search(params[:search]) if !params[:search].blank?
+		@breweries = @breweries.filter_country(params[:country]) if !params[:country].blank?
+		
 	end
 	
 	def beer_me
@@ -37,7 +30,7 @@ class StaticPagesController < ApplicationController
 		abv_min = abv[0]
 		abv_max = abv[1]
 		
-		if params[:ibu].empty?
+		if params[:ibu].blank?
 			@beers = Beer.beer_me(beer_type, abv_min, abv_max)
 		else
 			ibu = params[:ibu].split(',')

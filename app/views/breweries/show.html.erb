@@ -1,26 +1,52 @@
 <div class="c6">
+	
 	<%= image_tag @brewery.img.url, class: "brewery-logo" %>
+	
 	<h1><%= @brewery.name %></h1>
+	
 	<div>
-		<p>Nationalitet: <%= @brewery.nationality %></p>
-		<p>Etablerings år: <%= @brewery.nationality %></p>
-		<p>Hemsida: <%= @brewery.nationality %></p>
+		<p><strong>Nationalitet:</strong> <%= @brewery.nationality %></p>
+		<p>
+			<strong>Etablerings år:</strong> <%= @brewery.established %></p>
+		<p>
+			<strong>Hemsida:</strong><br />
+			<% if @brewery.homepage.blank? %>
+			okänd
+			<% else %>
+			<%= link_to @brewery.homepage, @brewery.homepage, :target => "_blank" %>
+			<% end %>
+		</p>
 		<p><%= @brewery.description %></p>
 	</div>
 	
 	<div class="clear"></div>
 	
 	<div class="c3">
-		<% if @brewery.address.empty? &&  @brewery.zip.empty? && @brewery.city.empty? %>
-		
+		<h3>Adress</h3>
+		<% if @brewery.address.blank? &&  @brewery.zip.blank? && @brewery.city.blank? %>
+		<p>Adress saknas</p>
 		<% else %>
 		<%= render 'breweries/show_address' %>
 		<% end %>
 	</div>
 
 	<div class="c3">
-		<% if @brewery.brewery_contacts %>
-		<%= render @brewery.brewery_contacts %>
+		
+		<h3>Kontaktinfo</h3>
+		
+		<% if @brewery.brewery_contacts.any? %>
+		
+		<% @brewery.brewery_contacts.each do |bc| %>
+		<div class="row">
+			<div class="col type"><%= bc.contact_type.name %></div>
+			<div class="col contact"><%= bc.brewery_contact %></div>
+		</div>
+		<% end %>
+		
+		<% else %>
+		<div class="row">
+			<div class="col type">Ingen kontaktinformation</div>
+		</div>
 		<% end %>
 	</div>
 </div>

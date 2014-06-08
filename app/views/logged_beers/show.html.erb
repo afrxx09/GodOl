@@ -1,16 +1,16 @@
-<div class="c12">
+<div id="logged-beer-details" class="c12">
 	
 	<div class="c4">
 		<h1>Öl-logg: <%= @logged_beer.beer.name %></h1>
 		<%= image_tag @logged_beer.beer.img.url, id: "logged-beer-image" %>
-		<div>
-			<p>Öl: <%= @logged_beer.beer.name %></p>
-			<p>Bryggeri: <%= link_to @logged_beer.beer.brewery.name, brewery_path(@logged_beer.beer.brewery) %></p>
-			<p>Typ: <%= @logged_beer.beer.beer_type.name %></p>
+		<div class="beer-info">
+			<p><strong>Öl:</strong> <%= @logged_beer.beer.name %></p>
+			<p><strong>Bryggeri:</strong> <%= link_to @logged_beer.beer.brewery.name, brewery_path(@logged_beer.beer.brewery) %></p>
+			<p><strong>Typ:</strong> <%= @logged_beer.beer.beer_type.name %></p>
 			
-			<p>ABV: <%= @logged_beer.beer.abv %>%</p>
-			<p>IBU: <%= @logged_beer.beer.ibu %></p>
-			<p>EBC: <%= @logged_beer.beer.ebc %></p>
+			<p><strong>ABV:</strong> <%= @logged_beer.beer.abv %>%</p>
+			<p><strong>IBU:</strong> <%= @logged_beer.beer.ibu %></p>
+			<p><strong>EBC:</strong> <%= @logged_beer.beer.ebc %></p>
 		</div>
 	</div>
 	
@@ -26,36 +26,36 @@
 			overall = lbs.overall
 			total = appearance + aroma + pallate + flavour + overall
 		%>
-		<div class="">
+		<div class="beer-score">
 			
-			<div class="">
-				<div class="">Utseende</div>
-				<div class=""><%= appearance %></div>
+			<div class="row">
+				<div class="col label">Utseende</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (appearance * 20) %>px;">&nbsp;</span></span> <%= appearance %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Arom</div>
-				<div class=""><%= aroma %></div>
+			<div class="row">
+				<div class="col label">Arom</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (aroma * 20) %>px;">&nbsp;</span></span> <%= aroma %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Munkänsla</div>
-				<div class=""><%= pallate %></div>
+			<div class="row">
+				<div class="col label">Gomkänsla</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (pallate * 20) %>px;">&nbsp;</span></span> <%= pallate %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Smak</div>
-				<div class=""><%= flavour %></div>
+			<div class="row">
+				<div class="col label">Smak</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (flavour * 20) %>px;">&nbsp;</span></span> <%= flavour %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Övergripande Betyg</div>
-				<div class=""><%= overall %></div>
+			<div class="row">
+				<div class="col label">Generellt</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (overall * 20) %>px;">&nbsp;</span></span> <%= overall %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Total</div>
-				<div class=""><%= total %> / 25</div>
+			<div class="row">
+				<div class="col label">Total</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (total * 4) %>px;">&nbsp;</span></span> <%= total %>/25</div>
 			</div>
 		</div>
 		<% else %>
@@ -84,85 +84,85 @@
 				sulphury = lbe.sulphury
 				carbonation = lbe.carbonation
 		%>
-		<div class="">
+		<div class="beer-evaluation">
 			
-			<div class="">
-				<div class="">Fyllighet</div>
-				<div class=""><%= body %></div>
+			<div class="row">
+				<div class="col label">Fyllighet</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (body * 20) %>px;">&nbsp;</span></span> <%= body %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Lång eftersmak</div>
-				<div class=""><%= linger %></div>
+			<div class="row">
+				<div class="col label">Eftersmak</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (linger * 20) %>px;">&nbsp;</span></span> <%= linger %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Bitter</div>
-				<div class=""><%= bitter %></div>
+			<div class="row">
+				<div class="col label">Bitter</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (bitter * 20) %>px;">&nbsp;</span></span> <%= bitter %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Sur</div>
-				<div class=""><%= sour %></div>
+			<div class="row">
+				<div class="col label">Sur</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (sour * 20) %>px;">&nbsp;</span></span> <%= sour %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Söt</div>
-				<div class=""><%= sweet %></div>
+			<div class="row">
+				<div class="col label">Söt</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (sweet * 20) %>px;">&nbsp;</span></span> <%= sweet %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Fruktig</div>
-				<div class=""><%= fruity %></div>
+			<div class="row">
+				<div class="col label">Fruktig</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (fruity * 20) %>px;">&nbsp;</span></span> <%= fruity %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Blommig</div>
-				<div class=""><%= floral %></div>
+			<div class="row">
+				<div class="col label">Blommig</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (floral * 20) %>px;">&nbsp;</span></span> <%= floral %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Humle</div>
-				<div class=""><%= hoppy %></div>
+			<div class="row">
+				<div class="col label">Humle</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (hoppy * 20) %>px;">&nbsp;</span></span> <%= hoppy %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Hetta</div>
-				<div class=""><%= spicy %></div>
+			<div class="row">
+				<div class="col label">Hetta</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (spicy * 20) %>px;">&nbsp;</span></span> <%= spicy %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Malt</div>
-				<div class=""><%= malty %></div>
+			<div class="row">
+				<div class="col label">Malt</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (malty * 20) %>px;">&nbsp;</span></span> <%= malty %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Toffee</div>
-				<div class=""><%= toffee %></div>
+			<div class="row">
+				<div class="col label">Toffee</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (toffee * 20) %>px;">&nbsp;</span></span> <%= toffee %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Bränd</div>
-				<div class=""><%= burnt %></div>
+			<div class="row">
+				<div class="col label">Bränd</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (burnt * 20) %>px;">&nbsp;</span></span> <%= burnt %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Choklad</div>
-				<div class=""><%= chocolate %></div>
+			<div class="row">
+				<div class="col label">Choklad</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (chocolate * 20) %>px;">&nbsp;</span></span> <%= chocolate %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Svavel</div>
-				<div class=""><%= sulphury %></div>
+			<div class="row">
+				<div class="col label">Svavel</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (sulphury * 20) %>px;">&nbsp;</span></span> <%= sulphury %></div>
 			</div>
 			
-			<div class="">
-				<div class="">Kolsyra</div>
-				<div class=""><%= carbonation %></div>
+			<div class="row">
+				<div class="col label">Kolsyra</div>
+				<div class="col value"><span class="bar"><span class="bar-fill" style="width:<%= 100 - (carbonation * 20) %>px;">&nbsp;</span></span> <%= carbonation %></div>
 			</div>
 			
 			<% else %>
-				Inget
+				<p>Utvärdering saknas.</p>
 			<% end %>
 		</div>
 	</div>

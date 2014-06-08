@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-	before_action :signed_in_user, only: [:edit, :update]
+	
+	before_action :signed_in_user, only: [:edit, :update, :destroy]
 	before_action :correct_user,   only: [:edit, :update]
-	before_action :admin_user,     only: [:index, :destroy, :edit, :update, :destroy]
+	before_action :admin_user,     only: :destroy
 	
 	def index
 		@users = User.order(admin: :desc)
@@ -63,7 +64,27 @@ class UsersController < ApplicationController
 		
 		def correct_user
 			@user = User.find(params[:id])
-			redirect_to(root_url) unless current_user?(@user)
+			redirect_to(beer_list_path) unless current_user?(@user)
+		end
+		
+		def current_user
+			remember_token = User.digest(cookies[:remember_token])
+			@current_user ||= User.find_by(remember_token: remember_token)
+		end
+		
+		def current_user?(user)
+			user == current_user
+		end
+		
+		def signed_in?
+			!current_user.nil?
+		end
+		
+		def signed_in_user
+			unless signed_in?
+				store_location
+				redirect_to root_path
+			end
 		end
 		
 		def admin_user

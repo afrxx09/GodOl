@@ -10,6 +10,7 @@ class ContactTypesController < ApplicationController
 		@contact_type = ContactType.new(contact_types_params)
 
 		if @contact_type.save
+			flash[:success] = "Ny kontakttypen har sparats"
 			redirect_to contact_types_path
 		else
 			render 'new'
@@ -19,7 +20,7 @@ class ContactTypesController < ApplicationController
 	def destroy
 		@contact_type = ContactType.find(params[:id])
 		@contact_type.destroy
-		
+		flash[:success] = "Kontakttyp borttagen"
 		redirect_to contact_types_path
 	end
 	

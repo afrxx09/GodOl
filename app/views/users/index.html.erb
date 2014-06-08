@@ -28,9 +28,9 @@
 			<div class="col email"><%= user.email %></div>
 			<div class="col level">
 				<% if user.admin %>
-					<%= link_to '=> Användare', toggle_admin_path(user) %>
+					<%= link_to 'Gör till Användare', toggle_admin_path(user) %>
 				<% else %>
-					<%= link_to '=> Admin', toggle_admin_path(user) %>
+					<%= link_to 'Gör till Admin', toggle_admin_path(user) %>
 					
 				<% end %>
 			</div>

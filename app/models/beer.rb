@@ -10,7 +10,7 @@ class Beer < ActiveRecord::Base
 	validates :beer_type_id, presence: true
 	validates_numericality_of :beer_type_id, :greater_than => 0
 	
-	validates :name, presence: true
+	validates :name, presence: {message: "Måste ange namn"}
 	
 	has_attached_file :img, :default_url => "/images/beer-no-image.png"
 	validates_attachment_content_type :img, :content_type => ['image/jpeg', 'image/png']
@@ -19,8 +19,12 @@ class Beer < ActiveRecord::Base
 		joins(:brewery).where("beers.name LIKE ? OR breweries.name LIKE ? OR beers.systembolaget = ?", "%#{query}%", "%#{query}%", "#{query}")
 	end
 	
-	def self.filter(query)
+	def self.filter_country(query)
 		joins(:brewery).where("breweries.nationality = ?", "#{query}")
+	end
+	
+	def self.filter_beer_type(query)
+		where("beer_type_id = ?", "#{query}")
 	end
 	
 	def self.beer_me(beer_type, abv_min, abv_max)

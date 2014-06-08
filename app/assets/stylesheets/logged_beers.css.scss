@@ -21,13 +21,13 @@
 			width:50px;
 		}
 		.appearance{
-			width:50px;
+			width:60px;
 		}
 		.flavour{
 			width:50px;
 		}
 		.pallate{
-			width:50px;
+			width:60px;
 		}
 		.overall{
 			width:50px;
@@ -62,6 +62,58 @@
 		select{
 			float:left;
 			width:50px;
+		}
+	}
+}
+
+#logged-beer-details{
+	.beer-info{
+		p{
+			margin:3px;
+			padding:3px;
+			border-bottom:1px dotted #ccc;
+		}
+		strong{
+			display:inline-block;
+			width:100px;
+		}
+	}
+	.row{
+		float:left;
+		width:100%;
+		margin:3px 0;
+		.col{
+			float:left;
+		}
+		
+		.label{
+			float:left;
+			width:100px;
+		}
+		
+		.value{
+			display:block;
+			width:150px;
+		}
+		
+		.bar{
+			display:inline-block;
+			width:100px;
+			border:1px solid #bbb;
+			background: #016b00;
+			background: -moz-linear-gradient(left,  #d86b04 25%, #016b00 100%);
+			background: -webkit-gradient(linear, left top, right top, color-stop(25%,#d86b04), color-stop(100%,#016b00));
+			background: -webkit-linear-gradient(left,  #d86b04 25%,#016b00 100%);
+			background: -o-linear-gradient(left,  #d86b04 25%,#016b00 100%);
+			background: -ms-linear-gradient(left,  #d86b04 25%,#016b00 100%);
+			background: linear-gradient(to right,  #d86b04 25%,#016b00 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d86b04', endColorstr='#016b00',GradientType=1 );
+
+		}
+		.bar-fill{
+			display:inline-block;
+			float:right;
+			background:#fff;
 		}
 	}
 }

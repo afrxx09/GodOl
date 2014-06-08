@@ -39,7 +39,7 @@
 				</div>
 				
 				<div class="row">
-					<%= lbs.label :pallate, "Munkänsla" %>
+					<%= lbs.label :pallate, "Gomkänsla" %>
 					<%= lbs.select :pallate, (0..5) %>
 				</div>
 				
@@ -60,35 +60,35 @@
 			<%= f.fields_for :logged_beer_evaluation do |lbe| %>
 			<div class="c3">
 				<div class="row">
-					<%= lbe.label :body %>
+					<%= lbe.label :body, "Fyllighet" %>
 					<%= lbe.select :body, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :linger %>
+					<%= lbe.label :linger, "Eftersmak" %>
 					<%= lbe.select :linger, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :bitter %>
+					<%= lbe.label :bitter, "Bitter" %>
 					<%= lbe.select :bitter, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :sour %>
+					<%= lbe.label :sour, "Sur" %>
 					<%= lbe.select :sour, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :sweet %>
+					<%= lbe.label :sweet, "Sötma" %>
 					<%= lbe.select :sweet, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :fruity %>
+					<%= lbe.label :fruity, "Fruktig" %>
 					<%= lbe.select :fruity, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :floral %>
+					<%= lbe.label :floral, "Blommig" %>
 					<%= lbe.select :floral, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :hoppy %>
+					<%= lbe.label :hoppy, "Humle" %>
 					<%= lbe.select :hoppy, (0..5) %>
 				</div>
 			
@@ -96,31 +96,31 @@
 			<div class="c3">
 			
 				<div class="row">
-					<%= lbe.label :spicy %>
+					<%= lbe.label :spicy, "Hetta" %>
 					<%= lbe.select :spicy, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :malty %>
+					<%= lbe.label :malty, "Malt" %>
 					<%= lbe.select :malty, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :toffee %>
+					<%= lbe.label :toffee, "toffee" %>
 					<%= lbe.select :toffee, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :burnt %>
+					<%= lbe.label :burnt, "Bränd" %>
 					<%= lbe.select :burnt, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :chocolate %>
+					<%= lbe.label :chocolate, "Choklad" %>
 					<%= lbe.select :chocolate, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :sulphury %>
+					<%= lbe.label :sulphury, "Svavel" %>
 					<%= lbe.select :sulphury, (0..5) %>
 				</div>
 				<div class="row">
-					<%= lbe.label :carbonation %>
+					<%= lbe.label :carbonation, "Kolsyra" %>
 					<%= lbe.select :carbonation, (0..5) %>
 				</div>
 			

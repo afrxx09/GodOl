@@ -1,25 +1,46 @@
-<% provide(:title, 'Öl-lista') %>
+<% provide(:title, 'Öl') %>
 <div class="c12">
 	<h1><%= yield(:title) %></h1>
+	<p>Sök efter öl i vår databas, sökning görs på ölets namn, bryggeri eller systembolagets artikelnummer.</p>
+	<%= form_tag(beer_list_path, :method => :get) do |f| %>
+		<div id="beer-search" class="c8">
+			
+			<div class="row">
+				
+				<div class="col">
+					<%= text_field_tag :search, params[:search], :autofocus => true %>
+				</div>
+				
+				<div class="col">
+					<%= submit_tag "Sök" %>
+				</div>
+				
+			</div>
+			
+			<div class="row">
+			
+				<div class="col">
+					<% @country_options = Brewery.select(:nationality).distinct.map{|country| [country.nationality, country.nationality] }.insert(0, ["", ""]) %>
+					<label>Land</label>
+					<%= select_tag("country", options_for_select(@country_options)) %>
+				</div>
+				
+				<div class="col">
+					<% @beer_type_options = BeerType.all.map{|beer_type| [beer_type.name, beer_type.id] }.insert(0, ["", ""]) %>
+					<label>Typ</label>
+					<%= select_tag("beer_type", options_for_select(@beer_type_options)) %>
+				</div>
+				
+			</div>
+		</div>
+	<% end %>
 
-	<div id="beer-search" class="c6">
-		<%= form_tag(beer_list_path, :method => :get) do |f| %>
-			<p>Söker på öl, bryggeri och systembolagets artikelnr</p>
-			<%= text_field_tag :search, params[:search], :autofocus => true %>
-			<%= submit_tag "Sök" %>
-		<% end %>
-	</div>
-	<div id="beer-filter" class="c6">
-		<%= form_tag(beer_list_path, :method => :get) do |f| %>
-			<p>Filtrera på land</p>
-			<% countries = Brewery.select(:nationality).distinct.map {|country| [country.nationality, country.nationality] } %>
-			<%= select_tag :filter, options_for_select(countries), :include_blank => true %>
-			<%= submit_tag "Filtrera" %>
-		<% end %>
-	</div>
-
+	<div class="clear"></div>
+	
 	<div id="beer-db" class="big-list gray">
 	
+		<% if @beers.any? %>
+		
 		<div class="row header">
 			<div class="col image"></div>
 			<div class="col beer">Öl</div>
@@ -37,9 +58,9 @@
 			</div>
 			<div class="col stats">
 				<%
-				 abv = beer.abv ? beer.abv.to_s + '%' : '' 
-				 ibu = beer.ibu ? beer.abv.to_s + ' IBU' : ''
-				 ebc = beer.ebc ? beer.abv.to_s + ' EBC' : ''
+				abv = beer.abv ? beer.abv.to_s + '%' : '' 
+				ibu = beer.ibu ? beer.abv.to_s + ' IBU' : ''
+				ebc = beer.ebc ? beer.abv.to_s + ' EBC' : ''
 				%>
 				<span class="label">Alkoholhalt</span><%= abv %><br />
 				<span class="label">Bitterhet</span><%= ibu %><br />
@@ -61,6 +82,12 @@
 				
 			</div>
 		</div>
+		<% end %>
+		
+		<% else %>
+			<div class="row">
+				<div class="col">Inga träffar</div>
+			</div>
 		<% end %>
 		
 		<div class="clear"></div>
